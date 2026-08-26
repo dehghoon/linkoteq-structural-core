@@ -1,91 +1,35 @@
 # Linkoteq Platform Architecture Knowledge
 
-## Purpose
-
-This file explains how Linkoteq applications, calculators, analysis engines, reports and AI/GPT workflows must interoperate around the canonical Structural Core contract.
-
 ## Source of truth
+`dehghoon/linkoteq-structural-core` is the single source of truth for cross-product engineering contracts. Current active schema: **v0.4**.
 
-The repository `dehghoon/linkoteq-structural-core` is the single source of truth for cross-product engineering data contracts.
+All GPTs must also follow `AI_GPT_UPDATE_POLICY.md`.
 
-Application repositories may keep internal UI state and calculator-private implementation models, but integration boundaries must not redefine conflicting schemas.
+## Canonical flow
+2D drawings / images / DXF / IFC / manual / AI -> Structural Core -> Load Calculators -> Canonical Loads -> Analysis Adapter -> Solver -> Canonical Analysis Results -> Design Calculators -> Canonical Design Results -> Canonical Reports.
 
-## Canonical engineering flow
+## Ownership
+- 3D Model owns geometry editing, assignment UX and Core-compatible model state.
+- Snow/Wind/Seismic calculators own their engineering formulas and write canonical loads.
+- Analysis Adapter owns translation between Core and solver-native types.
+- Solver owns analysis execution but not the cross-product contract.
+- Design calculators consume canonical model/analysis facts and return canonical design records.
+- Reports consume canonical facts and do not become a second engineering database.
+- AI/GPT workflows must use the same Core contracts as human-authored modules.
 
-```text
-2D drawings / images / DXF / IFC / manual / AI
-                    |
-                    v
-              Structural Core
-                    |
-         +----------+----------+
-         |                     |
-         v                     v
-  Load calculators         Manual loads
- Snow / Wind / Seismic
-         |                     |
-         +----------+----------+
-                    |
-                    v
-              Canonical Loads
-                    |
-                    v
-             Analysis Adapter
-                    |
-                    v
-              PyNite / Solver
-                    |
-                    v
-        Canonical Analysis Results
-                    |
-                    v
-            Design Calculators
- W-section / Beam / Column / Timber / Concrete / Foundation
-                    |
-                    v
-          Canonical Design Results
-                    |
-                    v
-              Canonical Reports
-```
+## Core v0.4 coordinate model
+- Geometry is global.
+- External loads are global by default.
+- Explicit member-local external loads are allowed.
+- Internal member forces used for design are canonical in member-local axes.
+- Member local axes use the Core right-handed convention.
+- Result station count is unrestricted by Core.
+- Station `x` is measured from member start along local +x.
+- Optional `xRatio` is normalized position.
+- Analysis/3D layers may choose default station sampling such as start/mid/end without making that a Core requirement.
 
-## Product responsibilities
+## Versioning
+Every integration declares the Core version it supports. New work targets the latest released Core version. Existing verified calculators are migrated at the integration boundary rather than rebuilt from scratch unless engineering requirements change.
 
-### 3D Model
-- Creates and edits geometry, levels, grids, nodes, members and surfaces.
-- Assigns materials, sections, supports, releases and loads.
-- Stores Core-compatible model state.
-- Does not own snow/wind/seismic formulas.
-- Does not own solver logic.
-- Does not own member design logic.
-
-### Load calculators
-- Consume project/model context through a Core-compatible calculator envelope.
-- Own their engineering formulas and code logic.
-- Write back `LoadSource`, `LoadCase` and `Load` records.
-- Preserve provenance, code edition, jurisdiction and run ID.
-
-### Analysis engine
-- Lives behind an Analysis Adapter.
-- Consumes canonical geometry, boundary conditions and loads.
-- Returns canonical member and node analysis results.
-- Solver-native types must not leak into the platform contract.
-
-### Design calculators
-- Consume geometry, assigned material/section and analysis forces from Core.
-- Return canonical `DesignRun`, `MemberDesignResult` and `DesignCheck` records.
-- Standalone calculator UIs remain valid products.
-
-### Reports
-- Consume canonical engineering facts and results.
-- Must not become a second engineering database.
-- Values shown in reports should be traceable to source IDs and run IDs.
-
-### AI/GPT workflows
-- Must follow the same Core schema and integration rules as human-authored modules.
-- Must not invent incompatible private integration schemas.
-- Must carry schema version and preserve provenance/traceability.
-
-## Versioning rule
-
-All integrations must declare the Core schema version they support. Breaking changes require an explicit new schema version and migration notes.
+## Duplication rule
+Shared engineering facts have one canonical owner. Product repositories may keep private UI/internal models, but they must not redefine conflicting cross-product schemas.
