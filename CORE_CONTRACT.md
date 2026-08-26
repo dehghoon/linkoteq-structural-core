@@ -1,10 +1,10 @@
-# Linkoteq Structural Core Contract v0.4
+# Linkoteq Structural Core Contract v0.5
 
 ## Purpose
 
-This repository is the canonical engineering contract for the Linkoteq platform. The 3D model, importers, load calculators, analysis adapters, design calculators, reports, viewers and AI/GPT workflows exchange engineering information through this contract.
+This repository is the canonical engineering language for Linkoteq. The 3D model, importers, load calculators, analysis adapters, solvers, design calculators, reports, viewers and AI/GPT workflows exchange structural information through this contract.
 
-Core is intentionally not a calculation engine. It stores engineering facts, requests, traceable results and standardized integration records.
+Core is solver-independent. PyNite is the reference analysis engine for the first analysis adapter, but PyNite classes are not the Core schema.
 
 ## Canonical pipeline
 
@@ -15,16 +15,16 @@ Core is intentionally not a calculation engine. It stores engineering facts, req
         Structural Model
                 |
                 v
- Snow / Wind / Seismic / Manual Loads
+ Snow / Wind / Seismic / Manual / Self Weight
                 |
                 v
           Canonical Loads
                 |
                 v
-        Analysis Adapter
+       PyNite Analysis Adapter
                 |
                 v
-        PyNite / Solver
+              PyNite
                 |
                 v
       Canonical Analysis Results
@@ -34,18 +34,19 @@ Core is intentionally not a calculation engine. It stores engineering facts, req
                 |
                 v
        Canonical Design Results
-                |
-                v
-        Canonical Reports
 ```
 
-## Core ownership
+## Source-of-truth rule
 
-Core defines project metadata, units, jurisdiction, grids, levels, nodes, members, surfaces, openings, diaphragms, materials, sections, supports, releases, load sources, load cases, load objects, load combinations, analysis requests/results, design runs/results and report records.
+Core defines the integration boundary. Application repositories may maintain private UI or implementation state, but must not redefine conflicting engineering entities. Materials, sections, coordinates, supports, loads, combinations and analysis results crossing repository boundaries MUST use the canonical definitions in this repository.
 
-External modules own engineering calculation logic. Snow, wind and seismic formulas stay in calculator repositories. PyNite or another solver stays behind an Analysis Adapter. W-section, beam, column, concrete, timber and foundation design logic stays in its calculator repository. Standalone calculator UIs remain valid products.
+## Units
 
-## Coordinate-system rules
+Every project declares a unit system. Engineering values whose dimensions are not unambiguous MUST carry explicit units at integration boundaries. Solver adapters are responsible for converting canonical values to a solver-consistent unit set and converting results back.
+
+Core does not assume that a solver performs unit conversion.
+
+## Coordinate systems
 
 ### Global geometry
 
@@ -53,19 +54,15 @@ Node coordinates and model geometry are expressed in the global model coordinate
 
 ### External loads
 
-External loads are **global by default**. Gravity therefore normally acts in global vertical direction, and wind/seismic directions normally reference global axes.
-
-A `Load` may explicitly set `coordinateSystem: "member-local"` when a member load is intentionally defined relative to that member's local axes. In that case the member reference must be unambiguous, using the member target or `localAxisMemberId`.
-
-The absence of `coordinateSystem` in legacy records is interpreted as `global`.
+External loads are global by default. Nodal loads are canonical global loads. Member point and distributed loads may explicitly use `member-local` axes. Surface pressure is normal to the target surface unless an explicit global vector load representation is used.
 
 ### Member local axes
 
-Member internal-force results are expressed in a right-handed local member coordinate system. The local +x axis follows the member from `startNodeId` to `endNodeId`. Local y/z orientation may be stored explicitly on the member as `localAxes`; analysis adapters are responsible for generating a deterministic right-handed system when explicit orientation is absent.
+Member local +x runs from `startNodeId` to `endNodeId`. Local axes are right-handed. An explicit orientation/rotation may be stored. If absent, the analysis adapter MUST create a deterministic right-handed system and preserve the mapping used for returned results.
 
 ### Internal member forces
 
-Canonical member internal forces are always written in **member-local axes** using:
+Canonical member internal forces are always member-local:
 
 - `axial`
 - `shearY`
@@ -74,77 +71,187 @@ Canonical member internal forces are always written in **member-local axes** usi
 - `momentY`
 - `momentZ`
 
-`MemberAnalysisResult.coordinateSystem` is therefore fixed to `member-local`, and the canonical sign convention is identified as `member-local-right-hand-v1`.
+The sign convention identifier is `member-local-right-hand-v1`.
 
-Each result also carries explicit force, moment and length units. Calculators must not infer these from display text.
+## Materials
 
-## Member stations and envelopes
+A canonical `Material` is not an arbitrary property bag. All structural materials share analysis properties required by frame/shell solvers:
 
-A member result may contain any number of stations. Core does **not** prescribe the number of stations because that is an analysis/solver decision.
+- stable `id`
+- `type`: steel, concrete, wood, or other
+- `name`
+- modulus of elasticity `E`
+- shear modulus `G`
+- Poisson ratio `nu`
+- mass/weight density `rho`
+- optional yield strength `fy`
 
-For each `MemberResultStation`, `x` is the physical distance from the start node measured along local +x in the model length unit. `xRatio` may also be supplied as a normalized 0.0–1.0 location.
+Material-specific design properties belong in typed extensions (`steel`, `concrete`, `wood`) and may be expanded without changing the common analysis language. Design calculators may add code-specific properties, but they MUST preserve the canonical analysis properties and material identity.
 
-A 3D/analysis workflow may choose start/mid/end as its default sampling when no denser result set is requested, but that default belongs to the application/analysis layer, not to Core.
+PyNite reference mapping: `add_material(name, E, G, nu, rho, fy)`.
 
-For efficient calculator access, `MemberAnalysisResult` may additionally carry a `MemberForceEnvelope` containing min/max values and their station locations for axial force, two shears, torsion and two bending moments. Detailed station data remains canonical and available for diagrams, connection design or advanced checks.
+## Sections
 
-## Calculator integration
+A canonical `Section` separates identity/geometry from analysis properties and design extensions.
 
-Every integrated calculator uses a Core-compatible boundary containing `projectId`, `runId`, `calculator`, `calculatorVersion`, `targetIds`, Core schema version and calculator-specific inputs. Writeback must use canonical records rather than exposing calculator-private structures to the rest of the platform.
+Required frame-analysis properties are:
 
-This is the supported contract of the calculator itself, not a second Linkoteq adapter layer.
+- `A` cross-sectional area
+- `Iy` second moment about local y
+- `Iz` second moment about local z
+- `J` torsional constant
 
-## Loads and load transfer
+Optional common properties include `Ay`, `Az`, `Sy`, `Sz`, `Zy`, `Zz`, `ry`, `rz`, and geometric dimensions. A section may identify a family/designation/library record. Material is referenced by members, not duplicated as a conflicting section property.
 
-Every generated load should reference a `LoadSource` so the Load Manager can display calculator, version, code edition, jurisdiction, inputs, summary and status.
+A W-section calculator may enrich a steel section with W-shape geometry and design properties, but MUST NOT rename or reinterpret canonical `A`, `Iy`, `Iz`, `J`, `Zy`, or `Zz`.
 
-Snow commonly writes area loads to slab/roof surfaces. Seismic may write level or diaphragm loads. Wind may write surface, level, diaphragm, member or nodal loads. Dead/live loads may be manual or geometry/material generated.
+PyNite reference mapping: `add_section(name, A, Iy, Iz, J)`; steel nonlinear mapping may additionally use `Zy`, `Zz` and material reference.
 
-Slabs declare engineering load-transfer intent as `one-way`, `two-way`, `shell` or `manual`. Solver-specific conversion of area loads to member/nodal loads belongs in the Analysis Adapter.
+## Nodes and degrees of freedom
 
-## Design result contract
+Each structural node has global `x,y,z` coordinates and six structural degrees of freedom:
 
-v0.3 added canonical design results. A design calculator must be able to write a `DesignRun` and one or more `MemberDesignResult` records. Individual `DesignCheck` records may identify demand, capacity, utilization, governing load case/combination, station, code clause and pass/fail status.
+`DX, DY, DZ, RX, RY, RZ`.
 
-The canonical result separates engineering results from UI presentation. A W-section calculator can therefore remain standalone while also returning the same design facts to the 3D workflow and reports.
+Canonical supports restrain these DOFs individually. Core also supports per-DOF support springs and enforced nodal displacement/rotation so the model can represent settlements and elastic restraints without solver-private records.
 
-## Report contract
+## Members
 
-Reports are consumers of canonical facts, not independent engineering databases. `ReportRequest` identifies the desired project/runs and output format. `ReportRecord` stores report sections, references, assumptions, warnings, figures and artifact references.
+A member references start node, end node, material and section. Optional analysis behavior includes:
 
-Reports should reference source IDs wherever possible so a displayed value can be traced back to its load source, analysis run, design run or model object.
+- rotation about local x
+- tension-only behavior
+- compression-only behavior
+- independent i-end and j-end releases for all six local DOFs
+- explicit local-axis orientation
 
-## AI / GPT integration
+Physical member identity remains stable even if an analysis adapter subdivides it internally.
 
-AI-generated engineering artifacts must follow the same contract as human-authored modules. GPTs and other AI workflows should be supplied a versioned knowledge manifest derived from this repository.
+## Surfaces
 
-The manifest must communicate at minimum:
+Surfaces represent slabs/walls and may reference material and thickness. Load-transfer intent is one-way, two-way, shell or manual. Solver-specific meshing and conversion of area loading belong to the analysis adapter.
 
-- active Core schema version
-- canonical type names
-- terminology and naming rules
-- unit conventions
-- stable ID/reference rules
-- calculator input/writeback rules
-- coordinate-system and sign-convention rules
-- traceability/provenance requirements
-- prohibition on inventing incompatible private schemas at integration boundaries
+## Load sources and provenance
 
-AI requests and results should carry `modelSchemaVersion`. AI may assist with model creation, mapping, report drafting or calculator generation, but engineering records written into the platform must validate against the canonical contract.
+Every generated load SHOULD reference a `LoadSource` describing calculator, version, code edition, jurisdiction, inputs and generation status. Loads preserve provenance so a design result can be traced to its originating load calculation.
+
+## Load cases
+
+A `LoadCase` has a stable ID, display name and canonical category. Categories include dead, live, roof-live, snow, rain, wind, seismic, temperature, construction and other.
+
+The category describes engineering meaning; the case name remains user/project specific. The PyNite adapter maps the stable Core load-case ID to a deterministic PyNite case name and retains the reverse mapping.
+
+## Canonical external load primitives
+
+Core defines explicit load primitives rather than one ambiguous load record.
+
+### NodalLoad
+
+Target: node. Coordinate system: global. Components may contain `FX,FY,FZ,MX,MY,MZ`.
+
+PyNite mapping: `add_node_load`.
+
+### MemberPointLoad
+
+Target: member. Contains force/moment direction, magnitude, distance `x` from member start, load case and coordinate system (`global` or `member-local`).
+
+PyNite mapping: `add_member_pt_load`.
+
+### MemberDistributedLoad
+
+Target: member. Represents uniform, trapezoidal or linearly varying distributed loading using `w1,w2,x1,x2`. `x1/x2` are measured from member start. Coordinate system may be global or member-local.
+
+PyNite mapping: `add_member_dist_load`.
+
+### SurfacePressureLoad
+
+Target: surface/plate/quad. Stores pressure magnitude, load case and pressure convention. Meshing and solver element targeting are adapter responsibilities.
+
+PyNite mapping: plate/quad surface pressure methods.
+
+### SelfWeightLoad
+
+Defines a global gravity direction, factor and load case. The adapter may use native solver self-weight support or generate equivalent canonical loads while retaining provenance.
+
+### Level and diaphragm loads
+
+Wind/seismic calculators may generate level/diaphragm resultants. These are valid Core loads, but a solver adapter must transform them into solver-supported nodal/member/surface actions deterministically and record that transformation.
+
+## Load combinations
+
+A load combination contains:
+
+- stable ID and name
+- factors keyed by Core load-case ID
+- optional limit state: ULS, SLS, ASD or other
+- optional tags such as Strength, Service, Overstrength
+- optional code reference
+
+PyNite mapping: `add_load_combo(name, factors, combo_tags)`.
+
+## Analysis request
+
+An `AnalysisRequest` explicitly selects analysis mode and requested cases/combinations. Canonical modes include:
+
+- `linear-static`
+- `elastic-iterative`
+- `p-delta`
+
+Solver-specific settings are isolated in adapter settings and must not redefine canonical model data.
+
+## Analysis results
+
+### Node results
+
+Canonical node results may include global translations `DX,DY,DZ`, rotations `RX,RY,RZ`, reactions `FX,FY,FZ` and reaction moments `MX,MY,MZ`, keyed to a load case or combination.
+
+### Member results
+
+Member results are returned in member-local axes. A station contains distance `x` from the start node, optional `xRatio`, six internal-force components and optional local displacements/rotations.
+
+Core does not prescribe station count. An application may request start/mid/end by default; dense solver sampling is also valid.
+
+Optional envelopes store min/max and governing station for each force component. Combination tags may be used by adapters/calculators to create Strength/Service envelopes.
+
+## PyNite adapter boundary
+
+The PyNite adapter is a separate module from the Core contract. Its responsibilities are:
+
+1. validate a Core model before analysis;
+2. establish solver units;
+3. create PyNite nodes;
+4. create materials and sections;
+5. create members/springs/plates/quads as supported;
+6. apply supports, support springs, releases and enforced displacements;
+7. map canonical load cases and all supported load primitives;
+8. create load combinations and tags;
+9. run the selected PyNite analysis mode;
+10. extract node and member results;
+11. transform all results back to canonical IDs, axes, units and sign conventions;
+12. emit warnings/errors for unsupported or lossy mappings rather than silently discarding information.
+
+No 3D model or design calculator should call PyNite directly across the platform integration boundary.
+
+## Design calculators
+
+Design calculators consume canonical material, section, member and analysis-result records. They may maintain richer private code-specific models internally. Writeback MUST use canonical IDs and canonical result contracts.
+
+PyNite performs structural analysis. Code design remains the responsibility of design calculators.
+
+## Reports and AI/GPT integration
+
+Reports consume canonical facts. AI-generated engineering artifacts must use the same versioned contract. GPT workflows should read the latest Core contract from this repository before generating specifications or integration code and must not invent incompatible integration schemas.
 
 ## Stable identity
 
-Nodes, members, surfaces, loads, sections, runs and results use stable IDs. UI labels such as beam numbers may be stored as metadata/display fields, but references between engineering records must use IDs rather than screen position or transient array indexes.
+Nodes, members, surfaces, materials, sections, load cases, loads, combinations, runs and results use stable IDs. Display labels are metadata and are not cross-record identifiers.
 
 ## Versioning
 
 - `0.1`: base structural model
-- `0.2`: calculator provenance, load-source metadata, slab load-transfer intent, analysis runs and node results
-- `0.3`: canonical design results, report records and AI/GPT integration contracts
-- `0.4`: explicit global/local coordinate-system rules, right-handed member local axes, member-result units/sign convention, arbitrary stations and optional member-force envelopes
+- `0.2`: load provenance and analysis runs
+- `0.3`: design/report/AI integration
+- `0.4`: coordinate systems, internal-force convention, arbitrary stations and envelopes
+- `0.5`: typed material/section analysis properties; explicit DOF/support behavior; explicit external load primitives; load-case/combination semantics; analysis modes; PyNite reference mapping and adapter boundary
 
-Changes should be additive where possible. Breaking changes require a new schema version and migration notes.
-
-## Source-of-truth rule
-
-This repository is the source of truth for cross-product engineering data contracts. Application repositories may extend internal UI state and calculator-private implementation models, but they must not redefine conflicting integration types. When the Core contract changes, dependent repositories and AI knowledge files must be updated against the new version.
+Breaking semantic changes require a new schema version and migration notes.
