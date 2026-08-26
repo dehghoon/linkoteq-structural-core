@@ -1,119 +1,105 @@
-# Linkoteq Structural Core Contract v0.2
+# Linkoteq Structural Core Contract v0.3
 
 ## Purpose
 
-The Structural Core is the canonical engineering data model shared by the 3D editor, load calculators, analysis engines, and member calculators.
+This repository is the canonical engineering contract for the Linkoteq platform. The 3D model, importers, load calculators, analysis adapters, design calculators, reports, viewers and AI/GPT workflows exchange engineering information through this contract.
 
-It is intentionally **not** a calculation engine. It stores engineering facts and traceable results.
+Core is intentionally not a calculation engine. It stores engineering facts, requests, traceable results and standardized integration records.
 
-## What belongs in Core
-
-- Project metadata, units, jurisdiction and code references
-- Grids and levels
-- Nodes
-- Members: beam, column, brace
-- Surfaces: slab, wall
-- Openings and diaphragms
-- Materials and assigned sections
-- Supports and releases
-- Load sources
-- Load cases, load objects and load combinations
-- Analysis requests and analysis results
-- Traceability metadata needed to understand where a load or result came from
-
-## What does not belong in Core
-
-### Load calculation logic
-
-Snow, wind and seismic formulas live in their own calculator repositories. A calculator reads Core-compatible information and writes Core-compatible `LoadSource`, `LoadCase` and `Load` records.
-
-### Structural solver logic
-
-PyNite or another solver is external. An Analysis Adapter converts the canonical model into the selected solver's input model and writes canonical analysis results back.
-
-### Member design logic
-
-W-section verification, beam design, column design, concrete design and other member calculators stay external. They consume geometry, assigned material/section and analysis forces from Core. Their standalone calculator pages remain valid products and must not be removed.
-
-## Required data flow
+## Canonical pipeline
 
 ```text
-3D editor / AI import / DXF / IFC
-              |
-              v
-      Structural Core v0.2
-              |
-      +-------+--------+
-      |                |
-      v                v
-Snow / Wind /       Manual loads
-Seismic calculators
-      |                |
-      +-------+--------+
-              |
-              v
-      Structural Core loads
-              |
-              v
-       Analysis Adapter
-              |
-              v
-        PyNite / solver
-              |
-              v
-     Core analysis results
-              |
-      +-------+--------+
-      |                |
-      v                v
- W-section          Beam / Column /
- calculator         Foundation calculators
+2D / image / DXF / IFC / manual / AI
+                |
+                v
+        Structural Model
+                |
+                v
+ Snow / Wind / Seismic / Manual Loads
+                |
+                v
+          Canonical Loads
+                |
+                v
+        Analysis Adapter
+                |
+                v
+        PyNite / Solver
+                |
+                v
+      Canonical Analysis Results
+                |
+                v
+       Design Calculators
+                |
+                v
+       Canonical Design Results
+                |
+                v
+        Canonical Reports
 ```
 
-## Calculator rule
+## Core ownership
 
-New calculators must use a Core-compatible envelope at their integration boundary. They may keep their existing standalone UI and internal calculation models.
+Core defines project metadata, units, jurisdiction, grids, levels, nodes, members, surfaces, openings, diaphragms, materials, sections, supports, releases, load sources, load cases, load objects, load combinations, analysis requests/results, design runs/results and report records.
 
-A calculator integration must identify:
+External modules own engineering calculation logic. Snow, wind and seismic formulas stay in calculator repositories. PyNite or another solver stays behind an Analysis Adapter. W-section, beam, column, concrete, timber and foundation design logic stays in its calculator repository. Standalone calculator UIs remain valid products.
 
-1. `projectId`
-2. `runId`
-3. `calculator`
-4. `targetIds`
-5. Core schema version
-6. Calculator-specific inputs
-7. Core-compatible writeback records
+## Calculator integration
 
-This is not an adapter layer between Linkoteq calculators and Core. It is the calculator's supported integration contract.
+Every integrated calculator uses a Core-compatible boundary containing `projectId`, `runId`, `calculator`, `calculatorVersion`, `targetIds`, Core schema version and calculator-specific inputs. Writeback must use canonical records rather than exposing calculator-private structures to the rest of the platform.
 
-## Load ownership
+This is the supported contract of the calculator itself, not a second Linkoteq adapter layer.
 
-Core stores the final engineering load objects, but does not derive them.
+## Loads and load transfer
 
-Examples:
+Every generated load should reference a `LoadSource` so the Load Manager can display calculator, version, code edition, jurisdiction, inputs, summary and status.
 
-- Snow calculator produces an `area` load targeted to a slab/roof surface.
-- Seismic calculator may produce a `level` or `diaphragm` load representing floor force.
-- Wind calculator may produce surface, level, diaphragm, member or nodal loads depending on the selected analytical idealization.
-- Dead/live loads may be manually assigned or generated from geometry/material information by a dedicated load-generation module.
+Snow commonly writes area loads to slab/roof surfaces. Seismic may write level or diaphragm loads. Wind may write surface, level, diaphragm, member or nodal loads. Dead/live loads may be manual or geometry/material generated.
 
-## Slab load transfer
+Slabs declare engineering load-transfer intent as `one-way`, `two-way`, `shell` or `manual`. Solver-specific conversion of area loads to member/nodal loads belongs in the Analysis Adapter.
 
-A slab may declare `loadTransfer.method` as:
+## Design result contract
 
-- `one-way`
-- `two-way`
-- `shell`
-- `manual`
+v0.3 adds canonical design results. A design calculator must be able to write a `DesignRun` and one or more `MemberDesignResult` records. Individual `DesignCheck` records may identify demand, capacity, utilization, governing load case/combination, station, code clause and pass/fail status.
 
-This describes the engineering intent. Transfer of an area load into solver-specific member/nodal loads belongs in the Analysis Adapter because the correct representation depends on the solver model.
+The canonical result separates engineering results from UI presentation. A W-section calculator can therefore remain standalone while also returning the same design facts to the 3D workflow and reports.
 
-## Traceability
+## Report contract
 
-Every generated load should reference a `LoadSource`. The source should capture calculator, version, code edition, jurisdiction, inputs, summary and generation status. A Load Manager can therefore explain where each load came from without recomputing engineering logic in the UI.
+Reports are consumers of canonical facts, not independent engineering databases. `ReportRequest` identifies the desired project/runs and output format. `ReportRecord` stores report sections, references, assumptions, warnings, figures and artifact references.
+
+Reports should reference source IDs wherever possible so a displayed value can be traced back to its load source, analysis run, design run or model object.
+
+## AI / GPT integration
+
+AI-generated engineering artifacts must follow the same contract as human-authored modules. GPTs and other AI workflows should be supplied a versioned knowledge manifest derived from this repository.
+
+The manifest must communicate at minimum:
+
+- active Core schema version
+- canonical type names
+- terminology and naming rules
+- unit conventions
+- stable ID/reference rules
+- calculator input/writeback rules
+- traceability/provenance requirements
+- prohibition on inventing incompatible private schemas at integration boundaries
+
+AI requests and results should carry `modelSchemaVersion`. AI may assist with model creation, mapping, report drafting or calculator generation, but engineering records written into the platform must validate against the canonical contract.
+
+## Stable identity
+
+Nodes, members, surfaces, loads, sections, runs and results use stable IDs. UI labels such as beam numbers may be stored as metadata/display fields, but references between engineering records must use IDs rather than screen position or transient array indexes.
 
 ## Versioning
 
-`0.2` adds calculator provenance, load-source metadata, slab load-transfer intent, analysis runs and node results while retaining compatibility with the original `0.1` model shape.
+- `0.1`: base structural model
+- `0.2`: calculator provenance, load-source metadata, slab load-transfer intent, analysis runs and node results
+- `0.3`: canonical design results, report records and AI/GPT integration contracts
 
-Future changes should be additive where possible. Breaking changes require a new schema version and explicit migration notes.
+Changes should be additive where possible. Breaking changes require a new schema version and migration notes.
+
+## Source-of-truth rule
+
+This repository is the source of truth for cross-product engineering data contracts. Application repositories may extend internal UI state and calculator-private implementation models, but they must not redefine conflicting integration types. When the Core contract changes, dependent repositories and AI knowledge files must be updated against the new version.
