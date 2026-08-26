@@ -1,21 +1,31 @@
 # Linkoteq Calculator Release Checklist
 
-Use this checklist for Snow, W-Section, Wind, Seismic, Timber/Wood Design and every future calculator.
+Use for W-Section, Snow, Wind, Seismic, Wood/Timber and every future calculator. Active Core schema: **v0.4**.
 
 ## Contract
-- [ ] Supported Core schema version declared
-- [ ] `projectId`, `runId`, `calculator`, `calculatorVersion`, `targetIds` handled
-- [ ] Stable engineering IDs preserved
-- [ ] Units explicit at every integration boundary
-- [ ] No conflicting local copy of platform-wide Core types
+- [ ] Core version declared
+- [ ] Canonical IDs and references preserved
+- [ ] `projectId`, `runId`, `calculator`, `calculatorVersion`, `targetIds` handled where applicable
+- [ ] Units explicit
+- [ ] No conflicting local platform schema
+- [ ] `AI_GPT_UPDATE_POLICY.md` followed
+
+## Coordinate / analysis compatibility
+- [ ] Geometry interpreted in global coordinates
+- [ ] External loads global by default
+- [ ] Member-local loads explicitly declared if used
+- [ ] Internal member forces for design interpreted as member-local
+- [ ] Core local-axis/sign convention verified
+- [ ] Station `x` and optional `xRatio` interpreted correctly
+- [ ] No hard-coded Core requirement for start/mid/end station count
 
 ## Engineering ownership
 - [ ] Calculator owns only its intended engineering logic
-- [ ] Solver logic remains outside design calculators unless explicitly part of scope
-- [ ] Load calculators write canonical loads rather than UI-only values
-- [ ] Design calculators consume canonical forces/results when integrated with 3D Model
+- [ ] Verified calculation engine is not duplicated in UI/integration code
+- [ ] Existing standalone mode preserved where required
+- [ ] Core migration changes mappings/tests before changing engineering logic
 
-## Outputs
+## Canonical outputs
 ### Load calculator
 - [ ] `LoadSource`
 - [ ] `LoadCase`
@@ -26,35 +36,29 @@ Use this checklist for Snow, W-Section, Wind, Seismic, Timber/Wood Design and ev
 - [ ] `DesignRun`
 - [ ] `MemberDesignResult`
 - [ ] `DesignCheck`
-- [ ] demand / capacity / utilization
-- [ ] governing check and code clause where applicable
+- [ ] governing check / utilization / demand-capacity data as applicable
 
 ## Reporting
-- [ ] Results expose all structured values required for a report
-- [ ] Report values can trace back to model object IDs and run IDs
-- [ ] Assumptions and warnings are structured, not buried only in prose
+- [ ] Structured report-ready values exposed
+- [ ] Source object IDs and run IDs traceable
+- [ ] Assumptions/warnings structured
 
 ## Tests
 - [ ] Known worked example
 - [ ] Boundary case
 - [ ] Invalid input
 - [ ] Unit consistency
-- [ ] Core envelope validation
+- [ ] Core v0.4 envelope validation
 - [ ] Canonical writeback validation
 - [ ] Provenance/run ID preservation
-- [ ] Regression test
+- [ ] Coordinate/sign-convention test when forces are consumed
+- [ ] Standalone regression test
 
-## Product integration
-- [ ] Standalone calculator still works
-- [ ] 3D Model integration works
-- [ ] Missing environment/service configuration gives a clear error
-- [ ] Desktop smoke test
-- [ ] Mobile smoke test where relevant
-- [ ] Build/CI passes
-
-## Release
-- [ ] Version updated
-- [ ] Migration notes added if needed
+## Integration / release
+- [ ] 3D integration tested where applicable
+- [ ] Missing service configuration fails clearly
+- [ ] CI/typecheck/build passes
+- [ ] Deployment smoke test passes
+- [ ] Migration notes added when needed
 - [ ] Core compatibility documented
-- [ ] Deployment smoke-tested
-- [ ] Integration not marked complete until structured results are visible downstream
+- [ ] GPT knowledge synchronized with current Core
