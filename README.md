@@ -1,21 +1,25 @@
 # Linkoteq Structural Core
 
-Versioned structural domain contract shared by Linkoteq applications, calculators, importers, analysis adapters, and viewers.
+Canonical, versioned engineering data contract shared by Linkoteq applications, calculators, importers, analysis adapters, design modules, reports, viewers and AI/GPT workflows.
+
+Current schema: **v0.3**.
 
 ## Scope
 
-This repository defines the canonical structural model. It does **not** contain rendering, PyNite, ezdxf, IFC parsing, or design-calculator logic.
+Core defines the shared structural domain and integration boundaries. It does **not** contain rendering, PyNite, DXF/IFC parsing, snow/wind/seismic formulas or member-design calculation logic.
 
-Core entities in v0.1:
+Canonical domains include:
 
-- Project metadata and units
-- Levels and grids
-- Nodes
-- Members: beam, column, brace
-- Surfaces: slab, wall, diaphragm
-- Materials and sections
-- Supports
-- Loads, load cases, load combinations
-- Normalized analysis results
+- Project metadata, units, codes and jurisdiction
+- Levels, grids and nodes
+- Members, surfaces, openings and diaphragms
+- Materials, sections, supports and releases
+- Load sources, load cases, loads and combinations
+- Analysis requests, runs and normalized results
+- Design runs, checks and member design results
+- Report requests and traceable report records
+- AI/GPT knowledge and generation envelopes
 
-Adapters such as DXF/IFC import and PyNite analysis must translate to/from this contract rather than exposing third-party data structures to the rest of Linkoteq.
+All Linkoteq products may maintain private implementation/UI state, but cross-product engineering exchange should conform to this repository.
+
+See `CORE_CONTRACT.md` for architecture and integration rules and `typescript/index.ts` for canonical TypeScript interfaces.
