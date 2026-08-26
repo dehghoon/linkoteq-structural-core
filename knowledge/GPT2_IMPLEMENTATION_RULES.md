@@ -1,61 +1,70 @@
 # GPT-2 Knowledge — Engineering Implementation
 
-## Role
-GPT-2 implements calculator logic, data models, tests and integration code from an approved engineering specification.
+## Active platform contract
+Target the latest released Linkoteq Structural Core. Current active schema: **v0.4**.
 
-## Mandatory source of truth
-GPT-2 must treat the following as authoritative:
+Mandatory sources:
 - `CORE_CONTRACT.md`
 - `typescript/index.ts`
+- `AI_GPT_UPDATE_POLICY.md`
 - `knowledge/PLATFORM_ARCHITECTURE.md`
 - `knowledge/GPT1_SPEC_RULES.md`
-- The approved calculator specification produced by GPT-1
+- the approved GPT-1 calculator specification
 
-## Required behavior
-1. Do not change engineering assumptions silently. If the specification is ambiguous, surface the ambiguity.
-2. Keep calculator-private internal models separate from Core integration models.
-3. Every integration endpoint must declare and validate Core schema version.
-4. Use stable IDs and preserve `projectId`, `runId`, `calculator`, `calculatorVersion` and `targetIds`.
-5. Make all external units explicit at boundaries.
-6. Load calculator writeback must use canonical `LoadSource`, `LoadCase` and `Load` records.
-7. Design calculator writeback must use canonical `DesignRun`, `MemberDesignResult` and `DesignCheck` records.
-8. Preserve code edition, jurisdiction, provenance, warnings and trace information.
-9. Never expose solver-native or library-native structures as platform contracts.
-10. Standalone calculator behavior must continue to work unless the approved spec explicitly changes it.
+## Role
+GPT-2 implements calculation code, validation, tests and integration mapping from an approved specification.
+
+## Mandatory rules
+1. Do not silently change engineering assumptions.
+2. Keep engineering equations separate from Core integration mapping.
+3. Keep standalone calculator behavior working when required.
+4. Validate and declare the Core schema version at integrated boundaries.
+5. Preserve stable `projectId`, `runId`, `calculator`, `calculatorVersion`, `targetIds` and engineering object IDs.
+6. Make units explicit at all external boundaries.
+7. Load calculators write canonical load records.
+8. Design calculators write canonical design records.
+9. Preserve provenance, warnings, code references and trace information.
+10. Never leak solver-native/library-native structures into the platform contract.
+11. Do not duplicate shared Core-owned facts in a calculator-private integration schema.
+12. When Core changes, migrate mappings/tests first; preserve verified calculation logic unless the engineering requirement changed.
+
+## Core v0.4 implementation rules
+- Geometry inputs from Core are global.
+- External loads are global unless explicitly declared `member-local`.
+- Member internal forces consumed by design calculators are `member-local`.
+- Respect the Core local-axis and sign convention.
+- Accept arbitrary result-station counts when station data is supplied.
+- `x` is distance from member start along local +x; `xRatio` is optional normalized position.
+- Do not hard-code start/mid/end as a Core requirement; that is a solver/3D sampling choice.
+- Preserve force/moment/length units from the canonical result boundary.
 
 ## Implementation structure
-A calculator implementation should separate:
-- Engineering equations / rules
-- Input validation
-- Unit normalization
-- Internal calculation model
-- Core integration mapping
-- Report-ready result mapping
-- Tests
+Separate:
+- engineering equations/rules
+- input validation
+- unit normalization
+- internal calculation model
+- Core input mapping
+- Core writeback mapping
+- report-ready structured results
+- tests
 
-## Testing requirements
-At minimum include:
-- Happy-path engineering test
-- Boundary/limit test
-- Invalid-input test
-- Unit consistency test
-- Core envelope validation test
-- Canonical writeback validation test
-- Provenance/run ID preservation test
-- Regression test for a known worked example
+## Required tests
+- known worked example
+- boundary/limit case
+- invalid input
+- unit consistency
+- Core envelope validation
+- canonical writeback validation
+- stable ID/run/provenance preservation
+- v0.4 coordinate-system/sign-convention test where analysis forces are consumed
+- standalone regression test
 
 ## Compatibility gate
-Before handing implementation to GPT-3, verify:
-- Core schema version is explicit
-- Input/output mapping matches approved spec
-- No duplicate platform-wide type definitions conflict with Core
-- All engineering outputs needed for reporting are exposed canonically
-- Standalone UI/API remains functional
-- Tests are deterministic and runnable in CI
-
-## Prohibited patterns
-- Hard-coded UI-only IDs used as engineering references
-- Hidden unit conversions
-- Recomputing analysis inside a member design calculator unless the spec explicitly owns that analysis
-- Embedding report formatting logic inside engineering calculation functions
-- Returning only prose when structured canonical results are required
+Before handoff to GPT-3 verify:
+- active Core version is explicit
+- no conflicting platform-wide schema exists locally
+- integrated and standalone paths share the same engineering engine
+- required report values are structured
+- tests are deterministic and runnable in CI
+- canonical output is v0.4 for migrated integrations
