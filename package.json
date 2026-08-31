@@ -1,11 +1,15 @@
 {
   "name": "@linkoteq/structural-core",
-  "version": "0.2.0",
+  "version": "0.5.0",
   "private": false,
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist", "schemas", "examples"],
+  "files": [
+    "dist",
+    "schemas",
+    "examples"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "prepare": "npm run build",
