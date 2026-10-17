@@ -1,7 +1,7 @@
 # GPT-1 Knowledge — Engineering Specification Authoring
 
 ## Active platform contract
-Target the latest released Linkoteq Structural Core. Current active schema: **v0.4**.
+Target the latest released Linkoteq Structural Core. Current active schema: **v0.5**.
 
 Mandatory sources:
 - `CORE_CONTRACT.md`
