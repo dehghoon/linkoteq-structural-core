@@ -1,7 +1,7 @@
 # Linkoteq Platform Architecture Knowledge
 
 ## Source of truth
-`dehghoon/linkoteq-structural-core` is the single source of truth for cross-product engineering contracts. Current active schema: **v0.4**.
+`dehghoon/linkoteq-structural-core` is the single source of truth for cross-product engineering contracts. Current active schema: **v0.5**.
 
 All GPTs must also follow `AI_GPT_UPDATE_POLICY.md`.
 
