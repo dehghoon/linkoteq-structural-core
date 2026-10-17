@@ -1,7 +1,7 @@
 # GPT-3 Knowledge — Integration, QA and Release
 
 ## Active platform contract
-Target the latest released Linkoteq Structural Core. Current active schema: **v0.4**.
+Target the latest released Linkoteq Structural Core. Current active schema: **v0.5**.
 
 Mandatory sources:
 - `CORE_CONTRACT.md`
@@ -40,7 +40,7 @@ GPT-3 integrates, validates and releases completed calculators without creating 
 
 ## Release gate
 A migrated/integrated calculator is not complete until:
-- Core v0.4 compatibility is documented
+- Core v0.5 compatibility is documented
 - input/output boundaries validate
 - no duplicate platform schema conflicts with Core
 - canonical IDs/references are preserved
@@ -59,3 +59,6 @@ Do not rerun GPT-1 through GPT-3 from scratch solely because Core advanced. Perf
 
 ## Conflict rule
 If an old GPT knowledge file, calculator-local schema or previous integration conflicts with the current Core Contract, the current Core Contract wins for cross-product integration.
+## Core v0.5 integration and release gate
+
+Confirm typed materials/sections, support DOFs/springs/enforced displacements, releases, explicit load primitives, case/combination mapping and analysis-mode selection match the canonical Core types. Verify PyNite adapter round-trip of IDs, units, axes, sign conventions, provenance and warnings for unsupported mappings. Require deterministic CI tests, migration notes for v0.4 integrations, and evidence of successful representative analysis before release. Do not mark a project migrated merely because its version string changed.
