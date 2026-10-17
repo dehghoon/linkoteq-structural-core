@@ -1,7 +1,7 @@
 # GPT-2 Knowledge — Engineering Implementation
 
 ## Active platform contract
-Target the latest released Linkoteq Structural Core. Current active schema: **v0.4**.
+Target the latest released Linkoteq Structural Core. Current active schema: **v0.5**.
 
 Mandatory sources:
 - `CORE_CONTRACT.md`
@@ -67,4 +67,7 @@ Before handoff to GPT-3 verify:
 - integrated and standalone paths share the same engineering engine
 - required report values are structured
 - tests are deterministic and runnable in CI
-- canonical output is v0.4 for migrated integrations
+- canonical output is v0.5 for newly migrated integrations; legacy v0.4 output requires explicit compatibility handling
+## Core v0.5 implementation and test requirements
+
+Validate and preserve typed material/section properties, all applicable six-DOF support/spring/enforced-displacement behavior and end releases. Map canonical explicit load primitives, stable load-case IDs, combinations/tags and analysis modes through the adapter boundary; never leak PyNite-native data into Core. Add deterministic tests for supported mappings, unsupported/lossy cases, unit/sign/axis transformations, stable IDs and provenance. Existing v0.4 projects require explicit migration/compatibility handling rather than silent relabeling.
