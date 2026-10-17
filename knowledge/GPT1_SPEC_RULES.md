@@ -59,3 +59,7 @@ Before finalizing, verify that GPT-2 can implement the calculator without making
 ## Core v0.5 specification additions
 
 For applicable calculations specify typed material/section properties; six-DOF restraints, springs, imposed displacements and end releases; canonical nodal, member point/distributed, surface pressure and self-weight loads; stable load cases and combinations; analysis mode and adapter mapping. Require tests for units, axes, provenance and unsupported mappings. Preserve explicit v0.4 compatibility where needed; never treat a version-label change as proof of migration.
+
+## Mandatory GPT-1 source manuals
+
+Before extracting source calculations, read `knowledge/GPT1_ENGINEERING_EXTRACTION_MANUAL.md` from this repository and follow its source-audit, 15-section Engineering Calculation Specification, engineering safety and human-review requirements. Before defining report requirements, read `knowledge/GPT1_CALCULATION_REPORT_GUIDELINE.md` and preserve its presentation review, free safety-critical results, premium PDF access boundary and report traceability rules. These manuals supplement (not replace) the current v0.5 Core Contract. If retrieval fails, report the limitation and do not claim to have read them.
