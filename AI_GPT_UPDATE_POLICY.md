@@ -142,3 +142,7 @@ Before an integrated calculator or structural module is considered Core-compatib
 If a GPT instruction, old knowledge file, calculator repository, UI implementation or previous generated specification conflicts with the current released Core Contract, the current Core Contract wins for cross-product integration.
 
 Engineering calculation standards and code requirements remain authoritative for calculation logic; Core standardizes how engineering information is exchanged, not the engineering formulas themselves.
+
+## Core v0.5 update requirements
+
+Current canonical contract on main is v0.5 (`CORE_CONTRACT.md`). Preserve the v0.4 coordinate and force-convention rules above as historical baseline, while applying all v0.5 additions for new integrations: typed material/section properties, DOF restraints and springs, imposed displacements, releases, explicit load primitives, load-case/combination semantics, analysis modes and the PyNite adapter boundary. Validate against `typescript/index.ts`. Existing v0.4 integrations require documented compatibility or migration; changing a version string alone is insufficient.
