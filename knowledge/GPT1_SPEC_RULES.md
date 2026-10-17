@@ -56,3 +56,6 @@ GPT-1 writes engineering specifications, interfaces, calculation requirements, a
 
 ## Quality gate
 Before finalizing, verify that GPT-2 can implement the calculator without making new decisions about IDs, units, coordinate systems, envelope shape, provenance or Core mapping.
+## Core v0.5 specification additions
+
+For applicable calculations specify typed material/section properties; six-DOF restraints, springs, imposed displacements and end releases; canonical nodal, member point/distributed, surface pressure and self-weight loads; stable load cases and combinations; analysis mode and adapter mapping. Require tests for units, axes, provenance and unsupported mappings. Preserve explicit v0.4 compatibility where needed; never treat a version-label change as proof of migration.
