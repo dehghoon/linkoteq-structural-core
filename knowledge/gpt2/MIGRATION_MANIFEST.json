@@ -1,0 +1,136 @@
+{
+  "status": "prepared_for_review_not_committed",
+  "source": "13 user-supplied original Knowledge files; Instructions supplied separately in chat",
+  "core_baseline": "0.5",
+  "repository": "dehghoon/linkoteq-structural-core",
+  "branch": "main",
+  "files": [
+    {
+      "source_filename": "AI_GPT_UPDATE_POLICY (1).md",
+      "source_sha256": "8f6e1a10bec56380da35835a09148c167fa1a8a4bbb9b6386fc8945de327476b",
+      "destination": "AI_GPT_UPDATE_POLICY.md",
+      "disposition": "reference_existing_canonical",
+      "destination_sha256": null
+    },
+    {
+      "source_filename": "CORE_CONTRACT (1).md",
+      "source_sha256": "e59d097e80f9de9c6b88c5e5bba240225bb945798ed71504d2d04df46fd174c7",
+      "destination": "CORE_CONTRACT.md",
+      "disposition": "reference_existing_canonical",
+      "destination_sha256": null
+    },
+    {
+      "source_filename": "Engineering_Documentation_Template (1).md",
+      "source_sha256": "ecf5486907f204cc1c998d90cf93857cd4658fc5a7964c0fdda16a685fdf5706",
+      "destination": "knowledge/gpt2/Engineering_Documentation_Template.md",
+      "disposition": "byte_identical_copy",
+      "destination_sha256": "ecf5486907f204cc1c998d90cf93857cd4658fc5a7964c0fdda16a685fdf5706"
+    },
+    {
+      "source_filename": "Engineering_Error_Handling_Guide (1).md",
+      "source_sha256": "b2859f12cec422d8188c802e2556cdb00ede297166c572e20e2893d6bc5a4937",
+      "destination": "knowledge/gpt2/Engineering_Error_Handling_Guide.md",
+      "disposition": "byte_identical_copy",
+      "destination_sha256": "b2859f12cec422d8188c802e2556cdb00ede297166c572e20e2893d6bc5a4937"
+    },
+    {
+      "source_filename": "Engineering_Testing_Guidelines (1).md",
+      "source_sha256": "3469fcae2069e24c9036ef98b4238928ffc23ea230ad286c4d54cb8fadcd348e",
+      "destination": "knowledge/gpt2/Engineering_Testing_Guidelines.md",
+      "disposition": "formatting_only",
+      "destination_sha256": "2d3b12e25a4156dd85fa21b157eb8b4c4379331749923de94db6daadab2963f6"
+    },
+    {
+      "source_filename": "Engineering_Testing_Guidelines-1 (1).md",
+      "source_sha256": "3469fcae2069e24c9036ef98b4238928ffc23ea230ad286c4d54cb8fadcd348e",
+      "destination": "knowledge/gpt2/Engineering_Testing_Guidelines.md",
+      "disposition": "duplicate_source_same_target",
+      "destination_sha256": "2d3b12e25a4156dd85fa21b157eb8b4c4379331749923de94db6daadab2963f6"
+    },
+    {
+      "source_filename": "Engineering_Validation_Rules (1).md",
+      "source_sha256": "0ab0a7484d14817a537c6fca43fb5ba036b8c414c4ffecc1bfe06484f320ce70",
+      "destination": "knowledge/gpt2/Engineering_Validation_Rules.md",
+      "disposition": "byte_identical_copy",
+      "destination_sha256": "0ab0a7484d14817a537c6fca43fb5ba036b8c414c4ffecc1bfe06484f320ce70"
+    },
+    {
+      "source_filename": "GPT2_IMPLEMENTATION_RULES_v0.4 (1).md",
+      "source_sha256": "3fb579021b2a8469001e8349622d8e51bf0f202e3d2932b6234c6e5f52f9c70c",
+      "destination": "knowledge/gpt2/GPT2_IMPLEMENTATION_RULES.md",
+      "disposition": "core_v05_integration_additions",
+      "destination_sha256": "413f015afefb306223835eebb3990ca5778b7d8be28db15e17e2388e28ea43de"
+    },
+    {
+      "source_filename": "Linkoteq_Python_Project_Structure (1).md",
+      "source_sha256": "88d2e2792c2cad8737d990d15357c0230bee4d3236825e5e2f219704be8faf70",
+      "destination": "knowledge/gpt2/Linkoteq_Python_Project_Structure.md",
+      "disposition": "byte_identical_copy",
+      "destination_sha256": "88d2e2792c2cad8737d990d15357c0230bee4d3236825e5e2f219704be8faf70"
+    },
+    {
+      "source_filename": "PLATFORM_ARCHITECTURE_v0.4 (1).md",
+      "source_sha256": "e8db4b039bba3822b84b7bd2cc2577b722e06882e1f28c8ce15ed22c198a9cf4",
+      "destination": "knowledge/PLATFORM_ARCHITECTURE.md",
+      "disposition": "reference_existing_canonical",
+      "destination_sha256": null
+    },
+    {
+      "source_filename": "Python_Engineering_Coding_Standards-2 (1).md",
+      "source_sha256": "be6d8b721620330a2552b0f0449a6b78f40166803b8914c0d14da521e1672e7f",
+      "destination": "knowledge/gpt2/Python_Engineering_Coding_Standards.md",
+      "disposition": "byte_identical_copy",
+      "destination_sha256": "be6d8b721620330a2552b0f0449a6b78f40166803b8914c0d14da521e1672e7f"
+    },
+    {
+      "source_filename": "Python_Naming_Convention (1).md",
+      "source_sha256": "3f47d3837f342372bb06e5a82baa40189bfca4c38df82c903da77148f6add8c4",
+      "destination": "knowledge/gpt2/Python_Naming_Convention.md",
+      "disposition": "byte_identical_copy",
+      "destination_sha256": "3f47d3837f342372bb06e5a82baa40189bfca4c38df82c903da77148f6add8c4"
+    },
+    {
+      "source_filename": "index.ts (1)",
+      "source_sha256": "7c9d853d3b2768b17f5bb39eed122b2cbc133d24b4c6a4decc14a576864c04fc",
+      "destination": "typescript/index.ts",
+      "disposition": "reference_existing_canonical",
+      "destination_sha256": null
+    }
+  ],
+  "canonical_sources": [
+    {
+      "path": "CORE_CONTRACT.md",
+      "git_blob_sha": "5b88c1c5c3049f81915f4772b94e8e617989f05b"
+    },
+    {
+      "path": "AI_GPT_UPDATE_POLICY.md",
+      "git_blob_sha": "14bf05b264149f2d952f705bf43327221b193a5f"
+    },
+    {
+      "path": "typescript/index.ts",
+      "git_blob_sha": "fbf75ec50ed9e62d3424e63e6acf82bcae0c439e"
+    },
+    {
+      "path": "knowledge/PLATFORM_ARCHITECTURE.md",
+      "git_blob_sha": "01fc6afd99b222dfe5130962c66fa30c8fbc7ea4"
+    },
+    {
+      "path": "adapters/pynite/MAPPING.md",
+      "git_blob_sha": "2b8f52028c1c9a32ff692544e4bf5b279520a1b3"
+    },
+    {
+      "path": "LINKOTEQ_PLUGIN_MIGRATION_CONTRACT.md",
+      "git_blob_sha": "3dd4eef929786ee2d28314d8a8a9ad028fad3555"
+    },
+    {
+      "path": "knowledge/GPT1_SPEC_RULES.md",
+      "git_blob_sha": "51dc2c3d352de90b1de4020ac3f146d3cee387d8"
+    },
+    {
+      "path": "README.md",
+      "git_blob_sha": "b2739400162e2263271b71e6af476ad261860144"
+    }
+  ],
+  "engineering_logic_changes": false,
+  "known_documentation_issue": "Root README still declares v0.4; active CORE_CONTRACT.md and typescript/index.ts declare v0.5. No shared files changed by this proposal."
+}
