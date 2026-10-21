@@ -10,5 +10,5 @@ assert len(ids) == len(set(ids)), "Duplicate component IDs"
 assert ids, "Registry must not be empty"
 for component in registry["components"]:
     assert component["coreSchemaVersion"] == manifest["coreSchemaVersion"], component["id"]
-    assert component["status"] in {"partial-verified", "verified", "pending-verification", "not-integrated", "pending-inventory"}
+    assert component["status"] in {"partial-verified", "verified", "pending-verification", "not-integrated", "not-started", "pending-inventory"}
 print("Component registry valid")
