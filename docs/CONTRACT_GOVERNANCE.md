@@ -12,12 +12,27 @@
 
 ## Change process
 
-1. Propose change on a branch with PR; document type (bugfix, capability, additive schema, breaking schema), impact, migration needs.
-2. Validate manifest and run tests in CI; obtain engineering review for pressure basis, units, coordinate directions, load equilibrium, and provenance.
-3. Merge only after approval, then tag an immutable release and publish release notes.
-4. Consumers pin an approved tag/SHA or versioned API; test compatibility in their own CI before deploying.
-5. Update a consumer's declared status only after evidence from that consumer's tests/deployment. Never claim automatic rollout.
-6. GPTs/plugins read the approved pinned Core revision through authorized GitHub tools at task start. Their instructions, skills, permissions, and executable integrations must be updated separately if required.
+1. Prepare a change proposal against main. Document the change
+   type (bugfix, capability, additive schema, breaking schema),
+   impact, and migration requirements.
+2. For GitHub Connector writes, follow
+   LINKOTEQ_PLUGIN_MIGRATION_CONTRACT.md:
+   read the current main head, present the complete before/after
+   diff, paths, base SHA, and commit message, and obtain explicit
+   user approval before any mutation.
+3. Revalidate main and source SHAs before writing. If anything
+   changed, prepare a new proposal and obtain fresh approval.
+   Commit only the approved changes directly to main without
+   force-pushing or creating a branch.
+4. Validate the compatibility manifest and run applicable tests.
+   Obtain engineering review for affected calculations, units,
+   coordinate directions, load equilibrium, and provenance.
+   Record validation results and any remaining release blockers.
+5. Tag an immutable release and publish release notes only
+   after the applicable release requirements are satisfied.
+6. Consumers pin an approved tag/SHA or versioned API; test compatibility in their own CI before deploying.
+7. Update a consumer's declared status only after evidence from that consumer's tests/deployment. Never claim automatic rollout.
+8. GPTs/plugins read the approved pinned Core revision through authorized GitHub tools at task start. Their instructions, skills, permissions, and executable integrations must be updated separately if required.
 
 ## Readiness
 
