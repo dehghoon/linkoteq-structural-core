@@ -32,8 +32,9 @@
     {
       "id": "pynite-adapter",
       "type": "adapter",
-      "status": "not-integrated",
-      "coreSchemaVersion": "0.5"
+      "status": "not-started",
+      "coreSchemaVersion": "0.5",
+      "note": "Reference adapter skeleton exists in Core; no verified operational PyNite integration or 3D analysis"
     },
     {
       "id": "gpt-1",
