@@ -1,0 +1,64 @@
+{
+  "registryVersion": "0.1",
+  "authority": {
+    "coreSchemaVersion": "0.5",
+    "manifestPath": "releases/compatibility-manifest.json",
+    "contractPath": "CORE_CONTRACT.md"
+  },
+  "policy": {
+    "newComponentsRequireRegistration": true,
+    "coreUpgradeRequiresConsumerVerification": true,
+    "blockUnverifiedProductionClaims": true
+  },
+  "components": [
+    {
+      "id": "snow-calculator",
+      "type": "calculator",
+      "status": "partial-verified",
+      "coreSchemaVersion": "0.5"
+    },
+    {
+      "id": "w-section-calculator",
+      "type": "calculator",
+      "status": "pending-verification",
+      "coreSchemaVersion": "0.5"
+    },
+    {
+      "id": "3d-model",
+      "type": "model",
+      "status": "not-integrated",
+      "coreSchemaVersion": "0.5"
+    },
+    {
+      "id": "pynite-adapter",
+      "type": "adapter",
+      "status": "not-started",
+      "coreSchemaVersion": "0.5",
+      "note": "Reference adapter skeleton exists in Core; no verified operational PyNite integration or 3D analysis"
+    },
+    {
+      "id": "gpt-1",
+      "type": "gpt",
+      "status": "pending-verification",
+      "coreSchemaVersion": "0.5"
+    },
+    {
+      "id": "gpt-2",
+      "type": "gpt",
+      "status": "pending-verification",
+      "coreSchemaVersion": "0.5"
+    },
+    {
+      "id": "gpt-3",
+      "type": "gpt",
+      "status": "pending-verification",
+      "coreSchemaVersion": "0.5"
+    },
+    {
+      "id": "plugins",
+      "type": "plugin-group",
+      "status": "pending-inventory",
+      "coreSchemaVersion": "0.5"
+    }
+  ]
+}
