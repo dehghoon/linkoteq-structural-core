@@ -35,4 +35,10 @@ The original Knowledge files must remain in the Custom GPT until complete migrat
 
 ## Access prerequisite
 
-The Gateway public read tool inspected on 2026-10-18 allows only three GPT-1 files. Core and GPT-2 reads are not yet supported by that discovered schema. Do not claim live GPT-2 loading until the required paths and authenticated access are tested. Direct GitHub reads used for this migration review are not Gateway authentication evidence.
+Use the connected GitHub Connector directly on `dehghoon/linkoteq-structural-core`, ref `main`, for this index, every required manual and the canonical shared sources. No custom Gateway, proxy or separate approval service is required or permitted.
+
+Verify actual tools and authenticated reads in each plugin host. If a required path cannot be read, report the path and failure and pause dependent implementation; snapshots support explicitly offline review only. A manifest dependency, saved release, prior test commit or successful read in another chat does not establish current runtime permissions.
+
+Every GitHub mutation requires a complete diff and explicit user approval in the conversation under `LINKOTEQ_PLUGIN_MIGRATION_CONTRACT.md`. Restrict reads and writes to the two authorized repositories on `main`. Policy restrictions do not themselves configure technical connector permissions.
+
+`MIGRATION_MANIFEST.json` retains the original migration's source hashes and canonical-source snapshot for provenance. Those historical hashes are not assertions about current file contents or the active access policy.

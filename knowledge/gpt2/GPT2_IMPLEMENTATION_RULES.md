@@ -42,10 +42,12 @@ These additions govern integration, validation and tests. They do not authorize 
 
 ## Source access and migration safeguards
 
-Use the existing Gateway only through actually available, verified interfaces. Do not invent tools, routes or authentication. The Custom GPT must not claim direct MCP support or authenticated access before a successful test in that environment.
+Use the connected GitHub Connector directly, with repository `dehghoon/linkoteq-structural-core` and ref `main` specified explicitly. Discover actual tools and verify access in the current host before claiming a successful connection. Do not use a custom Gateway or proxy fallback.
 
-Before engineering work, retrieve the active shared contract and all GPT-2 manuals listed in `knowledge/gpt2/README.md` through Gateway. If the required interface or path is unavailable, identify the exact blocked source and pause dependent implementation; user-supplied snapshots may support an explicitly labelled offline review, never a claim of live synchronization.
+Before engineering work, retrieve the active shared contract and all GPT-2 manuals listed in `knowledge/gpt2/README.md` directly through GitHub. If tools or required paths are unavailable, identify the exact blocked source and pause dependent implementation. User-supplied snapshots may support explicitly labelled offline review, never a claim of live synchronization.
 
 GitHub wins for cross-product contracts; approved engineering standards and specifications govern formula logic. Resolve conflicts explicitly. Do not use GPT-1 manuals as substitutes for the GPT-2 manuals.
 
-For each GitHub write follow `LINKOTEQ_PLUGIN_MIGRATION_CONTRACT.md`: prepare a complete Proposal, validate scope, display the exact Diff, require explicit browser approval, then commit only the approved content through Gateway. A chat request or draft URL is not approval or authentication. Verify the returned Commit SHA. Never embed tokens or bypass the review flow.
+For every repository mutation follow `LINKOTEQ_PLUGIN_MIGRATION_CONTRACT.md`: validate the authorized repository and main branch, read the base commit and source SHAs, show every path, operation, commit message and complete diff, and obtain explicit user approval of that exact diff in the conversation before writing. Re-read the base and source SHAs; changed inputs require a new diff and approval. Commit only approved content directly through available GitHub tools with the supported conflict checks, then verify the actual commit, changed paths and resulting contents. Never embed tokens, force-push, create another branch, or perform a connectivity-test write.
+
+The only authorized repositories are `dehghoon/linkoteq-structural-core` and `dehghoon/Main-website`, both on `main`. Instructions define behavioral limits; they do not grant or technically restrict connector permissions. A dependency declaration, saved release, or successful read in another chat does not prove runtime read/write access.
