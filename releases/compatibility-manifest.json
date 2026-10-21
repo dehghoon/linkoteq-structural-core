@@ -1,0 +1,42 @@
+{
+  "manifestVersion": "1.0",
+  "coreSchemaVersion": "0.5",
+  "coreContractPath": "CORE_CONTRACT.md",
+  "capabilities": {
+    "surface-to-member-transfer": {
+      "version": "0.1.0",
+      "status": "experimental",
+      "implementationStatus": "not-integrated",
+      "supportedModes": [
+        "one-way"
+      ],
+      "acceptedInputTypes": [
+        "surface-pressure"
+      ],
+      "outputTypes": [
+        "member-distributed"
+      ],
+      "requiresGeometry": true,
+      "productionReady": false
+    }
+  },
+  "consumers": {
+    "snow-calculator": {
+      "coreSchemaVersion": "0.5",
+      "surfacePressureExport": "verified",
+      "surfaceToMemberTransfer": "not-integrated"
+    },
+    "3d-model": {
+      "coreSchemaVersion": "0.5",
+      "surfaceToMemberTransfer": "not-integrated"
+    },
+    "pynite-adapter": {
+      "coreSchemaVersion": "0.5",
+      "surfaceToMemberTransfer": "not-integrated"
+    },
+    "gpt-and-plugins": {
+      "contractReadPolicy": "read pinned approved Core revision before engineering tasks",
+      "runtimeCapabilityAssumed": false
+    }
+  }
+}
