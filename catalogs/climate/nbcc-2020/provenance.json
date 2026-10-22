@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ca-nbcc-2020-snow-calculator-import",
+  "jurisdiction": "CA",
+  "verification": {
+    "status": "parsed"
+  },
+  "sourceRepository": "dehghoon/Snow-Calculator",
+  "sourceCommit": "5fccf64c4f8a21687d61c72dc6316002a58ded35",
+  "sourceReportedCode": {
+    "standard": "NBCC",
+    "edition": "2020",
+    "reference": "Appendix C, Table C-2",
+    "evidenceUrl": "https://github.com/dehghoon/Snow-Calculator/blob/5fccf64c4f8a21687d61c72dc6316002a58ded35/backend/app/climatic_data.py"
+  },
+  "parameters": {
+    "ss": {
+      "meaning": "Ground snow load",
+      "units": "kPa"
+    },
+    "sr": {
+      "meaning": "Associated rain load",
+      "units": "kPa"
+    }
+  },
+  "parameterEvidenceUrl": "https://github.com/dehghoon/Snow-Calculator/blob/5fccf64c4f8a21687d61c72dc6316002a58ded35/backend/app/schemas.py",
+  "independentCodeVerification": false,
+  "limitations": [
+    "Source attribution is not an independent comparison with official NBCC tables.",
+    "No local amendments, geographic coordinates, interpolation, or US applicability established.",
+    "Original JSON bytes and numeric representations preserved. Not a verified engineering design dataset.",
+    "Source includes selected place entries; not every Canadian settlement."
+  ],
+  "recordCount": 678,
+  "provinceTerritoryCounts": {
+    "British Columbia": 108,
+    "Alberta": 55,
+    "Manitoba": 24,
+    "Saskatchewan": 31,
+    "Ontario": 229,
+    "Quebec": 124,
+    "New Brunswick": 18,
+    "Newfoundland and Labrador": 18,
+    "Nova Scotia": 25,
+    "Prince Edward Island": 4,
+    "Northwest Territories": 17,
+    "Nunavut": 16,
+    "Yukon": 9
+  },
+  "datasets": [
+    {
+      "path": "catalogs/climate/nbcc-2020/climatic_bc.json",
+      "sourcePath": "backend/app/climatic_bc.json",
+      "sourceUrl": "https://github.com/dehghoon/Snow-Calculator/blob/5fccf64c4f8a21687d61c72dc6316002a58ded35/backend/app/climatic_bc.json",
+      "gitBlobSha": "842639ae593318767e535970c7c4233957d9df6d",
+      "recordCount": 108
+    },
+    {
+      "path": "catalogs/climate/nbcc-2020/climatic_prairies.json",
+      "sourcePath": "backend/app/climatic_prairies.json",
+      "sourceUrl": "https://github.com/dehghoon/Snow-Calculator/blob/5fccf64c4f8a21687d61c72dc6316002a58ded35/backend/app/climatic_prairies.json",
+      "gitBlobSha": "4b855ddcce292e715c3bae828eaa05daff89a936",
+      "recordCount": 110
+    },
+    {
+      "path": "catalogs/climate/nbcc-2020/climatic_ontario.json",
+      "sourcePath": "backend/app/climatic_ontario.json",
+      "sourceUrl": "https://github.com/dehghoon/Snow-Calculator/blob/5fccf64c4f8a21687d61c72dc6316002a58ded35/backend/app/climatic_ontario.json",
+      "gitBlobSha": "82b83869261ad5e38da580706ac7df55d07d77a4",
+      "recordCount": 229
+    },
+    {
+      "path": "catalogs/climate/nbcc-2020/climatic_quebec.json",
+      "sourcePath": "backend/app/climatic_quebec.json",
+      "sourceUrl": "https://github.com/dehghoon/Snow-Calculator/blob/5fccf64c4f8a21687d61c72dc6316002a58ded35/backend/app/climatic_quebec.json",
+      "gitBlobSha": "959cf9a0bbdcdd16b43299f063c4721e97cb661d",
+      "recordCount": 124
+    },
+    {
+      "path": "catalogs/climate/nbcc-2020/climatic_atlantic.json",
+      "sourcePath": "backend/app/climatic_atlantic.json",
+      "sourceUrl": "https://github.com/dehghoon/Snow-Calculator/blob/5fccf64c4f8a21687d61c72dc6316002a58ded35/backend/app/climatic_atlantic.json",
+      "gitBlobSha": "7bc7e033c54eda4aef995f0b96c22db6c47d6112",
+      "recordCount": 65
+    },
+    {
+      "path": "catalogs/climate/nbcc-2020/climatic_north.json",
+      "sourcePath": "backend/app/climatic_north.json",
+      "sourceUrl": "https://github.com/dehghoon/Snow-Calculator/blob/5fccf64c4f8a21687d61c72dc6316002a58ded35/backend/app/climatic_north.json",
+      "gitBlobSha": "4c6e5eb500daf7a3d0fc22621860431465d42805",
+      "recordCount": 42
+    }
+  ]
+}
