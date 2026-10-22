@@ -1,0 +1,11 @@
+{
+  "entityType": "manufacturer",
+  "id": "weyerhaeuser",
+  "legalName": "Weyerhaeuser Company",
+  "officialDomains": [
+    "weyerhaeuser.com"
+  ],
+  "verification": {
+    "status": "discovered"
+  }
+}

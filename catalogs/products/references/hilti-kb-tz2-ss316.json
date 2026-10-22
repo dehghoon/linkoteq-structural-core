@@ -1,0 +1,72 @@
+{
+  "id": "hilti.kb-tz2-ss316.reference-20261021",
+  "subjectRef": "hilti.kb-tz2-ss316",
+  "manufacturerId": "hilti",
+  "sourceRefs": [
+    "hilti.kb-tz2-ss316.page-20261021"
+  ],
+  "jurisdictions": [
+    "CA"
+  ],
+  "verification": {
+    "status": "parsed"
+  },
+  "observations": {
+    "manufacturerDesignation": "KB-TZ2",
+    "name": "Kwik Bolt TZ2 Wedge anchor SS316",
+    "material": "316 stainless steel",
+    "head": "Externally threaded",
+    "application": "Mechanical wedge anchoring in cracked concrete; manufacturer describes seismic applications.",
+    "diameterOptions": {
+      "values": [
+        0.25,
+        0.375,
+        0.5,
+        0.625,
+        0.75
+      ],
+      "unit": "in"
+    },
+    "lengthOptions": {
+      "values": [
+        2.5,
+        3,
+        3.25,
+        3.5,
+        3.75,
+        4.25,
+        4.5,
+        4.75,
+        5,
+        5.5,
+        6,
+        6.25,
+        7,
+        8,
+        8.5,
+        9,
+        10,
+        12
+      ],
+      "unit": "in"
+    },
+    "variantCaution": "Independent configurator option lists, not an asserted diameter-length Cartesian product. SKUs not extracted.",
+    "reportsListed": [
+      {
+        "title": "ICC-ESR-4266, KB-TZ2 for fastening in concrete",
+        "url": "https://productdata.hilti.com/APQ_HC_RAW/ASSET_DOC_25485849.pdf"
+      },
+      {
+        "title": "ICC-ESR-4561, KB-TZ2 for fastening in masonry units",
+        "url": "https://productdata.hilti.com/APQ_HC_RAW/ASSET_DOC_25573508.pdf"
+      }
+    ],
+    "reportStatus": "Links observed; reports and applicability not independently reviewed.",
+    "usAvailability": "Not established by this Canadian page"
+  },
+  "missingData": [
+    "No source-byte hash acquired; page observation only.",
+    "No independently reviewed design capacities or verified current approvals.",
+    "No complete installation specification or project applicability verification."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "entityType": "product",
+  "id": "canam.1-5b",
+  "manufacturerId": "canam",
+  "categoryIds": [
+    "metal-deck"
+  ],
+  "sourceRefs": [
+    "canam.deck-transition.2024"
+  ],
+  "verification": {
+    "status": "discovered"
+  }
+}

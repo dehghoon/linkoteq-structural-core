@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://linkoteq.example/schemas/product-reference.schema.json",
+  "title": "Product reference supplement — not engineering-ready",
+  "description": "Additive reference supplements for existing product identities; not canonical Materials, Sections, performance tables or family design records.",
+  "type": "object",
+  "required": [
+    "id",
+    "subjectRef",
+    "manufacturerId",
+    "sourceRefs",
+    "verification",
+    "jurisdictions",
+    "observations",
+    "missingData"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "subjectRef": {
+      "type": "string"
+    },
+    "manufacturerId": {
+      "type": "string"
+    },
+    "sourceRefs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "verification": {
+      "$ref": "catalog.schema.json#/$defs/verification"
+    },
+    "jurisdictions": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "CA",
+          "US"
+        ]
+      }
+    },
+    "observations": {
+      "type": "object"
+    },
+    "missingData": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

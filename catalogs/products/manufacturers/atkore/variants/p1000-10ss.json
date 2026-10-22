@@ -1,0 +1,17 @@
+{
+  "entityType": "product",
+  "id": "atkore.p1000.10ss",
+  "manufacturerId": "atkore",
+  "brandId": "unistrut",
+  "categoryIds": [
+    "strut-channels"
+  ],
+  "variantOf": "atkore.p1000",
+  "sourceRefs": [
+    "atkore.p1000.page-20261021"
+  ],
+  "verification": {
+    "status": "discovered"
+  },
+  "profile": "P1000 10SS"
+}

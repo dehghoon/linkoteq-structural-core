@@ -25,3 +25,13 @@ Not complete: manufacturer families, US climate, US sections, performance and co
 Six source JSON datasets copied unchanged; deterministic index has 678 unique location references across 13 provinces and territories. Provenance includes source commit/blob SHAs, exact source URLs, units and source-reported NBCC 2020 edition. No independent official-table verification is claimed. This batch's commit is recorded by Git history; verification will be appended after readback.
 
 Current phase after this batch: Phase 3, official manufacturer research. Earlier Phase 2 next-batch item is now implemented.
+
+## Phase 2 verification
+
+Commit `549f6cbb1e9e8dfc6ff866a241d6a781b27cd446`: main HEAD verified; all 10 files read back exactly. All six source Git blob SHAs match destination blobs. Index contains 678 unique province/place identities.
+
+## Phase 3 — first official-source expansion
+
+29 new product identities: 18 Atkore P1000 catalog variants, 3 Simpson Strong-Bolt 2 finish families, 4 Canam deck family references, 4 Weyerhaeuser engineered timber families. Added 13 descriptive supplements (Hilti and Atkore existing families plus 11 new family references), 6 source records, one manufacturer and one brand. Existing four pilot records preserved. Source URLs are in catalogs/sources; Cloud Browser used for all five manufacturer websites. Weyerhaeuser regional guide coverage supplemented by official technical-support page.
+
+No capacities or compatibility inferred. Canam transition announcement retained as historical evidence, not current availability or substitution approval. Strict product schemas preserved; a new reference-supplement schema keeps incomplete observations separate. Source-byte hashes remain unavailable. Current next batch: authoritative US section/climate references and explicit system/performance/compatibility coverage gaps.

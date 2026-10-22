@@ -1,0 +1,16 @@
+{
+  "entityType": "product",
+  "id": "simpson-strong-tie.strong-bolt-2.zinc",
+  "manufacturerId": "simpson-strong-tie",
+  "categoryIds": [
+    "anchors"
+  ],
+  "sourceRefs": [
+    "simpson-strong-tie.stb2.page-20261021"
+  ],
+  "variantOf": "simpson-strong-tie.strong-bolt-2",
+  "verification": {
+    "status": "discovered"
+  },
+  "anchorMechanism": "mechanical"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "canam.3n.reference-20261021",
+  "subjectRef": "canam.3n",
+  "manufacturerId": "canam",
+  "sourceRefs": [
+    "canam.deck-transition.2024"
+  ],
+  "jurisdictions": [
+    "CA"
+  ],
+  "verification": {
+    "status": "parsed"
+  },
+  "observations": {
+    "name": "3N",
+    "sourcePublicationDate": "2024-08-07",
+    "availability": "Historical manufacturer announcement; current regional availability requires confirmation.",
+    "transitionNote": "Announced replacement of P2404/P2436; no interchangeability asserted."
+  },
+  "missingData": [
+    "No source-byte hash acquired; page observation only.",
+    "No independently reviewed design capacities or verified current approvals.",
+    "No complete installation specification or project applicability verification."
+  ]
+}

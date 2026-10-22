@@ -1,0 +1,16 @@
+{
+  "entityType": "product",
+  "id": "weyerhaeuser.parallam-psl",
+  "manufacturerId": "weyerhaeuser",
+  "brandId": "trus-joist",
+  "categoryIds": [
+    "engineered-timber"
+  ],
+  "sourceRefs": [
+    "weyerhaeuser.engineered-wood.page-20261021",
+    "weyerhaeuser.design-values.page-20261021"
+  ],
+  "verification": {
+    "status": "discovered"
+  }
+}

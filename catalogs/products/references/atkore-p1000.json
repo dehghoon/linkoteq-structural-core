@@ -1,0 +1,307 @@
+{
+  "id": "atkore.p1000.reference-20261021",
+  "subjectRef": "atkore.p1000",
+  "manufacturerId": "atkore",
+  "sourceRefs": [
+    "atkore.p1000.page-20261021"
+  ],
+  "jurisdictions": [
+    "CA"
+  ],
+  "verification": {
+    "status": "parsed"
+  },
+  "observations": {
+    "name": "P1000 solid strut channel",
+    "nominalProfile": {
+      "width": 1.625,
+      "depth": 1.625,
+      "unit": "in"
+    },
+    "brand": "Unistrut",
+    "variants": [
+      {
+        "productRef": "atkore.p1000.10df",
+        "catalogNumber": "P1000 10DF",
+        "length": {
+          "value": 10,
+          "unit": "ft"
+        },
+        "sourceGaugeLabel": "12",
+        "material": "Steel",
+        "finish": "Defender",
+        "partWeight": {
+          "value": 1.91,
+          "unit": "lb/ft"
+        }
+      },
+      {
+        "productRef": "atkore.p1000.10ea",
+        "catalogNumber": "P1000 10EA",
+        "length": {
+          "value": 10,
+          "unit": "ft"
+        },
+        "sourceGaugeLabel": "12",
+        "material": "Aluminum",
+        "finish": null,
+        "partWeight": {
+          "value": 0.75,
+          "unit": "lb/ft"
+        }
+      },
+      {
+        "productRef": "atkore.p1000.10gr",
+        "catalogNumber": "P1000 10GR",
+        "length": {
+          "value": 10,
+          "unit": "ft"
+        },
+        "sourceGaugeLabel": "12",
+        "material": "Steel",
+        "finish": "Green E-Coat",
+        "partWeight": {
+          "value": 1.91,
+          "unit": "lb/ft"
+        }
+      },
+      {
+        "productRef": "atkore.p1000.10hg",
+        "catalogNumber": "P1000 10HG",
+        "length": {
+          "value": 10,
+          "unit": "ft"
+        },
+        "sourceGaugeLabel": "12",
+        "material": "Steel",
+        "finish": "Hot-Dip Galvanized",
+        "partWeight": {
+          "value": 1.91,
+          "unit": "lb/ft"
+        }
+      },
+      {
+        "productRef": "atkore.p1000.10pg",
+        "catalogNumber": "P1000 10PG",
+        "length": {
+          "value": 10,
+          "unit": "ft"
+        },
+        "sourceGaugeLabel": "12",
+        "material": "Steel",
+        "finish": "Pre-Galvanized",
+        "partWeight": {
+          "value": 1.91,
+          "unit": "lb/ft"
+        }
+      },
+      {
+        "productRef": "atkore.p1000.10pl",
+        "catalogNumber": "P1000 10PL",
+        "length": {
+          "value": 10,
+          "unit": "ft"
+        },
+        "sourceGaugeLabel": "12",
+        "material": "Steel",
+        "finish": "Plain/Oil",
+        "partWeight": {
+          "value": 1.91,
+          "unit": "lb/ft"
+        }
+      },
+      {
+        "productRef": "atkore.p1000.10ss",
+        "catalogNumber": "P1000 10SS",
+        "length": {
+          "value": 10,
+          "unit": "ft"
+        },
+        "sourceGaugeLabel": "12",
+        "material": "Stainless Steel - 304",
+        "finish": null,
+        "partWeight": {
+          "value": 1.91,
+          "unit": "lb/ft"
+        }
+      },
+      {
+        "productRef": "atkore.p1000.10st",
+        "catalogNumber": "P1000 10ST",
+        "length": {
+          "value": 10,
+          "unit": "ft"
+        },
+        "sourceGaugeLabel": "12",
+        "material": "Stainless Steel - 316",
+        "finish": null,
+        "partWeight": {
+          "value": 1.9,
+          "unit": "lb/ft"
+        }
+      },
+      {
+        "productRef": "atkore.p1000.10zd",
+        "catalogNumber": "P1000 10ZD",
+        "length": {
+          "value": 10,
+          "unit": "ft"
+        },
+        "sourceGaugeLabel": "12",
+        "material": "Steel",
+        "finish": "Zinc Dichromate",
+        "partWeight": {
+          "value": 1.91,
+          "unit": "lb/ft"
+        }
+      },
+      {
+        "productRef": "atkore.p1000.20df",
+        "catalogNumber": "P1000 20DF",
+        "length": {
+          "value": 20,
+          "unit": "ft"
+        },
+        "sourceGaugeLabel": "12",
+        "material": "Steel",
+        "finish": "Defender",
+        "partWeight": {
+          "value": 1.91,
+          "unit": "lb/ft"
+        }
+      },
+      {
+        "productRef": "atkore.p1000.20ea",
+        "catalogNumber": "P1000 20EA",
+        "length": {
+          "value": 20,
+          "unit": "ft"
+        },
+        "sourceGaugeLabel": "12",
+        "material": "Aluminum",
+        "finish": null,
+        "partWeight": {
+          "value": 0.75,
+          "unit": "lb/ft"
+        }
+      },
+      {
+        "productRef": "atkore.p1000.20gr",
+        "catalogNumber": "P1000 20GR",
+        "length": {
+          "value": 20,
+          "unit": "ft"
+        },
+        "sourceGaugeLabel": "12",
+        "material": "Steel",
+        "finish": "Green E-Coat",
+        "partWeight": {
+          "value": 1.91,
+          "unit": "lb/ft"
+        }
+      },
+      {
+        "productRef": "atkore.p1000.20hg",
+        "catalogNumber": "P1000 20HG",
+        "length": {
+          "value": 20,
+          "unit": "ft"
+        },
+        "sourceGaugeLabel": "12",
+        "material": "Steel",
+        "finish": "Hot-Dip Galvanized",
+        "partWeight": {
+          "value": 1.91,
+          "unit": "lb/ft"
+        }
+      },
+      {
+        "productRef": "atkore.p1000.20pg",
+        "catalogNumber": "P1000 20PG",
+        "length": {
+          "value": 20,
+          "unit": "ft"
+        },
+        "sourceGaugeLabel": "12",
+        "material": "Steel",
+        "finish": "Pre-Galvanized",
+        "partWeight": {
+          "value": 1.91,
+          "unit": "lb/ft"
+        }
+      },
+      {
+        "productRef": "atkore.p1000.20pl",
+        "catalogNumber": "P1000 20PL",
+        "length": {
+          "value": 20,
+          "unit": "ft"
+        },
+        "sourceGaugeLabel": "12",
+        "material": "Steel",
+        "finish": "Plain/Oil",
+        "partWeight": {
+          "value": 1.91,
+          "unit": "lb/ft"
+        }
+      },
+      {
+        "productRef": "atkore.p1000.20ss",
+        "catalogNumber": "P1000 20SS",
+        "length": {
+          "value": 20,
+          "unit": "ft"
+        },
+        "sourceGaugeLabel": "12",
+        "material": "Stainless Steel - 304",
+        "finish": null,
+        "partWeight": {
+          "value": 1.91,
+          "unit": "lb/ft"
+        }
+      },
+      {
+        "productRef": "atkore.p1000.20st",
+        "catalogNumber": "P1000 20ST",
+        "length": {
+          "value": 20,
+          "unit": "ft"
+        },
+        "sourceGaugeLabel": "12",
+        "material": "Stainless Steel - 316",
+        "finish": null,
+        "partWeight": {
+          "value": 1.91,
+          "unit": "lb/ft"
+        }
+      },
+      {
+        "productRef": "atkore.p1000.20zd",
+        "catalogNumber": "P1000 20ZD",
+        "length": {
+          "value": 20,
+          "unit": "ft"
+        },
+        "sourceGaugeLabel": "12",
+        "material": "Steel",
+        "finish": "Zinc Dichromate",
+        "partWeight": {
+          "value": 1.91,
+          "unit": "lb/ft"
+        }
+      }
+    ],
+    "availability": "18 catalog rows observed on Canada page; US supply not separately verified.",
+    "notes": [
+      "Source calls dimensions informational.",
+      "Gauge labels preserved, not converted into metal thickness.",
+      "10ST weight is 1.90 lb/ft; 20ST is 1.91 lb/ft in source. Difference preserved.",
+      "Beam/column tables are limited by manufacturer conditions; aluminum cannot inherit steel load values."
+    ]
+  },
+  "missingData": [
+    "No source-byte hash acquired; page observation only.",
+    "No independently reviewed design capacities or verified current approvals.",
+    "No complete installation specification or project applicability verification."
+  ]
+}

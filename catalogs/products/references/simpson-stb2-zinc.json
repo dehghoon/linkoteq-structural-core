@@ -1,0 +1,27 @@
+{
+  "id": "simpson-strong-tie.strong-bolt-2.zinc.reference-20261021",
+  "subjectRef": "simpson-strong-tie.strong-bolt-2.zinc",
+  "manufacturerId": "simpson-strong-tie",
+  "sourceRefs": [
+    "simpson-strong-tie.stb2.page-20261021"
+  ],
+  "jurisdictions": [
+    "US"
+  ],
+  "verification": {
+    "status": "parsed"
+  },
+  "observations": {
+    "name": "Strong-Bolt 2",
+    "manufacturerDesignation": "STB2",
+    "materialOrFinish": "Zinc-plated",
+    "application": "Wedge-type expansion anchoring",
+    "availability": "US/North America site; Canadian approval and SKU availability not independently established.",
+    "variants": "Family reference only; no SKU, diameter or length combinations asserted."
+  },
+  "missingData": [
+    "No source-byte hash acquired; page observation only.",
+    "No independently reviewed design capacities or verified current approvals.",
+    "No complete installation specification or project applicability verification."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "weyerhaeuser.parallam-psl.reference-20261021",
+  "subjectRef": "weyerhaeuser.parallam-psl",
+  "manufacturerId": "weyerhaeuser",
+  "sourceRefs": [
+    "weyerhaeuser.engineered-wood.page-20261021",
+    "weyerhaeuser.design-values.page-20261021"
+  ],
+  "jurisdictions": [
+    "CA",
+    "US"
+  ],
+  "verification": {
+    "status": "parsed"
+  },
+  "observations": {
+    "name": "Parallam PSL",
+    "type": "Parallel strand lumber",
+    "regionalBasis": "Manufacturer identifies separate US and Canadian specifier guides/evaluation reports; editions and grades must be selected per region.",
+    "variants": "No sizes, grades, SKUs or capacities extracted."
+  },
+  "missingData": [
+    "No source-byte hash acquired; page observation only.",
+    "No independently reviewed design capacities or verified current approvals.",
+    "No complete installation specification or project applicability verification."
+  ]
+}

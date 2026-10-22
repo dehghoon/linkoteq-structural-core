@@ -1,0 +1,26 @@
+{
+  "id": "canam.1-5b.reference-20261021",
+  "subjectRef": "canam.1-5b",
+  "manufacturerId": "canam",
+  "sourceRefs": [
+    "canam.deck-transition.2024"
+  ],
+  "jurisdictions": [
+    "CA",
+    "US"
+  ],
+  "verification": {
+    "status": "parsed"
+  },
+  "observations": {
+    "name": "1.5B",
+    "sourcePublicationDate": "2024-08-07",
+    "availability": "Historical manufacturer announcement; current regional availability requires confirmation.",
+    "transitionNote": "Announced gradual Canadian replacement of P-3615/P-3606; no interchangeability asserted."
+  },
+  "missingData": [
+    "No source-byte hash acquired; page observation only.",
+    "No independently reviewed design capacities or verified current approvals.",
+    "No complete installation specification or project applicability verification."
+  ]
+}

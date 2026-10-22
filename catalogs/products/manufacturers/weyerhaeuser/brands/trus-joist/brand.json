@@ -1,0 +1,9 @@
+{
+  "entityType": "brand",
+  "id": "trus-joist",
+  "manufacturerId": "weyerhaeuser",
+  "name": "Trus Joist",
+  "verification": {
+    "status": "discovered"
+  }
+}

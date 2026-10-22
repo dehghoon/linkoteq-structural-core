@@ -1,0 +1,25 @@
+{
+  "id": "canam.lf2.reference-20261021",
+  "subjectRef": "canam.lf2",
+  "manufacturerId": "canam",
+  "sourceRefs": [
+    "canam.deck-transition.2024"
+  ],
+  "jurisdictions": [
+    "CA"
+  ],
+  "verification": {
+    "status": "parsed"
+  },
+  "observations": {
+    "name": "LF2",
+    "sourcePublicationDate": "2024-08-07",
+    "availability": "Historical manufacturer announcement; current regional availability requires confirmation.",
+    "transitionNote": "Also designated P-3623; announced as composite deck."
+  },
+  "missingData": [
+    "No source-byte hash acquired; page observation only.",
+    "No independently reviewed design capacities or verified current approvals.",
+    "No complete installation specification or project applicability verification."
+  ]
+}

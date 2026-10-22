@@ -1,0 +1,14 @@
+{
+  "entityType": "product",
+  "id": "canam.lf3",
+  "manufacturerId": "canam",
+  "categoryIds": [
+    "composite-deck"
+  ],
+  "sourceRefs": [
+    "canam.deck-transition.2024"
+  ],
+  "verification": {
+    "status": "discovered"
+  }
+}
