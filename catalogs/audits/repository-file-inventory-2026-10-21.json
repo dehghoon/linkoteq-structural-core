@@ -1,0 +1,1111 @@
+{
+  "schemaVersion": "1.0",
+  "sourceRepository": "dehghoon/linkoteq-structural-core",
+  "sourceBranch": "main",
+  "sourceCommit": "f1b0b51d0e9022a9dfafe721b932f2a384f89735",
+  "sourceTreeTruncated": false,
+  "inventoryType": "git-tree-path-blob-inventory",
+  "engineeringDataValidated": false,
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha": "307b2d8f9c8498f462cd3a9b737b37b84c75fbef",
+      "sizeBytes": 307
+    },
+    {
+      "path": ".github/workflows/component-registry.yml",
+      "sha": "21af822f32e73162e31d2bc7de648ded76a1c070",
+      "sizeBytes": 305
+    },
+    {
+      "path": ".github/workflows/contract-governance.yml",
+      "sha": "d31180f4d3638a36ecf726f92f26ee66562a71d2",
+      "sizeBytes": 627
+    },
+    {
+      "path": "AI_GPT_UPDATE_POLICY.md",
+      "sha": "14bf05b264149f2d952f705bf43327221b193a5f",
+      "sizeBytes": 7777
+    },
+    {
+      "path": "CORE_CONTRACT.md",
+      "sha": "5b88c1c5c3049f81915f4772b94e8e617989f05b",
+      "sizeBytes": 10920
+    },
+    {
+      "path": "LINKOTEQ_PLUGIN_MIGRATION_CONTRACT.md",
+      "sha": "39fada7c549528a4ca5280fb7353949f9ce56b48",
+      "sizeBytes": 7475
+    },
+    {
+      "path": "README.md",
+      "sha": "f6a4d8a70548cc6f6e8b4fd9ce92cd4fc2a3cf20",
+      "sizeBytes": 2015
+    },
+    {
+      "path": "adapters/pynite/MAPPING.md",
+      "sha": "2b8f52028c1c9a32ff692544e4bf5b279520a1b3",
+      "sizeBytes": 5319
+    },
+    {
+      "path": "adapters/pynite/adapter.py",
+      "sha": "8725066a420e14ec332c215454dfc7b8d35ae780",
+      "sizeBytes": 8331
+    },
+    {
+      "path": "capabilities/surface-to-member-transfer.md",
+      "sha": "545435b8098d66930c7004b561297cf8b90d9e9a",
+      "sizeBytes": 1493
+    },
+    {
+      "path": "catalogs/CATALOG_COMPLETION_AUDIT_2026-10-21.md",
+      "sha": "fc2aaf4802ee18df92a44c5174a1de1fd5dc55de",
+      "sizeBytes": 3060
+    },
+    {
+      "path": "catalogs/CATALOG_COMPLETION_PROGRESS.md",
+      "sha": "75f332016bced3581ecc8b6dd59c7f131a1c2623",
+      "sizeBytes": 9028
+    },
+    {
+      "path": "catalogs/CATALOG_COVERAGE_AUDIT_2026-10-21.md",
+      "sha": "90da0fb3fe30377269ce69bad019b1557d79b201",
+      "sizeBytes": 4176
+    },
+    {
+      "path": "catalogs/CATALOG_VERIFICATION_MATRIX.md",
+      "sha": "89ebf01c612df5b37a18722a159f9cb053276023",
+      "sizeBytes": 3311
+    },
+    {
+      "path": "catalogs/ENGINEERING_CATALOG_ACCEPTANCE_POLICY.md",
+      "sha": "8d09d04ec8ec1e849224220f30b991c4665f9491",
+      "sizeBytes": 5443
+    },
+    {
+      "path": "catalogs/PHASE2_README.md",
+      "sha": "7fc1a4e8443d4c7e14eea6b76f4043d38ad2c8a6",
+      "sizeBytes": 853
+    },
+    {
+      "path": "catalogs/README.md",
+      "sha": "b01a2de4157ee1ac03bcd28a64ecb2d2042adb7a",
+      "sizeBytes": 886
+    },
+    {
+      "path": "catalogs/climate/nbcc-2020/README.md",
+      "sha": "1839c28b43868786739f2313ce805facbf3ed80d",
+      "sizeBytes": 850
+    },
+    {
+      "path": "catalogs/climate/nbcc-2020/climatic_atlantic.json",
+      "sha": "7bc7e033c54eda4aef995f0b96c22db6c47d6112",
+      "sizeBytes": 2211
+    },
+    {
+      "path": "catalogs/climate/nbcc-2020/climatic_bc.json",
+      "sha": "842639ae593318767e535970c7c4233957d9df6d",
+      "sizeBytes": 3588
+    },
+    {
+      "path": "catalogs/climate/nbcc-2020/climatic_north.json",
+      "sha": "4c6e5eb500daf7a3d0fc22621860431465d42805",
+      "sizeBytes": 1561
+    },
+    {
+      "path": "catalogs/climate/nbcc-2020/climatic_ontario.json",
+      "sha": "82b83869261ad5e38da580706ac7df55d07d77a4",
+      "sizeBytes": 7623
+    },
+    {
+      "path": "catalogs/climate/nbcc-2020/climatic_prairies.json",
+      "sha": "4b855ddcce292e715c3bae828eaa05daff89a936",
+      "sizeBytes": 3578
+    },
+    {
+      "path": "catalogs/climate/nbcc-2020/climatic_quebec.json",
+      "sha": "959cf9a0bbdcdd16b43299f063c4721e97cb661d",
+      "sizeBytes": 4217
+    },
+    {
+      "path": "catalogs/climate/nbcc-2020/provenance.json",
+      "sha": "47df438870a40f3363156cbae39b6f4bd9182216",
+      "sizeBytes": 3876
+    },
+    {
+      "path": "catalogs/climate/us/source-coverage.json",
+      "sha": "5e8c8c7efb552d87d0d80408564b8d5e090da666",
+      "sizeBytes": 2014
+    },
+    {
+      "path": "catalogs/compatibility/README.md",
+      "sha": "febd0647db9a18b670d51e2ddb159c8e9383d675",
+      "sizeBytes": 331
+    },
+    {
+      "path": "catalogs/compatibility/canam/hambro-d500-transfer-slab.json",
+      "sha": "fb182a41d6f9e91454a4c8723ee106dd2d901021",
+      "sizeBytes": 645
+    },
+    {
+      "path": "catalogs/compatibility/canam/hambro-md2000-transfer-slab.json",
+      "sha": "50e13c39947b13904476acbfdd4339836f364d20",
+      "sizeBytes": 649
+    },
+    {
+      "path": "catalogs/locations/canadian-location-index.json",
+      "sha": "e73ecd2f1fb7748506a8f0e6927c828f6950e5d4",
+      "sizeBytes": 202231
+    },
+    {
+      "path": "catalogs/locations/us-geographic-source-index.json",
+      "sha": "6d0e8297360960eb51d77157d1353d66b4afa465",
+      "sizeBytes": 845
+    },
+    {
+      "path": "catalogs/materials/references/README.md",
+      "sha": "4d7b318c5b058b86a2790aae7b6b7889daee07b8",
+      "sizeBytes": 679
+    },
+    {
+      "path": "catalogs/materials/references/material-templates-v05.json",
+      "sha": "58f06fedf1938a937707a9e7ad50974f607f5c8f",
+      "sizeBytes": 4728
+    },
+    {
+      "path": "catalogs/materials/references/standards-source-index.json",
+      "sha": "b9d8747acf56b17cadd84a35dcac0f61eaeee2ce",
+      "sizeBytes": 2268
+    },
+    {
+      "path": "catalogs/performance/atkore/p1000-table-reference.json",
+      "sha": "e4257472b37aa6ca4dbc15fd2ad691fe1a783424",
+      "sizeBytes": 1561
+    },
+    {
+      "path": "catalogs/products/categories/categories.json",
+      "sha": "14b5153c61165ddcb347b1f8344b5bce05742437",
+      "sizeBytes": 369
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/brands/unistrut/brand.json",
+      "sha": "5d07e459bd95dfae22193525896a1ecd6edacd8a",
+      "sizeBytes": 176
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/manufacturer.json",
+      "sha": "40ec5716b9035bc71a7372b96eda3e2e71d33447",
+      "sizeBytes": 199
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/pilots/p1000.json",
+      "sha": "f5d6cfa855acb5655037a3d288361cf7cedd76e7",
+      "sizeBytes": 264
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/variants/p1000-10df.json",
+      "sha": "e664a19a1e0369de63caf37f4c48b6607188016e",
+      "sizeBytes": 349
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/variants/p1000-10ea.json",
+      "sha": "0786296a82c00447eaeb68eb5fff5fa650d25d42",
+      "sizeBytes": 325
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/variants/p1000-10gr.json",
+      "sha": "e9510aa7b413a73088dd6098d6d0b6ec47a9f515",
+      "sizeBytes": 353
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/variants/p1000-10hg.json",
+      "sha": "6b091895136ac26718ed5cc35e352bfa1b977587",
+      "sizeBytes": 359
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/variants/p1000-10pg.json",
+      "sha": "db12a95d39628868e0feb289c7f15bb4707f31b3",
+      "sizeBytes": 355
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/variants/p1000-10pl.json",
+      "sha": "efc35be01a5955c1c16575b6eab9b82461e4b222",
+      "sizeBytes": 350
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/variants/p1000-10ss.json",
+      "sha": "6e59580c9a65729768589f693f1d6898eb39e24f",
+      "sizeBytes": 325
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/variants/p1000-10st.json",
+      "sha": "bc72dca284502e6e2f03910caf39a598fd0c7a5b",
+      "sizeBytes": 325
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/variants/p1000-10zd.json",
+      "sha": "0d29a4459da60b5bda9ef90430ea6045d2454ed8",
+      "sizeBytes": 356
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/variants/p1000-20df.json",
+      "sha": "37dccbfdff78b275544d8542417043f4264b1c38",
+      "sizeBytes": 349
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/variants/p1000-20ea.json",
+      "sha": "bcf57c75137ceaf8dd217f23405260f00bcb93e4",
+      "sizeBytes": 325
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/variants/p1000-20gr.json",
+      "sha": "fb3ccd32438482955f8795ac0d25402d2377f732",
+      "sizeBytes": 353
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/variants/p1000-20hg.json",
+      "sha": "e1204b863e4284df72606a3b4b580d0b55554cb0",
+      "sizeBytes": 359
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/variants/p1000-20pg.json",
+      "sha": "6a0f5152ed941645726b2727320662aad57b8a70",
+      "sizeBytes": 355
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/variants/p1000-20pl.json",
+      "sha": "5549a878bac67bd0d7b76ad7c03c7807289bb758",
+      "sizeBytes": 350
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/variants/p1000-20ss.json",
+      "sha": "c7bd8b846a71acaae19f8a6264f07953a41a549d",
+      "sizeBytes": 325
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/variants/p1000-20st.json",
+      "sha": "d58c6f97ea03e2d3e2997bb5ece5681bccdfce6d",
+      "sizeBytes": 325
+    },
+    {
+      "path": "catalogs/products/manufacturers/atkore/variants/p1000-20zd.json",
+      "sha": "377a08d12a3b44b7adbc57eee6e80e50c88854bb",
+      "sizeBytes": 356
+    },
+    {
+      "path": "catalogs/products/manufacturers/canam/manufacturer.json",
+      "sha": "5f982f8f6ac0470c56fe8bc9858b3c854b7ff614",
+      "sizeBytes": 196
+    },
+    {
+      "path": "catalogs/products/manufacturers/canam/pilots/p3615-p3606.json",
+      "sha": "176e2f5b807cc5c51fa697718e0d927853fed5e1",
+      "sizeBytes": 248
+    },
+    {
+      "path": "catalogs/products/manufacturers/canam/references/1-5b.json",
+      "sha": "d269bc8f276123889194da39862bc2d74afc2449",
+      "sizeBytes": 230
+    },
+    {
+      "path": "catalogs/products/manufacturers/canam/references/3n.json",
+      "sha": "07c9ed84cd9f1d3dfa3d56d4bb94ef528b0b088a",
+      "sizeBytes": 228
+    },
+    {
+      "path": "catalogs/products/manufacturers/canam/references/hambro-d500.json",
+      "sha": "a89bf10de121a2a7dffeaecac015ea3b97d2d1b4",
+      "sizeBytes": 264
+    },
+    {
+      "path": "catalogs/products/manufacturers/canam/references/hambro-joist-girder.json",
+      "sha": "eb35ecb7044567ccf4fa87be47a8668169d20f68",
+      "sizeBytes": 282
+    },
+    {
+      "path": "catalogs/products/manufacturers/canam/references/hambro-md2000.json",
+      "sha": "d0a0d12a63408fd0b76268a349ec369fa35c797f",
+      "sizeBytes": 268
+    },
+    {
+      "path": "catalogs/products/manufacturers/canam/references/lf2.json",
+      "sha": "e5360b450ee4a77c89c12a310fddc00f6f06005f",
+      "sizeBytes": 233
+    },
+    {
+      "path": "catalogs/products/manufacturers/canam/references/lf3.json",
+      "sha": "5bf16ac6219e8ca999bb3982f5e1094354e90dcd",
+      "sizeBytes": 233
+    },
+    {
+      "path": "catalogs/products/manufacturers/hilti/manufacturer.json",
+      "sha": "6492d21eab683e983eaaed4398a761e9001729e7",
+      "sizeBytes": 195
+    },
+    {
+      "path": "catalogs/products/manufacturers/hilti/pilots/kb-tz2-ss316.json",
+      "sha": "cb896c4bc81bc58e54cb0b891ababf18fd6bff43",
+      "sizeBytes": 243
+    },
+    {
+      "path": "catalogs/products/manufacturers/hilti/references/README.md",
+      "sha": "23bf6ddbf1e94ac6229e0d863e7e24095f7cb144",
+      "sizeBytes": 409
+    },
+    {
+      "path": "catalogs/products/manufacturers/hilti/references/kb-tz2-carbon.json",
+      "sha": "32ff31a86a50342e9df16224223882d5aea18af5",
+      "sizeBytes": 246
+    },
+    {
+      "path": "catalogs/products/manufacturers/hilti/references/kb-tz2-ss304.json",
+      "sha": "ddf7177901cf57a3f25a598fabd4bf1d53fa663d",
+      "sizeBytes": 244
+    },
+    {
+      "path": "catalogs/products/manufacturers/hilti/references/kb1-carbon.json",
+      "sha": "b66490eee8581582091464c1c34e4c5de198aaaf",
+      "sizeBytes": 240
+    },
+    {
+      "path": "catalogs/products/manufacturers/hilti/references/kb3-hdg.json",
+      "sha": "c3e3ed45803c633fc3a4024d87b5325ad8ce512d",
+      "sizeBytes": 234
+    },
+    {
+      "path": "catalogs/products/manufacturers/hilti/references/kb3-ss304.json",
+      "sha": "de227207db3f4b6cc15bd34dc99b049fb1160cff",
+      "sizeBytes": 238
+    },
+    {
+      "path": "catalogs/products/manufacturers/hilti/references/kb3-ss316.json",
+      "sha": "26bb1ba4f5059bdbb0ba2956a0224658def1038b",
+      "sizeBytes": 238
+    },
+    {
+      "path": "catalogs/products/manufacturers/simpson-strong-tie/manufacturer.json",
+      "sha": "51b44c4b9b56dde07db0ebf44786c3ef40b3d377",
+      "sizeBytes": 226
+    },
+    {
+      "path": "catalogs/products/manufacturers/simpson-strong-tie/pilots/strong-bolt-2.json",
+      "sha": "aa8486df639c2cd131f2ac41d1487d51353d757e",
+      "sizeBytes": 284
+    },
+    {
+      "path": "catalogs/products/manufacturers/simpson-strong-tie/variants/strong-bolt-2-mg.json",
+      "sha": "06471f2747e63d0cbee76b67aeb6bed117de2643",
+      "sizeBytes": 362
+    },
+    {
+      "path": "catalogs/products/manufacturers/simpson-strong-tie/variants/strong-bolt-2-ss.json",
+      "sha": "764a933444eaeeedb21102009689c9b76fb3f0d7",
+      "sizeBytes": 362
+    },
+    {
+      "path": "catalogs/products/manufacturers/simpson-strong-tie/variants/strong-bolt-2-zinc.json",
+      "sha": "02bc9453ecf0da547ee4249ec0823f10881b089e",
+      "sizeBytes": 364
+    },
+    {
+      "path": "catalogs/products/manufacturers/weyerhaeuser/brands/trus-joist/brand.json",
+      "sha": "0fecb9fb3acb8d271400a172049d3bc00c5ee416",
+      "sizeBytes": 162
+    },
+    {
+      "path": "catalogs/products/manufacturers/weyerhaeuser/manufacturer.json",
+      "sha": "bfc310785b572ce32b987410c874aa06aa74b7e9",
+      "sizeBytes": 201
+    },
+    {
+      "path": "catalogs/products/manufacturers/weyerhaeuser/references/microllam-lvl.json",
+      "sha": "2bcac6a71b78b8189645057c81b4adae93188a63",
+      "sizeBytes": 351
+    },
+    {
+      "path": "catalogs/products/manufacturers/weyerhaeuser/references/parallam-psl.json",
+      "sha": "30e53b5a7fb692a8e9ddfc3f42e61ac1399a04ab",
+      "sizeBytes": 350
+    },
+    {
+      "path": "catalogs/products/manufacturers/weyerhaeuser/references/timberstrand-lsl.json",
+      "sha": "b1ef6997cee90f1c5096ee4fe1e9441c10fc997b",
+      "sizeBytes": 354
+    },
+    {
+      "path": "catalogs/products/manufacturers/weyerhaeuser/references/tji.json",
+      "sha": "3a50b2c4e5be507fe9111e6df5391128b42a0222",
+      "sizeBytes": 341
+    },
+    {
+      "path": "catalogs/products/references/README.md",
+      "sha": "9d74686ee00589cedc09f20228e19a3ed21386e4",
+      "sizeBytes": 915
+    },
+    {
+      "path": "catalogs/products/references/atkore-p1000.json",
+      "sha": "6c6d52ba13de4497feac3895b35050880d00ee80",
+      "sizeBytes": 7602
+    },
+    {
+      "path": "catalogs/products/references/canam-1-5b.json",
+      "sha": "80e0a3e7c2c8e817e6438fd5d66de84ee3ef0fb1",
+      "sizeBytes": 817
+    },
+    {
+      "path": "catalogs/products/references/canam-3n.json",
+      "sha": "d6a654a2a4c403b6e6f6d259f07a20b70816ce2c",
+      "sizeBytes": 782
+    },
+    {
+      "path": "catalogs/products/references/canam-lf2.json",
+      "sha": "973500a4da47a879101da88d00f5afee56d427b8",
+      "sizeBytes": 768
+    },
+    {
+      "path": "catalogs/products/references/canam-lf3.json",
+      "sha": "bd2a366a911c7a42261f691ac19bb980f8527e36",
+      "sizeBytes": 780
+    },
+    {
+      "path": "catalogs/products/references/hilti-kb-tz2-carbon.json",
+      "sha": "11f33367695686cb71c33c56643b2218ef7bf244",
+      "sizeBytes": 1071
+    },
+    {
+      "path": "catalogs/products/references/hilti-kb-tz2-ss304.json",
+      "sha": "3ff4a081233985bb763faf9e6e17ecb80c5c0143",
+      "sizeBytes": 1056
+    },
+    {
+      "path": "catalogs/products/references/hilti-kb-tz2-ss316.json",
+      "sha": "d5b8c9a2e94f0940a50756c27ced391c91ff10ca",
+      "sizeBytes": 1919
+    },
+    {
+      "path": "catalogs/products/references/hilti-kb1-carbon.json",
+      "sha": "19c003fd3b03a1ba2cf3a8970c2bdee7e50b5892",
+      "sizeBytes": 1043
+    },
+    {
+      "path": "catalogs/products/references/hilti-kb3-hdg.json",
+      "sha": "85cdd5b7269e6a5ff9d028daa82250e3bd0934d6",
+      "sizeBytes": 1033
+    },
+    {
+      "path": "catalogs/products/references/hilti-kb3-ss304.json",
+      "sha": "71c90c90d9af94418c45225fea9a10941c6bffba",
+      "sizeBytes": 1014
+    },
+    {
+      "path": "catalogs/products/references/hilti-kb3-ss316.json",
+      "sha": "0fa04e54dce2a56b6969090690ada259f2b4d814",
+      "sizeBytes": 1014
+    },
+    {
+      "path": "catalogs/products/references/simpson-stb2-mg.json",
+      "sha": "ef72b808f0a53a6f4f279f52d1b3c17e31171167",
+      "sizeBytes": 970
+    },
+    {
+      "path": "catalogs/products/references/simpson-stb2-ss.json",
+      "sha": "717c071ea9902c913e64abad517b05df78f40f66",
+      "sizeBytes": 988
+    },
+    {
+      "path": "catalogs/products/references/simpson-stb2-zinc.json",
+      "sha": "bacd0ea7a2f594d43cc85fc3323881803732f823",
+      "sizeBytes": 962
+    },
+    {
+      "path": "catalogs/products/references/weyerhaeuser-microllam-lvl.json",
+      "sha": "9c66854dd2eb2abd0243ab35ef23623c8bac8ed1",
+      "sizeBytes": 923
+    },
+    {
+      "path": "catalogs/products/references/weyerhaeuser-parallam-psl.json",
+      "sha": "dc6de5769355b2171faaabfde73a9ecf57b65056",
+      "sizeBytes": 919
+    },
+    {
+      "path": "catalogs/products/references/weyerhaeuser-timberstrand-lsl.json",
+      "sha": "25ff50f03e7fb879b594bf3419d5a7c9a91ab6fa",
+      "sizeBytes": 932
+    },
+    {
+      "path": "catalogs/products/references/weyerhaeuser-tji.json",
+      "sha": "035624342230b279431434801d5a01fef33c3fa7",
+      "sizeBytes": 892
+    },
+    {
+      "path": "catalogs/providers/README.md",
+      "sha": "65ab3ed918db4a765c5674966744ac944fc3548c",
+      "sizeBytes": 2389
+    },
+    {
+      "path": "catalogs/providers/atkore-unistrut.json",
+      "sha": "29bc3d5e4f4027f7af3f22f2d9c8fe759e97ff23",
+      "sizeBytes": 744
+    },
+    {
+      "path": "catalogs/providers/canam.json",
+      "sha": "4932bc05323652606c09b87e919c272e273d4d8b",
+      "sizeBytes": 674
+    },
+    {
+      "path": "catalogs/providers/hilti.json",
+      "sha": "9b6f031c1f47f7907919a75432b00e4890d5b871",
+      "sizeBytes": 775
+    },
+    {
+      "path": "catalogs/providers/mitek.json",
+      "sha": "9b606b3942e0a99bf12345c2fa33f1dc19eb6032",
+      "sizeBytes": 670
+    },
+    {
+      "path": "catalogs/providers/simpson-strong-tie.json",
+      "sha": "40e19814eccec27a05f53c6b0c67c3efcd935521",
+      "sizeBytes": 718
+    },
+    {
+      "path": "catalogs/providers/weyerhaeuser.json",
+      "sha": "31a174cc2a5da007c3e822416b5de0b30547ba1f",
+      "sizeBytes": 771
+    },
+    {
+      "path": "catalogs/schemas/README.md",
+      "sha": "494e25566c5bfad6186e07a53ab23161fa89e5e2",
+      "sizeBytes": 476
+    },
+    {
+      "path": "catalogs/schemas/catalog.schema.json",
+      "sha": "05e535c7d92e54ea56fd025aa395d12d1f4b3ad1",
+      "sizeBytes": 7824
+    },
+    {
+      "path": "catalogs/schemas/compatibility.schema.json",
+      "sha": "c705d7c28104b543ccae11d0a203ef74a02be93b",
+      "sizeBytes": 1252
+    },
+    {
+      "path": "catalogs/schemas/families/anchor.schema.json",
+      "sha": "941fdf8216cb18527b560b8338a60cffd074f21e",
+      "sizeBytes": 2616
+    },
+    {
+      "path": "catalogs/schemas/families/composite-deck.schema.json",
+      "sha": "c3bf8c92e4e0fa1038b4195252992f694ce87fba",
+      "sizeBytes": 2672
+    },
+    {
+      "path": "catalogs/schemas/families/connector.schema.json",
+      "sha": "2a7a99165757ff21f1d418eadbb06e025a4483c9",
+      "sizeBytes": 2148
+    },
+    {
+      "path": "catalogs/schemas/families/fastener.schema.json",
+      "sha": "2fd3bb7afe048ba0320744f5326f76a6d025e50c",
+      "sizeBytes": 2574
+    },
+    {
+      "path": "catalogs/schemas/families/metal-deck.schema.json",
+      "sha": "66d2e44fb1cd540861490aab13d39404b5dca023",
+      "sizeBytes": 2704
+    },
+    {
+      "path": "catalogs/schemas/families/steel-joist.schema.json",
+      "sha": "48940fa50f6e7e7f656639e38f8126ba46070a5f",
+      "sizeBytes": 2457
+    },
+    {
+      "path": "catalogs/schemas/families/strut-channel.schema.json",
+      "sha": "db646afa8e4ec262df06864e4cc28f8dff874013",
+      "sizeBytes": 3087
+    },
+    {
+      "path": "catalogs/schemas/product-reference.schema.json",
+      "sha": "c4c98ca018509c8f89e1df82638768a87ebf8167",
+      "sizeBytes": 1300
+    },
+    {
+      "path": "catalogs/schemas/source-document.schema.json",
+      "sha": "4102b89a0ba11abd5750883a7db6e1fb77a7ccf5",
+      "sizeBytes": 2043
+    },
+    {
+      "path": "catalogs/sections/steel/aisc/source-reference.json",
+      "sha": "e8a0cfa41e87dfa854c9b4c59d60fd49cfd1cdc6",
+      "sizeBytes": 733
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/001.xzpart",
+      "sha": "521aaeef1f607743906669bb965c83a5a8a962a3",
+      "sizeBytes": 4000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/002.xzpart",
+      "sha": "14f4a935aadd475c6146e1f1139ed328a283825b",
+      "sizeBytes": 1000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/002a.xzpart",
+      "sha": "263d4a5745f56225a31cc88ce7b41d726b141cf7",
+      "sizeBytes": 1000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/002b.xzpart",
+      "sha": "673b5b01eefc6d2305012fc0e0faa12c42f2b1e1",
+      "sizeBytes": 1000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/002c.xzpart",
+      "sha": "6314908b86df61a0bd8f5abf3124723801e639a9",
+      "sizeBytes": 1000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/003.xzpart",
+      "sha": "dd6b6d8671bc16f3f2d8e8b5bb990685e5f0d40e",
+      "sizeBytes": 4000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/004.xzpart",
+      "sha": "d9b57347ccd3620c5c7022ce2a4864591199c723",
+      "sizeBytes": 4000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/005.xzpart",
+      "sha": "26ad870a8a0acf58f330fcc4d1b45c384ec13b82",
+      "sizeBytes": 4000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/006.xzpart",
+      "sha": "785f4d074156202fd965a168b89977b83db4c75a",
+      "sizeBytes": 4000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/007.xzpart",
+      "sha": "f0dd9f933a4019f958e64fa3ba572e5366849162",
+      "sizeBytes": 4000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/008.xzpart",
+      "sha": "09678baaea218538530164051e54b1609df082cb",
+      "sizeBytes": 1000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/008a.xzpart",
+      "sha": "fbae30e7a57325a93c18f4a778959f0bd3743194",
+      "sizeBytes": 1000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/008b.xzpart",
+      "sha": "c990990f6cae0a73198f022df80f31841b047c84",
+      "sizeBytes": 1000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/008c.xzpart",
+      "sha": "ad990e4499f1a236ff8621568761674713b38510",
+      "sizeBytes": 1000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/009.xzpart",
+      "sha": "2312dedef437d0fb3ace751073d9d38497d63010",
+      "sizeBytes": 4000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/010.xzpart",
+      "sha": "a97a44f4a2c8c54097c26313adaddf7d51689d93",
+      "sizeBytes": 1000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/010a.xzpart",
+      "sha": "8fa4050497900bad375e76fac192737b0a936f8a",
+      "sizeBytes": 1000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/010b.xzpart",
+      "sha": "c5a4c75a14d578d4cdbb49db1ef08756052f73f2",
+      "sizeBytes": 1000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/010c.xzpart",
+      "sha": "bd28fad40c4a00a483d7aab8c46df0fa13e8eb4a",
+      "sizeBytes": 1000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/011.xzpart",
+      "sha": "8c0809cfa2da76f6cb357367e500389f7406e569",
+      "sizeBytes": 4000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/012a.xzpart",
+      "sha": "fd4457bf85878399298cfc76586bb64849ad1a53",
+      "sizeBytes": 2000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/012b.xzpart",
+      "sha": "17cb151c76bf597e1c744a8140d2cac14b01845e",
+      "sizeBytes": 2000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/013a.xzpart",
+      "sha": "172f9263737ac9494ac8c7eea6181eb6b7aebd47",
+      "sizeBytes": 2000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/013b.xzpart",
+      "sha": "699031f6cb2945d993a7239a12439e01d72aeb5b",
+      "sizeBytes": 2000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/014a.xzpart",
+      "sha": "dc778cd5a096e9bf288618344f44015dd2ddaeb0",
+      "sizeBytes": 2000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/014b.xzpart",
+      "sha": "a7b7ac3ac21293b8e3991fb5a963ab40122ac100",
+      "sizeBytes": 2000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/015a.xzpart",
+      "sha": "855a393a637712a7866c4b9451c5a2331a00b138",
+      "sizeBytes": 2000
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/015b.xzpart",
+      "sha": "5bddccb15e23d4d9a708254794e9c1f4f53a0229",
+      "sizeBytes": 1292
+    },
+    {
+      "path": "catalogs/sections/steel/cisc/sst13-2026-08-25/manifest.json",
+      "sha": "37b00bd398c50965cd14c4416d33f4d2084057a5",
+      "sizeBytes": 447
+    },
+    {
+      "path": "catalogs/sources/atkore/atkore.p1000.page-20261021.json",
+      "sha": "b095f5d862bc29f40dc22a9822cf3282e8d037f7",
+      "sizeBytes": 427
+    },
+    {
+      "path": "catalogs/sources/atkore/p1000.json",
+      "sha": "7ccea3d78474780a3aaecc2fbc42f005a9e8ccac",
+      "sizeBytes": 387
+    },
+    {
+      "path": "catalogs/sources/canam/canam.deck-transition.2024.json",
+      "sha": "a93a95965ede9a1b42b269b1808825664943c401",
+      "sizeBytes": 453
+    },
+    {
+      "path": "catalogs/sources/canam/p3615-p3606.json",
+      "sha": "1740c00c73645a5dfdb3be9c3d56513600ee68eb",
+      "sizeBytes": 444
+    },
+    {
+      "path": "catalogs/sources/hilti/hilti.kb-tz2-ss316.page-20261021.json",
+      "sha": "115a0641772cc86e57e506c5d71beb334136ddb4",
+      "sizeBytes": 433
+    },
+    {
+      "path": "catalogs/sources/hilti/kb-tz2-carbon.ca-page-20261021.json",
+      "sha": "26186e0afdbcc855c28086bfab7bf61fd569ebb0",
+      "sizeBytes": 660
+    },
+    {
+      "path": "catalogs/sources/hilti/kb-tz2-ss304.ca-page-20261021.json",
+      "sha": "89b8cec11bca24e9816f1ecbb2f254f9a58e365b",
+      "sizeBytes": 665
+    },
+    {
+      "path": "catalogs/sources/hilti/kb-tz2-ss316.json",
+      "sha": "a5b72e13199fac81dec65101f5d0a242131f9a8d",
+      "sizeBytes": 414
+    },
+    {
+      "path": "catalogs/sources/hilti/kb1-carbon.ca-page-20261021.json",
+      "sha": "f951562e8a4a9bbcf1b21db61b1913f0e24a6d23",
+      "sizeBytes": 655
+    },
+    {
+      "path": "catalogs/sources/hilti/kb3-hdg.ca-page-20261021.json",
+      "sha": "f7fb91ed7a4427944f8e8e9c435142ec065e90cd",
+      "sizeBytes": 653
+    },
+    {
+      "path": "catalogs/sources/hilti/kb3-ss304.ca-page-20261021.json",
+      "sha": "6e89cf615276619a84fbadf9ce0baf45f859499b",
+      "sizeBytes": 657
+    },
+    {
+      "path": "catalogs/sources/hilti/kb3-ss316.ca-page-20261021.json",
+      "sha": "a8e1dd05f5bda7de8c13bff112307ad2f080bc54",
+      "sizeBytes": 657
+    },
+    {
+      "path": "catalogs/sources/references/aisc.shapes-v16.reference.json",
+      "sha": "b566e1295acaf987a61b75008b26cbe9029f3321",
+      "sizeBytes": 414
+    },
+    {
+      "path": "catalogs/sources/references/asce.hazard-tool.reference.json",
+      "sha": "fa49c4630ac78bf26e55f095a4f539e2d6810f91",
+      "sizeBytes": 408
+    },
+    {
+      "path": "catalogs/sources/references/astm.a992-06a.reference.json",
+      "sha": "d7d8a40fbcf13cb989292c0e41881e7e61e92494",
+      "sizeBytes": 453
+    },
+    {
+      "path": "catalogs/sources/references/awc.nds-2024.reference.json",
+      "sha": "57cdbc373c8bc1a9cb9a9d84b8d06634dc3baaf7",
+      "sizeBytes": 402
+    },
+    {
+      "path": "catalogs/sources/references/canam.hambro.page-20261021.json",
+      "sha": "aa61253dacd0d230065784d51ea2341ac83a6e54",
+      "sizeBytes": 410
+    },
+    {
+      "path": "catalogs/sources/references/census.gazetteer-2025.reference.json",
+      "sha": "0a89d222446183fa5991f305e38eddf100b774bb",
+      "sizeBytes": 464
+    },
+    {
+      "path": "catalogs/sources/references/csa.o86-24.reference.json",
+      "sha": "ef8d96922b1a61d4cc7719dffd2cd7e004006543",
+      "sizeBytes": 411
+    },
+    {
+      "path": "catalogs/sources/references/sdi.aisi-s100-2024.reference.json",
+      "sha": "1395712d384f6ae1df5ecde35d5f262fce321b39",
+      "sizeBytes": 556
+    },
+    {
+      "path": "catalogs/sources/simpson-strong-tie/simpson-strong-tie.stb2.page-20261021.json",
+      "sha": "1fb82279a8f323b979516efab33504ae0e72267b",
+      "sizeBytes": 433
+    },
+    {
+      "path": "catalogs/sources/simpson-strong-tie/strong-bolt-2.json",
+      "sha": "b0a9e83a328587062c46e2a7544a4b59e1978bd0",
+      "sizeBytes": 430
+    },
+    {
+      "path": "catalogs/sources/weyerhaeuser/weyerhaeuser.design-values.page-20261021.json",
+      "sha": "fa95094ac46aaae21025875d73c5019e43e5285e",
+      "sizeBytes": 450
+    },
+    {
+      "path": "catalogs/sources/weyerhaeuser/weyerhaeuser.engineered-wood.page-20261021.json",
+      "sha": "67fa70e2b0b7d856f94ad92ecc94e8e3168e9b27",
+      "sizeBytes": 416
+    },
+    {
+      "path": "catalogs/systems/canam/hambro-d500.json",
+      "sha": "c0fa8f6ee482549e3c6f116ab034069158860997",
+      "sizeBytes": 828
+    },
+    {
+      "path": "catalogs/systems/canam/hambro-md2000.json",
+      "sha": "8627888b28ffac554dc066c19ca1351f0292309a",
+      "sizeBytes": 835
+    },
+    {
+      "path": "catalogs/systems/canam/hambro-transfer-slab.json",
+      "sha": "6659ecc66ccec779ab1153fae07acf8b3756f5e3",
+      "sizeBytes": 1010
+    },
+    {
+      "path": "design-codes/codes.json",
+      "sha": "43ff5f6cdb6fe1d8d72fc341f69aa09f8a122293",
+      "sizeBytes": 119
+    },
+    {
+      "path": "design-codes/implementations.json",
+      "sha": "6d98ab246ec8b733181803006efcd8f9de4dd97e",
+      "sizeBytes": 126
+    },
+    {
+      "path": "docs/CONTRACT_GOVERNANCE.md",
+      "sha": "f0cd308208ba69c140c92dfdbe9d048e0400f267",
+      "sizeBytes": 2788
+    },
+    {
+      "path": "docs/ENGINEERING_CODE_RESOLUTION_POLICY.md",
+      "sha": "58f2acd09f9c7ba8fa273236285f032bb1329ddc",
+      "sizeBytes": 1047
+    },
+    {
+      "path": "example.md",
+      "sha": "7406ab659e5cf39cd28e458512df28ef6f516007",
+      "sizeBytes": 27
+    },
+    {
+      "path": "knowledge/CALCULATOR_RELEASE_CHECKLIST.md",
+      "sha": "d5a4b296d99c757f5c762cac329ee0fe81b1a0fe",
+      "sizeBytes": 2225
+    },
+    {
+      "path": "knowledge/GPT1_CALCULATION_REPORT_GUIDELINE.md",
+      "sha": "69c6ec1119aa06fcc0acc90f70bee5564ef1b279",
+      "sizeBytes": 5325
+    },
+    {
+      "path": "knowledge/GPT1_ENGINEERING_EXTRACTION_MANUAL.md",
+      "sha": "551ebf8378aa29d89bc9ccd16195a279cf6d0690",
+      "sizeBytes": 18798
+    },
+    {
+      "path": "knowledge/GPT1_SPEC_RULES.md",
+      "sha": "51dc2c3d352de90b1de4020ac3f146d3cee387d8",
+      "sizeBytes": 3838
+    },
+    {
+      "path": "knowledge/GPT2_IMPLEMENTATION_RULES.md",
+      "sha": "40de0823564a8a91d590d716727aac1deb070cc8",
+      "sizeBytes": 3575
+    },
+    {
+      "path": "knowledge/GPT3_INTEGRATION_RELEASE_RULES.md",
+      "sha": "c480ba7331e685c49e92279c1be93bd85c3b9840",
+      "sizeBytes": 3425
+    },
+    {
+      "path": "knowledge/GPT4_MASTER_INSTRUCTIONS.md",
+      "sha": "646e8b7594d413f65e7c0e51be9e1856e79685f2",
+      "sizeBytes": 3864
+    },
+    {
+      "path": "knowledge/GPT4_OPERATIONS_HANDBOOK.md",
+      "sha": "0e53f886249b890692ea64b0140b50f060aa17ba",
+      "sizeBytes": 3067
+    },
+    {
+      "path": "knowledge/GPT5_SECURITY_RULES.md",
+      "sha": "1919b092732e7a50faec367809ba950bc81be415",
+      "sizeBytes": 2502
+    },
+    {
+      "path": "knowledge/PLATFORM_ARCHITECTURE.md",
+      "sha": "01fc6afd99b222dfe5130962c66fa30c8fbc7ea4",
+      "sizeBytes": 2109
+    },
+    {
+      "path": "knowledge/gpt2/Engineering_Documentation_Template.md",
+      "sha": "3c92973b80c1c231680b198c725676a1210e6811",
+      "sizeBytes": 258
+    },
+    {
+      "path": "knowledge/gpt2/Engineering_Error_Handling_Guide.md",
+      "sha": "9b443011f0c1c8c1ab8daaf555169cdd37e6b174",
+      "sizeBytes": 377
+    },
+    {
+      "path": "knowledge/gpt2/Engineering_Testing_Guidelines.md",
+      "sha": "b02feef2a578fd7bbc1228521bc4c9c0dfe771fa",
+      "sizeBytes": 425
+    },
+    {
+      "path": "knowledge/gpt2/Engineering_Validation_Rules.md",
+      "sha": "21936bd5b05bc94199d433aed290b6a091f7ca4a",
+      "sizeBytes": 374
+    },
+    {
+      "path": "knowledge/gpt2/GPT2_IMPLEMENTATION_RULES.md",
+      "sha": "a2c241b8f10674b5153f72df683338899c8fb97d",
+      "sizeBytes": 6106
+    },
+    {
+      "path": "knowledge/gpt2/Linkoteq_Python_Project_Structure.md",
+      "sha": "ec097dc6db55d5f6f68db96877b85ba83e6a9727",
+      "sizeBytes": 799
+    },
+    {
+      "path": "knowledge/gpt2/MIGRATION_MANIFEST.json",
+      "sha": "980e520fd8cac68661d02b4f6e4cec95f4f2405a",
+      "sizeBytes": 6090
+    },
+    {
+      "path": "knowledge/gpt2/Python_Engineering_Coding_Standards.md",
+      "sha": "6e515e48834fda102f45f8ca7969036ce328fb27",
+      "sizeBytes": 4587
+    },
+    {
+      "path": "knowledge/gpt2/Python_Naming_Convention.md",
+      "sha": "18d8c1d0f14593e698924c2b54a40eb61da619cb",
+      "sizeBytes": 438
+    },
+    {
+      "path": "knowledge/gpt2/README.md",
+      "sha": "d1fb872beb212c39d26b4975c96e7d137e58fc3c",
+      "sizeBytes": 3001
+    },
+    {
+      "path": "orchestration/AGENT_HANDOFF_WORKFLOW.md",
+      "sha": "701d3e1bce48a29884f1804ab6ba6272864dc3ba",
+      "sizeBytes": 3737
+    },
+    {
+      "path": "orchestration/AGENT_ROLE_REGISTRY.md",
+      "sha": "3de6c8113b41a369cc3d603f6be67b1508034493",
+      "sizeBytes": 3499
+    },
+    {
+      "path": "orchestration/PROJECT_STATUS_SCHEMA.md",
+      "sha": "f1f854bd2cc454de9cb29c071271a6bf7c40d6da",
+      "sizeBytes": 1728
+    },
+    {
+      "path": "package.json",
+      "sha": "afe8b5c301b2ea7e652c560b9890a909e5cbab78",
+      "sizeBytes": 414
+    },
+    {
+      "path": "registry/README.md",
+      "sha": "a4f3c0436a3eb0c6dda933a2e3a9f19279606b7c",
+      "sizeBytes": 663
+    },
+    {
+      "path": "registry/components.json",
+      "sha": "934dea6c555bb5178593cc775a547c8fac1cf69d",
+      "sizeBytes": 1556
+    },
+    {
+      "path": "releases/compatibility-manifest.json",
+      "sha": "f80e7da6dd4e32016f00568467d397ce86c1c99b",
+      "sizeBytes": 1086
+    },
+    {
+      "path": "scripts/check_component_registry.py",
+      "sha": "bf2a8e2e0615ba7893d396f66fbe7d1cb5602db0",
+      "sizeBytes": 801
+    },
+    {
+      "path": "scripts/validate_compatibility_manifest.py",
+      "sha": "8585ad134169878edbb4aa16aa9444c95bc79dba",
+      "sizeBytes": 1103
+    },
+    {
+      "path": "tests/gpt1-direct-write-test.md",
+      "sha": "45256b50383c7146b94b0bca1b8d1c502cd9c588",
+      "sizeBytes": 458
+    },
+    {
+      "path": "tests/gpt2-direct-write-test.md",
+      "sha": "6185df7f30a58c6306f9f030656a12d1c376e98e",
+      "sizeBytes": 495
+    },
+    {
+      "path": "tsconfig.json",
+      "sha": "b64b699b79a0fe44962f3cd32b8c047bcf6040d4",
+      "sizeBytes": 243
+    },
+    {
+      "path": "typescript/index.ts",
+      "sha": "fbf75ec50ed9e62d3424e63e6acf82bcae0c439e",
+      "sizeBytes": 13161
+    }
+  ]
+}
