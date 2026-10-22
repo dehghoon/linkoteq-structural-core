@@ -1,0 +1,26 @@
+{
+  "id": "us-geographic-source-index",
+  "recordType": "geographic-source-reference",
+  "jurisdiction": "US",
+  "sourceRefs": [
+    "census.gazetteer-2025.reference"
+  ],
+  "verification": {
+    "status": "discovered"
+  },
+  "edition": "2025",
+  "coverage": "50 states, District of Columbia and Puerto Rico as described by Census.",
+  "availableFields": [
+    "geographic identifier codes",
+    "names",
+    "area measurements",
+    "representative latitude and longitude"
+  ],
+  "datasets": "States, counties, places and other Census geographic entities.",
+  "importStatus": "No files or coordinates imported.",
+  "limitations": [
+    "Representative points are not building/site coordinates.",
+    "Boundary vintage must remain attached to identifiers.",
+    "Download, field mapping and provenance verification remain a future batch."
+  ]
+}

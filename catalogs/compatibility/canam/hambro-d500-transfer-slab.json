@@ -1,0 +1,17 @@
+{
+  "id": "canam.hambro-d500.transfer-slab.relationship",
+  "subjectRef": "canam.hambro-d500",
+  "objectRef": "canam.hambro-transfer-slab.system",
+  "relationship": "conditional",
+  "sourceRefs": [
+    "canam.hambro.page-20261021"
+  ],
+  "verification": {
+    "status": "discovered"
+  },
+  "conditions": {
+    "evidenceScope": "Manufacturer explicitly identifies D500 or MD2000 joists as transfer slab components.",
+    "useRestriction": "Assembly membership only; no interchangeability, universal compatibility or design approval.",
+    "requirements": "Exact project configuration and regional engineering documentation still required."
+  }
+}

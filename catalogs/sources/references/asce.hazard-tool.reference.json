@@ -1,0 +1,15 @@
+{
+  "id": "asce.hazard-tool.reference",
+  "publisher": "ASCE",
+  "title": "About the ASCE Hazard Tool",
+  "canonicalUrl": "https://www.asce.org/publications-and-news/asce-hazard-tool/about",
+  "documentVersion": null,
+  "retrievedAt": "2026-10-22T02:35:10.791Z",
+  "sha256": null,
+  "accessStatus": "public",
+  "lifecycleStatus": "unknown",
+  "verification": {
+    "status": "parsed"
+  },
+  "codeRefs": []
+}

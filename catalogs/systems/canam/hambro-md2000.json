@@ -1,0 +1,30 @@
+{
+  "entityType": "system",
+  "id": "canam.hambro-md2000.system",
+  "verification": {
+    "status": "discovered"
+  },
+  "sourceRefs": [
+    "canam.hambro.page-20261021"
+  ],
+  "components": [
+    {
+      "role": "Composite joists",
+      "selectionMode": "product-family",
+      "ref": "canam.hambro-md2000",
+      "required": true
+    },
+    {
+      "role": "Steel deck permanent form",
+      "selectionMode": "project-defined",
+      "required": true
+    }
+  ],
+  "scope": "Manufacturer-described component roles only; not a complete BOM, design or installation specification.",
+  "jurisdictionStatus": "Regional code compliance not established from this overview.",
+  "missingData": [
+    "Detailed regional installation manual",
+    "Design loads and code edition",
+    "Exact component sizes, grades and connection details"
+  ]
+}

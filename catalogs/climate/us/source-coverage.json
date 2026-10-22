@@ -1,0 +1,58 @@
+{
+  "id": "us-climate-source-coverage",
+  "recordType": "climate-source-index",
+  "jurisdiction": "US",
+  "verification": {
+    "status": "parsed"
+  },
+  "records": [
+    {
+      "id": "asce-hazard-tool",
+      "sourceRefs": [
+        "asce.hazard-tool.reference"
+      ],
+      "url": "https://ascehazardtool.org/",
+      "codeEditions": [
+        "ASCE/SEI 7-10",
+        "ASCE/SEI 7-16",
+        "ASCE/SEI 7-22",
+        "ASCE/SEI 41-17",
+        "ASCE/SEI 41-23"
+      ],
+      "scope": "Site-specific hazards; ASCE 41 selections are seismic only.",
+      "inputsRequired": [
+        "site address or coordinates",
+        "standard edition",
+        "risk category for ASCE 7",
+        "site soil class for seismic",
+        "unit system",
+        "hazard selection"
+      ],
+      "parameters": [
+        {
+          "name": "wind",
+          "meaning": "Three-second gust speed, Exposure C, at 33 ft (10 m) elevation above ground",
+          "units": "Tool offers customary/SI; preserve units from each individual report."
+        },
+        {
+          "name": "snow",
+          "meaning": "Ground snow load; edition-specific meaning and design basis must accompany each site result",
+          "units": "Not assigned until a specific report is captured."
+        },
+        {
+          "name": "rain",
+          "meaning": "Rainfall intensities; source identifies NOAA HDSC data for ASCE 7-16/7-22",
+          "units": "Not assigned until a specific report is captured."
+        }
+      ],
+      "dataImported": false,
+      "access": "Public site queries described as free; API quote offered separately.",
+      "gap": "No bulk dataset, API agreement, source-byte hashes or redistribution rights acquired. No site values harvested."
+    }
+  ],
+  "limitations": [
+    "NBCC Ss/Sr are not mapped to ASCE parameters.",
+    "No Canadian values or invented coordinates reused.",
+    "Do not attach climate values to population centroids or Census representative points without project/site validation."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "aisc.shapes-v16.reference",
+  "publisher": "AISC",
+  "title": "AISC Shapes Database v16.0",
+  "canonicalUrl": "https://www.aisc.org/aisc/explore-aisc/aisc-shapes-database-v160/",
+  "documentVersion": "16.0",
+  "retrievedAt": "2026-10-22T02:35:10.791Z",
+  "sha256": null,
+  "accessStatus": "unknown",
+  "lifecycleStatus": "unknown",
+  "verification": {
+    "status": "discovered"
+  },
+  "codeRefs": []
+}

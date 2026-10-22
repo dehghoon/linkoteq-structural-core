@@ -1,0 +1,43 @@
+{
+  "entityType": "performance-table",
+  "id": "atkore.p1000.performance-reference",
+  "subjectRefs": [
+    "atkore.p1000"
+  ],
+  "sourceRefs": [
+    "atkore.p1000.page-20261021"
+  ],
+  "codeRefs": [
+    {
+      "standardId": "AISI specification for design of cold-formed steel structural members",
+      "edition": "2007",
+      "role": "design"
+    }
+  ],
+  "interpolationPolicy": "none",
+  "verification": {
+    "status": "blocked"
+  },
+  "dataStatus": "External table reference only; zero capacity cells imported.",
+  "loadBasis": "Manufacturer identifies ASD; beam table values are total uniformly distributed loads on a simple beam, not load per unit length.",
+  "units": {
+    "span": "in",
+    "beamTotalLoad": "lbf",
+    "columnLoad": "lbf",
+    "deflection": "in"
+  },
+  "conditions": [
+    "Unistrut brand channel only.",
+    "Manufacturer states carbon steel and stainless steel applicability; not aluminum.",
+    "Source states steel cold formed from 33 ksi to 42 ksi.",
+    "Manufacturer safety factors: 1.67 beam, 1.80 column.",
+    "Beam table includes lateral-bracing factors and deflection limits; column tables distinguish load at slot face from centroid loading and effective-length factors."
+  ],
+  "blockers": [
+    "Source-byte hash absent.",
+    "Reuse rights for numerical table not established.",
+    "No independent engineering cross-check.",
+    "2007 source-table basis must not be silently relabeled to a newer standard.",
+    "Stainless material-specific performance cautions must be resolved with manufacturer before use."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "entityType": "product",
+  "id": "canam.hambro-md2000",
+  "manufacturerId": "canam",
+  "categoryIds": [
+    "steel-joists"
+  ],
+  "sourceRefs": [
+    "canam.hambro.page-20261021"
+  ],
+  "verification": {
+    "status": "discovered"
+  },
+  "name": "Hambro MD2000"
+}

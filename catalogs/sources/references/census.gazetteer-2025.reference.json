@@ -1,0 +1,15 @@
+{
+  "id": "census.gazetteer-2025.reference",
+  "publisher": "United States Census Bureau",
+  "title": "2025 Gazetteer Files",
+  "canonicalUrl": "https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.2025.html",
+  "documentVersion": "2025",
+  "retrievedAt": "2026-10-22T02:35:10.791Z",
+  "sha256": null,
+  "accessStatus": "unknown",
+  "lifecycleStatus": "unknown",
+  "verification": {
+    "status": "discovered"
+  },
+  "codeRefs": []
+}

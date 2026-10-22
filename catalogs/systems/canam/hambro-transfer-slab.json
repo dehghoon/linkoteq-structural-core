@@ -1,0 +1,35 @@
+{
+  "entityType": "system",
+  "id": "canam.hambro-transfer-slab.system",
+  "verification": {
+    "status": "discovered"
+  },
+  "sourceRefs": [
+    "canam.hambro.page-20261021"
+  ],
+  "components": [
+    {
+      "role": "D500 or MD2000 joists selected by system design",
+      "selectionMode": "project-defined",
+      "required": true
+    },
+    {
+      "role": "Hambro joist girders",
+      "selectionMode": "product-family",
+      "ref": "canam.hambro-joist-girder",
+      "required": true
+    },
+    {
+      "role": "Concrete-filled steel supporting columns",
+      "selectionMode": "project-defined",
+      "required": true
+    }
+  ],
+  "scope": "Manufacturer-described component roles only; not a complete BOM, design or installation specification.",
+  "jurisdictionStatus": "Regional code compliance not established from this overview.",
+  "missingData": [
+    "Detailed regional installation manual",
+    "Design loads and code edition",
+    "Exact component sizes, grades and connection details"
+  ]
+}

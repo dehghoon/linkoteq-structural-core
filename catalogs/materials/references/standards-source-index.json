@@ -1,0 +1,66 @@
+{
+  "id": "materials-standards-source-index",
+  "recordType": "standards-reference-index",
+  "verification": {
+    "status": "discovered"
+  },
+  "records": [
+    {
+      "id": "us-wood-nds-2024",
+      "jurisdiction": "US",
+      "materialFamily": "wood",
+      "standard": "AWC NDS",
+      "edition": "2024",
+      "sourceRefs": [
+        "awc.nds-2024.reference"
+      ],
+      "role": "Design standard and associated supplement; no tables imported",
+      "gap": "Official listing found; direct retrieval returned 403. NDS provisions and supplement must use matched editions."
+    },
+    {
+      "id": "ca-wood-o86-24",
+      "jurisdiction": "CA",
+      "materialFamily": "wood",
+      "standard": "CSA O86",
+      "edition": "2024",
+      "sourceRefs": [
+        "csa.o86-24.reference"
+      ],
+      "role": "Design standard reference",
+      "gap": "Listing only; no design values or restricted standard text imported."
+    },
+    {
+      "id": "na-cold-formed-s100-2024",
+      "jurisdictions": [
+        "CA",
+        "US"
+      ],
+      "materialFamily": "cold-formed-steel",
+      "standard": "ANSI/SDI AISI S100",
+      "edition": "2024",
+      "sourceRefs": [
+        "sdi.aisi-s100-2024.reference"
+      ],
+      "role": "Design standard reference",
+      "gap": "North American standard; jurisdictional adoption and regional provisions require review. Not a material-property table."
+    },
+    {
+      "id": "us-steel-a992-historical",
+      "jurisdiction": "US",
+      "materialFamily": "structural-steel",
+      "standard": "ASTM A992/A992M",
+      "edition": "2006a",
+      "sourceRefs": [
+        "astm.a992-06a.reference"
+      ],
+      "role": "Historical material specification reference only",
+      "gap": "Do not select this edition automatically for new projects; current/project edition and steel properties not verified."
+    }
+  ],
+  "coverageGaps": [
+    "Concrete templates exist, but approved CSA A23.3/ACI 318 editions and project strengths still require evidence.",
+    "Engineered timber products have separate manufacturer references; no generic properties inferred.",
+    "CSA G40.21 and additional ASTM material specification editions remain unverified.",
+    "No changes to the editions-unspecified 22 migrated templates."
+  ]
+}

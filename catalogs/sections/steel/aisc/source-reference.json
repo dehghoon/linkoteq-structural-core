@@ -1,0 +1,20 @@
+{
+  "id": "us-aisc-shapes-v16",
+  "recordType": "section-dataset-reference",
+  "jurisdiction": "US",
+  "sourceRefs": [
+    "aisc.shapes-v16.reference"
+  ],
+  "version": "16.0",
+  "verification": {
+    "status": "discovered"
+  },
+  "scope": "Section dimensions and properties corresponding to AISC Steel Construction Manual, 16th Edition.",
+  "dataImported": false,
+  "limitations": [
+    "Official search listing located; direct page retrieval failed in research service.",
+    "Spreadsheet bytes, hashes, contents and redistribution license not acquired.",
+    "Free access does not establish redistribution authorization.",
+    "No section properties or code rules inferred. Existing Canadian CISC dataset remains separate."
+  ]
+}

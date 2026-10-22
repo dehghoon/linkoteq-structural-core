@@ -1,0 +1,15 @@
+{
+  "entityType": "product",
+  "id": "canam.hambro-joist-girder",
+  "manufacturerId": "canam",
+  "categoryIds": [
+    "joist-girders"
+  ],
+  "sourceRefs": [
+    "canam.hambro.page-20261021"
+  ],
+  "verification": {
+    "status": "discovered"
+  },
+  "name": "Hambro joist girders"
+}
