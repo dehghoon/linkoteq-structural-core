@@ -1,0 +1,14 @@
+{
+  "entityType": "product",
+  "id": "hilti.kb-tz2-ss316",
+  "manufacturerId": "hilti",
+  "categoryIds": [
+    "anchors"
+  ],
+  "sourceRefs": [
+    "hilti.kb-tz2-ss316.official-source"
+  ],
+  "verification": {
+    "status": "discovered"
+  }
+}

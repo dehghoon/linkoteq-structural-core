@@ -1,0 +1,15 @@
+{
+  "entityType": "product",
+  "id": "atkore.p1000",
+  "manufacturerId": "atkore",
+  "categoryIds": [
+    "strut-channels"
+  ],
+  "sourceRefs": [
+    "atkore.p1000.official-source"
+  ],
+  "verification": {
+    "status": "discovered"
+  },
+  "brandId": "unistrut"
+}

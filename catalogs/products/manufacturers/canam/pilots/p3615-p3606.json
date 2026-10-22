@@ -1,0 +1,14 @@
+{
+  "entityType": "product",
+  "id": "canam.p3615-p3606",
+  "manufacturerId": "canam",
+  "categoryIds": [
+    "composite-deck"
+  ],
+  "sourceRefs": [
+    "canam.p3615-p3606.official-source"
+  ],
+  "verification": {
+    "status": "discovered"
+  }
+}

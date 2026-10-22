@@ -1,0 +1,15 @@
+{
+  "id": "atkore.p1000.official-source",
+  "publisher": "atkore",
+  "title": "p1000 official source",
+  "canonicalUrl": "https://www.atkore.com/en-ca/products/strut-and-fittings/p1000",
+  "accessStatus": "unknown",
+  "lifecycleStatus": "unknown",
+  "verification": {
+    "status": "discovered"
+  },
+  "sha256": null,
+  "retrievedAt": null,
+  "documentVersion": null,
+  "codeRefs": []
+}

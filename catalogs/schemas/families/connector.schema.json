@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://linkoteq.example/schemas/connector.schema.json",
+  "title": "Linkoteq connector product draft",
+  "type": "object",
+  "required": [
+    "entityType",
+    "id",
+    "manufacturerId",
+    "categoryIds",
+    "sourceRefs",
+    "verification"
+  ],
+  "properties": {
+    "entityType": {
+      "const": "product"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "manufacturerId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "categoryIds": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9._-]*$"
+      }
+    },
+    "sourceRefs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9._-]*$"
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "discovered",
+            "parsed",
+            "reviewed",
+            "validated",
+            "verified",
+            "blocked",
+            "rejected",
+            "superseded"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "variantOf": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "brandId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "connectorType": {
+      "enum": [
+        "bracket",
+        "plate",
+        "hanger",
+        "fitting",
+        "clamp",
+        "coupler",
+        "other"
+      ]
+    },
+    "requiredFastenerRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9._-]*$"
+      }
+    },
+    "compatibilityRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9._-]*$"
+      }
+    },
+    "orientation": {
+      "type": "string"
+    },
+    "installationConditions": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://linkoteq.example/schemas/source-document.schema.json",
+  "type": "object",
+  "required": [
+    "id",
+    "publisher",
+    "title",
+    "canonicalUrl",
+    "accessStatus",
+    "lifecycleStatus",
+    "verification"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "canonicalUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "documentVersion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "codeRefs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "standardId",
+          "edition",
+          "role"
+        ],
+        "properties": {
+          "standardId": {
+            "type": "string"
+          },
+          "edition": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "role": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "retrievedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "accessStatus": {
+      "enum": [
+        "public",
+        "gated",
+        "unavailable",
+        "unknown"
+      ]
+    },
+    "lifecycleStatus": {
+      "enum": [
+        "current",
+        "expired",
+        "superseded",
+        "withdrawn",
+        "unknown"
+      ]
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "discovered",
+            "acquired",
+            "parsed",
+            "reviewed",
+            "validated",
+            "verified",
+            "blocked"
+          ]
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

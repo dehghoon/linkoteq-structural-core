@@ -1,0 +1,14 @@
+{
+  "entityType": "product",
+  "id": "simpson-strong-tie.strong-bolt-2",
+  "manufacturerId": "simpson-strong-tie",
+  "categoryIds": [
+    "anchors"
+  ],
+  "sourceRefs": [
+    "simpson-strong-tie.strong-bolt-2.official-source"
+  ],
+  "verification": {
+    "status": "discovered"
+  }
+}

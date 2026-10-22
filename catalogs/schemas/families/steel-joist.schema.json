@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://linkoteq.example/schemas/steel-joist.schema.json",
+  "title": "Linkoteq steel-joist product draft",
+  "type": "object",
+  "required": [
+    "entityType",
+    "id",
+    "manufacturerId",
+    "categoryIds",
+    "sourceRefs",
+    "verification"
+  ],
+  "properties": {
+    "entityType": {
+      "const": "product"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "manufacturerId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "categoryIds": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9._-]*$"
+      }
+    },
+    "sourceRefs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9._-]*$"
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "discovered",
+            "parsed",
+            "reviewed",
+            "validated",
+            "verified",
+            "blocked",
+            "rejected",
+            "superseded"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "variantOf": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "brandId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "joistType": {
+      "enum": [
+        "standard",
+        "custom",
+        "joist-girder"
+      ]
+    },
+    "configuration": {
+      "type": "object"
+    },
+    "span": {
+      "type": "object",
+      "required": [
+        "value",
+        "unit"
+      ],
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "depth": {
+      "type": "object",
+      "required": [
+        "value",
+        "unit"
+      ],
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "bridgingRequirements": {
+      "type": "object"
+    },
+    "supportConditions": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}
