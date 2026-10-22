@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "0.1.0",
+  "vendorId": "atkore-unistrut",
+  "jurisdictions": [
+    "CA",
+    "US"
+  ],
+  "accessMode": "partner_feed_unconfirmed",
+  "officialDocumentationUrl": "https://www.atkore.com/resources/bim-library-tools",
+  "documentedIntegrationUrl": null,
+  "authenticationOrOnboarding": "vendor_permission",
+  "engineeringDataLicense": "not_granted_to_linkoteq",
+  "publicRedistribution": "not_authorized",
+  "automatedCollection": "do_not_enable_without_written_permission",
+  "implementationStatus": "not_connected",
+  "notes": "Official BIM Toolbar synchronizes product families; no supported third-party catalogue endpoint or reuse licence verified. Contact atkoretoolbar@atkore.com.",
+  "lastResearchDate": "2026-10-22"
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "0.1.0",
+  "vendorId": "hilti",
+  "jurisdictions": [
+    "CA",
+    "US"
+  ],
+  "accessMode": "product_api_unconfirmed",
+  "officialDocumentationUrl": "https://www.hilti.com/content/hilti/W1/US/en/support/support/b2b-eprocurement/digital-procurement-ecosystems.html",
+  "documentedIntegrationUrl": null,
+  "authenticationOrOnboarding": "vendor_permission",
+  "engineeringDataLicense": "not_granted_to_linkoteq",
+  "publicRedistribution": "not_authorized",
+  "automatedCollection": "do_not_enable_without_written_permission",
+  "implementationStatus": "not_connected",
+  "notes": "ON!Track is not a product catalogue API. B2B eCatalog/EDI/punchout exists but engineering properties and Canadian access not confirmed.",
+  "lastResearchDate": "2026-10-22"
+}

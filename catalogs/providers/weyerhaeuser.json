@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "0.1.0",
+  "vendorId": "weyerhaeuser",
+  "jurisdictions": [
+    "CA",
+    "US"
+  ],
+  "accessMode": "sdk_agreement_required",
+  "officialDocumentationUrl": "https://www.weyerhaeuser.com/woodproducts/software-learning/forte-software/",
+  "documentedIntegrationUrl": "https://devapimportal.weyerhaeuser.com/",
+  "authenticationOrOnboarding": "vendor_agreement",
+  "engineeringDataLicense": "not_granted_to_linkoteq",
+  "publicRedistribution": "not_authorized",
+  "automatedCollection": "do_not_enable_without_written_permission",
+  "implementationStatus": "not_connected",
+  "notes": "ForteWEB SDK documented for passing members and loads to ForteWEB; portal exists but catalogue API entitlement not established.",
+  "lastResearchDate": "2026-10-22"
+}
