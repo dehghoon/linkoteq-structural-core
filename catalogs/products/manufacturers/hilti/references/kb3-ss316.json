@@ -1,0 +1,14 @@
+{
+  "entityType": "product",
+  "id": "hilti.kb3-ss316",
+  "manufacturerId": "hilti",
+  "categoryIds": [
+    "anchors"
+  ],
+  "sourceRefs": [
+    "hilti.kb3-ss316.ca-page-20261021"
+  ],
+  "verification": {
+    "status": "discovered"
+  }
+}

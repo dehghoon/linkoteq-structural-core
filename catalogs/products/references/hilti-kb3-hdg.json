@@ -1,0 +1,28 @@
+{
+  "id": "hilti.kb3-hdg.reference-20261021",
+  "subjectRef": "hilti.kb3-hdg",
+  "manufacturerId": "hilti",
+  "sourceRefs": [
+    "hilti.kb3-hdg.ca-page-20261021"
+  ],
+  "jurisdictions": [
+    "CA"
+  ],
+  "verification": {
+    "status": "parsed"
+  },
+  "observations": {
+    "manufacturerDesignation": "Kwik Bolt 3 Wedge anchor HDG",
+    "material": "Carbon steel, hot-dip galvanized / sherardized",
+    "headConfiguration": "Externally threaded",
+    "application": "Uncracked concrete",
+    "officialProductPage": "https://www.hilti.ca/c/CLS_FASTENER_7135/CLS_MECHANICAL_ANCHORS_7135/r6294",
+    "productFamilyOnly": true,
+    "approvals": "Manufacturer page lists approval/test-report categories; individual item approvals not reviewed."
+  },
+  "missingData": [
+    "Exact SKU/diameter/length combinations not captured.",
+    "Manufacturer technical document bytes and SHA256 not captured.",
+    "Installation instructions, approved capacities, code applicability and current regional approvals not independently reviewed."
+  ]
+}

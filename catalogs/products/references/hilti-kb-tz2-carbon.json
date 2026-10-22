@@ -1,0 +1,28 @@
+{
+  "id": "hilti.kb-tz2-carbon.reference-20261021",
+  "subjectRef": "hilti.kb-tz2-carbon",
+  "manufacturerId": "hilti",
+  "sourceRefs": [
+    "hilti.kb-tz2-carbon.ca-page-20261021"
+  ],
+  "jurisdictions": [
+    "CA"
+  ],
+  "verification": {
+    "status": "parsed"
+  },
+  "observations": {
+    "manufacturerDesignation": "Kwik Bolt TZ2 Wedge anchor",
+    "material": "Carbon steel, zinc plated (min. 5 microns)",
+    "headConfiguration": "Externally threaded",
+    "application": "Cracked concrete and seismic applications",
+    "officialProductPage": "https://www.hilti.ca/c/CLS_FASTENER_7135/CLS_MECHANICAL_ANCHORS_7135/r8863215",
+    "productFamilyOnly": true,
+    "approvals": "Manufacturer page lists approval/test-report categories; individual item approvals not reviewed."
+  },
+  "missingData": [
+    "Exact SKU/diameter/length combinations not captured.",
+    "Manufacturer technical document bytes and SHA256 not captured.",
+    "Installation instructions, approved capacities, code applicability and current regional approvals not independently reviewed."
+  ]
+}
