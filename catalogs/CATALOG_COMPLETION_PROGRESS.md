@@ -71,3 +71,16 @@ Review covered all requested catalog domains: materials, sections, products, cli
 6. Validate full schemas in an environment with a JSON Schema 2020-12 validator, then obtain engineering review before promoting any record to verified.
 
 All writes are additive except non-conflicting category/progress updates. No security, application code, original numeric values or other repositories changed. This checkpoint does not schedule unattended work. The current checkpoint commit is the commit introducing this report revision; its SHA can be obtained from file history and will be reported after live readback.
+
+## Verified implementation ledger
+
+| Batch | Commit | Readback result |
+|---|---|---|
+| Materials | f71e9770f03c75acf49cedb0e19a0778c98cf86f | 3/3 files matched; main HEAD matched |
+| Canadian climate and index | 549f6cbb1e9e8dfc6ff866a241d6a781b27cd446 | 10/10 files matched; six source blobs identical; main HEAD matched |
+| Manufacturer expansion | 142618effbb92fa8fa70083a7a36e2fbb53dfee6 | 54/54 files matched; main HEAD matched |
+| Sources, systems and checkpoint | e0122f06e88fa346643ecf36616658980862d457 | 23/23 files matched; main HEAD matched |
+
+Final preservation comparison against audit baseline: 86 new files, zero deleted files, all 29 CISC blobs unchanged. The only changed baseline file is catalogs/products/categories/categories.json (one additive category). All other pre-existing blob SHAs match. Cross-reference checks passed for new sources, product parents, manufacturers, brands and system components. 17 applicable records in the fourth batch passed the implemented schema-constraint checks; the full-validator limitation above remains.
+
+This final ledger is a documentation-only follow-up commit. Its own SHA is available from Git history; a commit cannot contain its own SHA. Resume from the actual main HEAD, preserving these four verified implementation commits.
