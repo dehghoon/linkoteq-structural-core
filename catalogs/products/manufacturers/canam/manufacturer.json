@@ -1,0 +1,12 @@
+{
+  "entityType": "manufacturer",
+  "id": "canam",
+  "legalName": "Canam",
+  "officialDomains": [
+    "canam.com"
+  ],
+  "verification": {
+    "status": "discovered",
+    "evidenceRefs": []
+  }
+}

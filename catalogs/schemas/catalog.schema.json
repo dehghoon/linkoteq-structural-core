@@ -1,0 +1,349 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://linkoteq.example/schemas/catalog.schema.json",
+  "title": "Linkoteq catalog entity foundation",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/manufacturer"
+    },
+    {
+      "$ref": "#/$defs/brand"
+    },
+    {
+      "$ref": "#/$defs/product"
+    },
+    {
+      "$ref": "#/$defs/system"
+    },
+    {
+      "$ref": "#/$defs/performance"
+    }
+  ],
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "discovered",
+            "parsed",
+            "reviewed",
+            "validated",
+            "verified",
+            "rejected",
+            "superseded",
+            "blocked"
+          ]
+        },
+        "evidenceRefs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "id",
+        "canonicalUrl",
+        "retrievedAt",
+        "accessStatus"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "canonicalUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "retrievedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "accessStatus": {
+          "enum": [
+            "public",
+            "gated",
+            "unavailable"
+          ]
+        },
+        "lifecycleStatus": {
+          "enum": [
+            "current",
+            "expired",
+            "superseded",
+            "withdrawn",
+            "unknown"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "base": {
+      "type": "object",
+      "required": [
+        "entityType",
+        "id",
+        "verification"
+      ],
+      "properties": {
+        "entityType": {
+          "type": "string"
+        },
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "verification": {
+          "$ref": "#/$defs/verification"
+        }
+      }
+    },
+    "manufacturer": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        },
+        {
+          "type": "object",
+          "required": [
+            "legalName"
+          ],
+          "properties": {
+            "entityType": {
+              "const": "manufacturer"
+            },
+            "legalName": {
+              "type": "string"
+            },
+            "officialDomains": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "brand": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        },
+        {
+          "type": "object",
+          "required": [
+            "manufacturerId",
+            "name"
+          ],
+          "properties": {
+            "entityType": {
+              "const": "brand"
+            },
+            "manufacturerId": {
+              "$ref": "#/$defs/id"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "product": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        },
+        {
+          "type": "object",
+          "required": [
+            "manufacturerId",
+            "categoryIds",
+            "sourceRefs"
+          ],
+          "properties": {
+            "entityType": {
+              "const": "product"
+            },
+            "manufacturerId": {
+              "$ref": "#/$defs/id"
+            },
+            "brandId": {
+              "$ref": "#/$defs/id"
+            },
+            "categoryIds": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/$defs/id"
+              }
+            },
+            "variantOf": {
+              "$ref": "#/$defs/id"
+            },
+            "sectionRef": {
+              "$ref": "#/$defs/id"
+            },
+            "sourceRefs": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/$defs/id"
+              }
+            },
+            "performanceRefs": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/id"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "system": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        },
+        {
+          "type": "object",
+          "required": [
+            "components"
+          ],
+          "properties": {
+            "entityType": {
+              "const": "system"
+            },
+            "components": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": [
+                  "role",
+                  "selectionMode"
+                ],
+                "properties": {
+                  "role": {
+                    "type": "string"
+                  },
+                  "selectionMode": {
+                    "enum": [
+                      "fixed-product",
+                      "product-family",
+                      "category-selector",
+                      "material-selector",
+                      "project-defined"
+                    ]
+                  },
+                  "ref": {
+                    "$ref": "#/$defs/id"
+                  },
+                  "required": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "performance": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        },
+        {
+          "type": "object",
+          "required": [
+            "subjectRefs",
+            "sourceRefs",
+            "codeRefs",
+            "interpolationPolicy"
+          ],
+          "properties": {
+            "entityType": {
+              "const": "performance-table"
+            },
+            "subjectRefs": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/$defs/id"
+              }
+            },
+            "sourceRefs": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/$defs/id"
+              }
+            },
+            "codeRefs": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "standardId",
+                  "edition",
+                  "role"
+                ],
+                "properties": {
+                  "standardId": {
+                    "type": "string"
+                  },
+                  "edition": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "role": {
+                    "enum": [
+                      "design",
+                      "qualification",
+                      "material",
+                      "installation",
+                      "fire",
+                      "seismic",
+                      "listing"
+                    ]
+                  }
+                }
+              }
+            },
+            "interpolationPolicy": {
+              "enum": [
+                "none",
+                "vendor-defined",
+                "linear",
+                "implementation-defined"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

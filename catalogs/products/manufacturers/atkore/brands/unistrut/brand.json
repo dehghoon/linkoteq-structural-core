@@ -1,0 +1,10 @@
+{
+  "entityType": "brand",
+  "id": "unistrut",
+  "manufacturerId": "atkore",
+  "name": "Unistrut",
+  "verification": {
+    "status": "discovered",
+    "evidenceRefs": []
+  }
+}

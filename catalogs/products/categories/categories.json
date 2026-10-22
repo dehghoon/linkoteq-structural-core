@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0.0",
+  "categories": [
+    "anchors",
+    "anchor-bolts",
+    "screws",
+    "bolts",
+    "nails",
+    "deck-fasteners",
+    "connectors",
+    "brackets",
+    "plates",
+    "strut-channels",
+    "strut-fittings",
+    "modular-steel",
+    "steel-joists",
+    "joist-girders",
+    "metal-deck",
+    "composite-deck"
+  ]
+}

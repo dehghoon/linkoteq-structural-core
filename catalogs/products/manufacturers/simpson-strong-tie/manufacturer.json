@@ -1,0 +1,12 @@
+{
+  "entityType": "manufacturer",
+  "id": "simpson-strong-tie",
+  "legalName": "Simpson Strong-Tie",
+  "officialDomains": [
+    "strongtie.com"
+  ],
+  "verification": {
+    "status": "discovered",
+    "evidenceRefs": []
+  }
+}

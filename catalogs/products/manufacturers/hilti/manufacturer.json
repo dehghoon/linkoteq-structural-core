@@ -1,0 +1,12 @@
+{
+  "entityType": "manufacturer",
+  "id": "hilti",
+  "legalName": "Hilti",
+  "officialDomains": [
+    "hilti.ca"
+  ],
+  "verification": {
+    "status": "discovered",
+    "evidenceRefs": []
+  }
+}

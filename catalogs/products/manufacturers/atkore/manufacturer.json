@@ -1,0 +1,12 @@
+{
+  "entityType": "manufacturer",
+  "id": "atkore",
+  "legalName": "Atkore",
+  "officialDomains": [
+    "atkore.com"
+  ],
+  "verification": {
+    "status": "discovered",
+    "evidenceRefs": []
+  }
+}
