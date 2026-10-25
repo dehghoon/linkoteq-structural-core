@@ -23,3 +23,5 @@ This directory is the proposed GitHub-backed knowledge source for GPT-3 (Enginee
 ## Migration exclusions
 
 Do not upload the provided obsolete `GPT3_CORE_AND_PLATFORM_ARCHITECTURE_v0.4.md`, `CALCULATOR_RELEASE_CHECKLIST_v0.4.md`, `AI_GPT_UPDATE_POLICY (1).md` or `index.ts (1)` as active Core definitions. The canonical versions remain at repository root.
+
+- [MIGRATION_MANIFEST.json](MIGRATION_MANIFEST.json)
