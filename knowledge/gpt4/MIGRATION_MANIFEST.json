@@ -1,0 +1,23 @@
+{
+  "migration": "gpt4-copy-to-direct-github-plugin",
+  "status": "in-progress",
+  "core_baseline": "0.5",
+  "access_policy": "direct_github_connector_only",
+  "gateway_allowed": false,
+  "source": "GPT-4 current",
+  "target": "GPT-4 COPY with Direct GitHub Plugin",
+  "rollback": "Keep current GPT-4 unchanged until validated",
+  "canonical_dependencies": [
+    "CORE_CONTRACT.md",
+    "AI_GPT_UPDATE_POLICY.md",
+    "knowledge/gpt4/README.md"
+  ],
+  "restrictions": [
+    "No Core contract changes",
+    "No GPT-2 calculation engine or PyNite adapter changes",
+    "No standalone calculator changes",
+    "No Main Website changes",
+    "No unapproved production deployment"
+  ],
+  "production_gate": "Solver-dependent production requires GPT-2 evidence and GPT-4 acceptance"
+}
