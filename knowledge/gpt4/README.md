@@ -23,3 +23,7 @@ Migration remains in progress. Preserve the existing GPT-4 as rollback reference
 GPT-5 provides security review and retest; GPT-6 validates reconstruction and Core geometry promotion; GPT-7 produces detection evidence and owns dataset/model lifecycle. All analysis uses the GPT-2-owned Core Analysis Adapter. Current Core schema is v0.5; verify main and released/pinned baseline separately.
 
 The Markdown guide is the editable source for the DOCX reading copy. Documentation synchronization, plugin configuration, runtime permissions, CI, deployment and production verification are independent milestones. Update the existing GPT-4 plugin in place and retain its prior version as rollback; do not create a replacement plugin.
+
+
+## Recovered historical Knowledge
+See [archive inventory](archive/README.md) for the ten former Knowledge attachments and their current replacements. The original project summary is retained unchanged as optional historical context. Use the [calculator release checklist](../CALCULATOR_RELEASE_CHECKLIST.md) with the applicable Core baseline. Existing runtime Instructions already reference the README and knowledge manifest; no additional bootstrap text is required.

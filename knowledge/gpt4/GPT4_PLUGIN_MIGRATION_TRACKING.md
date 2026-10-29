@@ -52,3 +52,17 @@ Evidence states at preparation: local files changed; publication commit pending 
 Next permitted work is documentation publication after exact-diff approval, followed by actual existing-plugin inspection, configuration review and runtime tests. Migration remains in-progress. Plugin release, deployment and production readiness are not established.
 
 Local document QA: all original DOCX paragraphs were accounted for in the original Markdown; revised Markdown/DOCX paragraph parity passed (345 paragraphs). All 10 final rendered pages were visually reviewed. Relative README links resolve against the inspected tree. These are local document checks, not CI or runtime tests.
+
+
+## Recovery and publication reconciliation 2026-10-29
+This checkpoint supersedes the earlier preparation-only publication states above; historical entries are retained.
+- Seven-agent documentation was published in commit `2ddb506e4b7c33463dbf537c0acef125d485d047`. Canonical guides and manifest were read directly again during attachment reconciliation.
+- Ten former Knowledge attachments were inspected. The uploaded master differs in the expected agent/version scope lines; all nonempty uploaded handbook lines are retained. Uploaded Word guide paragraph text matches the pre-migration guide.
+- The original project-summary bytes are included under `archive/`, with SHA-256 and replacement inventory in `archive/README.md`. Historical content is not current operational authority.
+- The shared calculator release checklist is updated from its stale v0.4 declaration to explicit v0.5 validation and specialist gates. No Core schema, adapter or approved calculation logic changes.
+- User authorized saving the missing guides to GPT-4 GitHub. This recovery checkpoint and its containing commit identify the recovery revision; verify committed bytes/content after publication.
+- The user supplied a GPT-4 response reporting a successful API read of the master guide with blob `ddeeca525cbd315c183f6e69dbd52368153d057c`. This is user-provided host evidence, not proof of plugin installation, write access or all required reads.
+- Runtime Instructions need no replacement: they already require the README and knowledge manifest.
+
+Remaining owners and gates: GPT-4/plugin owner must verify actual plugin identity/configuration and required runtime reads; GPT-4 must verify real cross-repository handoffs; GPT-5 must provide independent review where applicable; the Core owner must establish the released or approved pinned baseline. Migration remains in-progress.
+For this recovery revision, CI is not yet verified, no deployment is performed, and production is not verified. Readback and CI observations must be reported separately; a source archive does not imply runtime activation.
