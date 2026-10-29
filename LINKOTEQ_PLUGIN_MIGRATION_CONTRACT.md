@@ -35,7 +35,15 @@ Authorized repositories and branch for reads and writes:
 - `dehghoon/linkoteq-structural-core`, branch `main`
 - `dehghoon/Main-website`, branch `main`
 
-All file paths in these repositories are in scope. Other repositories and branches are forbidden by this policy.
+All file paths in these repositories are in scope.
+Additional Linkoteq project repositories may be authorized explicitly by the user for a defined task, repository, branch, and operation.
+
+For the Universal Structural Model Importer, authorized read-only access includes:
+- `dehghoon/linkoteq-structural-importer`, branch `main`
+
+This authorization does not grant write access to the importer repository. Repository mutations require separate authorization and exact-diff approval.
+
+No Gateway, proxy, or intermediary access mechanism is permitted.
 Specify `main` explicitly. A pinned SHA may be used only to verify the observed main revision or an approved commit.
 
 These are behavioral restrictions; instructions alone do not enforce a technical repository allowlist.

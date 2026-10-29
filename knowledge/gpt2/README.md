@@ -43,6 +43,6 @@ Use the connected GitHub Connector directly on `dehghoon/linkoteq-structural-cor
 
 Verify actual tools and authenticated reads in each plugin host. If a required path cannot be read, report the path and failure and pause dependent implementation; snapshots support explicitly offline review only. A manifest dependency, saved release, prior test commit or successful read in another chat does not establish current runtime permissions.
 
-Every GitHub mutation requires a complete diff and explicit user approval in the conversation under `LINKOTEQ_PLUGIN_MIGRATION_CONTRACT.md`. Restrict reads and writes to the two authorized repositories on `main`. Policy restrictions do not themselves configure technical connector permissions.
+Every GitHub mutation requires a complete diff and explicit user approval in the conversation under `LINKOTEQ_PLUGIN_MIGRATION_CONTRACT.md`. Follow the authorized repository and branch scope in `LINKOTEQ_PLUGIN_MIGRATION_CONTRACT.md`. For importer tasks, read the approved specification, status, and handoff directly from `dehghoon/linkoteq-structural-importer` on `main`. Do not use Gateway or infer write authorization from successful reads. Policy restrictions do not themselves configure technical connector permissions.
 
 `MIGRATION_MANIFEST.json` retains the original migration's source hashes and canonical-source snapshot for provenance. Those historical hashes are not assertions about current file contents or the active access policy.
