@@ -19,3 +19,8 @@ GPT-7 produces StructuralDetectionEvidence; detection evidence is not canonical 
 
 ## Handoffs and gates
 Read current Core and relevant repository contracts before work. GitHub handoffs and project-status.json track owner, upstream commit, contract version, deliverables, tests, blockers and next action. Independently verify file change, commit, push, CI, deployment creation, deployment health, public URL and representative production functionality. Record contract incompatibilities as blockers rather than silently inventing compatibility.
+
+## Shared authorities and scope
+Apply `LINKOTEQ_PLUGIN_MIGRATION_CONTRACT.md` for Direct GitHub access, authorized scope, exact-diff approval, expected-head checks and readback. Agent ownership is registered in `orchestration/AGENT_ROLE_REGISTRY.md`; handoffs follow `orchestration/AGENT_HANDOFF_WORKFLOW.md`. Operational detail and migration evidence are in `knowledge/gpt4/GPT4_PLUGIN_MIGRATION_RUNBOOK.md` and `knowledge/gpt4/GPT4_PLUGIN_MIGRATION_TRACKING.md`.
+
+Core v0.5 is the observed active schema; releases/pinned baselines must be verified independently. StructuralDetectionEvidence names the detection boundary and must use its owning project's versioned contract; it is not canonical geometry or an invented Core type. GPT-6 may orchestrate validated inference components but GPT-7 owns the detector and dataset/model lifecycle. All solver execution uses the GPT-2-owned Core Analysis Adapter and its acceptance gate.

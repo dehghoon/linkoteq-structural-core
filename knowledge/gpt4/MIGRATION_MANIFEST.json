@@ -5,12 +5,29 @@
   "access_policy": "direct_github_connector_only",
   "gateway_allowed": false,
   "source": "GPT-4 current",
-  "target": "GPT-4 COPY with Direct GitHub Plugin",
-  "rollback": "Keep current GPT-4 unchanged until validated",
+  "target": "Existing GPT-4 plugin updated in place with Direct GitHub Connector",
+  "rollback": "Preserve prior existing-plugin version/configuration and source documents until runtime validation; do not delete or recreate plugin",
   "canonical_dependencies": [
     "CORE_CONTRACT.md",
     "AI_GPT_UPDATE_POLICY.md",
-    "knowledge/gpt4/README.md"
+    "knowledge/gpt4/README.md",
+    "typescript/index.ts",
+    "LINKOTEQ_PLUGIN_MIGRATION_CONTRACT.md",
+    "orchestration/PYNITE_ADAPTER_VERIFICATION_GATE.md",
+    "adapters/pynite/MAPPING.md",
+    "knowledge/GPT4_MASTER_INSTRUCTIONS.md",
+    "knowledge/GPT4_OPERATIONS_HANDBOOK.md",
+    "knowledge/gpt4/ANALYSIS_WORKFLOW.md",
+    "knowledge/gpt4/GPT4_KNOWLEDGE_MANIFEST.md",
+    "knowledge/gpt4/GPT4_MASTER_INSTRUCTIONS.md",
+    "knowledge/gpt4/GPT4_OPERATIONS_HANDBOOK.md",
+    "knowledge/gpt4/GPT4_PLUGIN_MIGRATION_RUNBOOK.md",
+    "knowledge/gpt4/GPT4_PLUGIN_MIGRATION_TRACKING.md",
+    "knowledge/gpt4/LINKOTEQ_GPT4_ORCHESTRATOR_GUIDE.docx",
+    "knowledge/gpt4/LINKOTEQ_GPT4_ORCHESTRATOR_GUIDE.md",
+    "knowledge/gpt4/MULTI_AGENT_ORCHESTRATION_CONTRACT.md",
+    "orchestration/AGENT_HANDOFF_WORKFLOW.md",
+    "orchestration/AGENT_ROLE_REGISTRY.md"
   ],
   "restrictions": [
     "No Core contract changes",
@@ -19,5 +36,115 @@
     "No Main Website changes",
     "No unapproved production deployment"
   ],
-  "production_gate": "Solver-dependent production requires GPT-2 evidence and GPT-4 acceptance"
+  "production_gate": "Solver-dependent production requires GPT-2 evidence and GPT-4 acceptance",
+  "historical_target": "GPT-4 COPY with Direct GitHub Plugin",
+  "manifest_revision": "2.0-seven-agent-documentation",
+  "prepared_date": "2026-10-29",
+  "inspected_main_commit": "5b4590bf5b70bf3fc345b1e1c376736cff4fde31",
+  "core_contract_blob": "5b88c1c5c3049f81915f4772b94e8e617989f05b",
+  "latest_released_version": null,
+  "release_evidence": "GitHub releases returned []; inspected main is not a verified release",
+  "agent_ownership": {
+    "GPT-1": "Engineering specification",
+    "GPT-2": "Authoritative calculations, Core Analysis Adapter and numerical tests",
+    "GPT-3": "Application, API, UI, reports and deployment implementation",
+    "GPT-4": "Orchestration, Core compliance and independent release verification",
+    "GPT-5": "Security review, findings and remediation retest",
+    "GPT-6": "Drawing reconstruction, provenance, human review and Core geometry promotion",
+    "GPT-7": "AI detection evidence and dataset/model lifecycle"
+  },
+  "evidence": {
+    "documentation": "prepared-for-exact-diff-approval",
+    "local_text_parity": {
+      "status": "passed",
+      "paragraphs": 345,
+      "method": "all nonblank Markdown lines compared to DOCX paragraphs after removing heading/list/backtick markup; numeric list labels preserved"
+    },
+    "docx_render": {
+      "pages": 10,
+      "visual_review": "passed"
+    },
+    "github_read": "Core contract, GPT-4 sources and authorized Main-website README read in this session",
+    "publication_commit": null,
+    "readback": "pending-publication",
+    "ci": "not-run-for-this-change",
+    "plugin_identity_and_configuration": "not-inspected",
+    "actual_gpt4_plugin_host": "not-verified",
+    "gpt5_security_verdict": "pending",
+    "deployment": "not-performed",
+    "production": "not-verified"
+  },
+  "artifacts": [
+    {
+      "path": "knowledge/GPT4_MASTER_INSTRUCTIONS.md",
+      "source_git_blob": "646e8b7594d413f65e7c0e51be9e1856e79685f2",
+      "sha256": "3f65d8dbb7c320249c3077e3a0847b81a8a66cf222fb13b2ce7da39711c96686"
+    },
+    {
+      "path": "knowledge/GPT4_OPERATIONS_HANDBOOK.md",
+      "source_git_blob": "0e53f886249b890692ea64b0140b50f060aa17ba",
+      "sha256": "42f54d068d5c34b03e3d253d0468199e27d917c1f38e93a9c8768d976edb5c72"
+    },
+    {
+      "path": "knowledge/gpt4/ANALYSIS_WORKFLOW.md",
+      "source_git_blob": "dc093d6b62b7a85e8a0621c18b6e64f64b7f095e",
+      "sha256": "6c64ec79ad8dba967d19c39bced223d3b2e7d89da5e7356942d1afb77874ceda"
+    },
+    {
+      "path": "knowledge/gpt4/GPT4_KNOWLEDGE_MANIFEST.md",
+      "source_git_blob": "6131e9f589b64b2a9aefa38e322d4c3abf959700",
+      "sha256": "dfd562b0cabdb350fad007f3ee430237022487fef17631fd68ca04aa6f8531b4"
+    },
+    {
+      "path": "knowledge/gpt4/GPT4_MASTER_INSTRUCTIONS.md",
+      "source_git_blob": "f90563f79293aa749a9e4b503d9e01fc9e8e9e0c",
+      "sha256": "58600cd377a0e9209df5e63199cdabf2a57f391ede3e289b4c33f3b14c5abc7e"
+    },
+    {
+      "path": "knowledge/gpt4/GPT4_OPERATIONS_HANDBOOK.md",
+      "source_git_blob": "b9ef92adc09dd66dd43cdb863e54ec8f64df0a24",
+      "sha256": "95856cf29bafd63390a035b9e65b157992304de5e3e859547bda77772eb64c0c"
+    },
+    {
+      "path": "knowledge/gpt4/GPT4_PLUGIN_MIGRATION_RUNBOOK.md",
+      "source_git_blob": "6d51477ec2fb63520df80fc7fff2cc953697777e",
+      "sha256": "697a7e2e1fc338e0cd97f32dcd29fc3a277d07be1d4f318c7be876db3c42bbaa"
+    },
+    {
+      "path": "knowledge/gpt4/GPT4_PLUGIN_MIGRATION_TRACKING.md",
+      "source_git_blob": "2607bc157bf9398e958f914ef0e2e7bc5df0dce3",
+      "sha256": "3252c930782ffabc41f3ef11fc730cc3b85e27e95fab97511b5f0b333e7b7e54"
+    },
+    {
+      "path": "knowledge/gpt4/LINKOTEQ_GPT4_ORCHESTRATOR_GUIDE.docx",
+      "source_git_blob": "c0cb83071a474d8ec94a4a30f06f25862bb1a255",
+      "sha256": "e3364b6abc6e0c5dc955b45c54d8370352999de183b660276b6a608c7b2fa249"
+    },
+    {
+      "path": "knowledge/gpt4/LINKOTEQ_GPT4_ORCHESTRATOR_GUIDE.md",
+      "source_git_blob": "3478887be06130b91b85268100fbe459bfe885dd",
+      "sha256": "dcd4d299d8f27c9144f3e8a5eb1860583e8baf6b539099d1f0bef95abeae75d0"
+    },
+    {
+      "path": "knowledge/gpt4/MULTI_AGENT_ORCHESTRATION_CONTRACT.md",
+      "source_git_blob": "8ccf855898784eb3835200f1a0f1ed4160d0662a",
+      "sha256": "bc9be8d375356afc968798e56914aa56cd7f171aab9441a63090d81251fbd56f"
+    },
+    {
+      "path": "knowledge/gpt4/README.md",
+      "source_git_blob": "580bd0173b403b04f01bdb9734c641eed6f4f4bd",
+      "sha256": "ecf924d984fc00f320a9051ae0d8bb4848b979c948e055c55c21bfff22763515"
+    },
+    {
+      "path": "orchestration/AGENT_HANDOFF_WORKFLOW.md",
+      "source_git_blob": "701d3e1bce48a29884f1804ab6ba6272864dc3ba",
+      "sha256": "a023047dfda76f67a10c2635b05408bb91bcd7ec18f39a8fc1bd94253ae3dd6c"
+    },
+    {
+      "path": "orchestration/AGENT_ROLE_REGISTRY.md",
+      "source_git_blob": "3de6c8113b41a369cc3d603f6be67b1508034493",
+      "sha256": "a0a461a1deaa0f829ff5db1eae061172878c4588261519f2f0e586866c171518"
+    }
+  ],
+  "integrity_note": "Artifact hashes cover this documentation revision excluding this manifest itself. Historical source blobs are provenance, not current runtime permission evidence."
 }

@@ -29,3 +29,19 @@ Inspect `project-status.json`, `handoffs/`, code, tests, CI, and deployment arti
 3. Confirm plugin GitHub read/write permissions and cross-repository status inspection.
 4. Obtain GPT-5 review for affected security workflows.
 5. Independently verify all commits and applicable CI; record missing evidence explicitly.
+
+## Existing-plugin migration procedure
+Inspect the installed GPT-4 plugin ID, owner, private visibility, current version/release, full file inventory and effective dependencies before editing plugin configuration. Preserve valid instructions, assets and prompts; remove Gateway configuration and keep the Direct GitHub dependency. Update the existing plugin in place, with its prior version retained as rollback; do not delete/recreate it or infer that a COPY target authorizes a second plugin.
+
+Verify actual-host reads of Core and GPT-4 manuals and the authorized website README, then non-mutating scope, approval and role-regression cases. Existing write evidence is reusable only for its recorded environment; do not create a commit solely as a connectivity test. Document configured technical permissions separately from behavioral restrictions. Request GPT-5 review of the affected access/security workflow and retest any remediation. Record exact plugin release and runtime evidence before closing migration.
+
+## Related authorities
+- `knowledge/gpt4/GPT4_MASTER_INSTRUCTIONS.md`
+- `knowledge/gpt4/GPT4_OPERATIONS_HANDBOOK.md`
+- `knowledge/gpt4/GPT4_KNOWLEDGE_MANIFEST.md`
+- `knowledge/gpt4/MULTI_AGENT_ORCHESTRATION_CONTRACT.md`
+- `LINKOTEQ_PLUGIN_MIGRATION_CONTRACT.md`
+- `orchestration/AGENT_ROLE_REGISTRY.md`
+- `orchestration/AGENT_HANDOFF_WORKFLOW.md`
+
+Repository publication may complete documentation synchronization only after readback; it cannot establish actual plugin installation, runtime access, independent security acceptance, CI success or production verification.
