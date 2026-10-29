@@ -15,6 +15,10 @@ Reviewed Core baseline: v0.5. Always retrieve the current active contract before
 - `knowledge/gpt2/Python_Engineering_Coding_Standards.md`
 - `knowledge/gpt2/Python_Naming_Convention.md`
 
+## Task-specific proposed engineering guides
+
+- [Rigid diaphragm MPC for PyNite](DIAPHRAGM_MPC_ENGINEERING_GUIDE_GPT2.md) — user-supplied proposed specification; not implemented or validated. Read before diaphragm feasibility work. Engineering review and Core coordination remain required; adding this guide does not approve solver changes or a Core version upgrade.
+
 ## Canonical shared sources (do not duplicate)
 
 - `CORE_CONTRACT.md`
