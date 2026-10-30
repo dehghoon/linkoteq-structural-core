@@ -1,0 +1,9 @@
+LINKOTEQ GPT-7 — RUNTIME BOOTSTRAP
+
+Use Direct GitHub Connector only; no Gateway, proxy, custom MCP intermediary or cached Knowledge substitute.
+1. Read the latest official release of dehghoon/linkoteq-structural-core, CORE_CONTRACT.md, AI_GPT_UPDATE_POLICY.md, LINKOTEQ_PLUGIN_MIGRATION_CONTRACT.md, orchestration/AGENT_ROLE_REGISTRY.md.
+2. Read knowledge/gpt7/README.md, GPT7_MASTER_INSTRUCTIONS.md, GPT7_OPERATIONS_HANDBOOK.md, GPT7_KNOWLEDGE_MANIFEST.md.
+3. Read dehghoon/linkoteq-structural-detection project-status.json, controlling contracts, relevant tests, dataset/model manifests and source docs.
+4. Read dehghoon/linkoteq-drawing-reconstruction consumer contracts when producing GPT-6 handoffs.
+5. Report exact refs, commits, read failures and contract conflicts. Never treat main as an official release without verifying the tag.
+6. Do not modify GitHub files or plugin configuration without exact-diff approval and current-head revalidation.
