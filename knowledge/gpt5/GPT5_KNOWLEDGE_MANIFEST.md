@@ -8,10 +8,10 @@
 GPT-5 MUST read these from GitHub before work:
 
 1. `dehghoon/linkoteq-structural-core/CORE_CONTRACT.md`
-2. `dehghoon/Main-website/security/SECURITY_POLICY.md`
-3. `dehghoon/Main-website/security/THREAT_MODEL.md`
-4. `dehghoon/Main-website/security/GPT5_MASTER_INSTRUCTIONS.md`
-5. `dehghoon/Main-website/security/GPT5_OPERATIONS_HANDBOOK.md`
+2. `dehghoon/linkoteq-structural-core/knowledge/gpt5/SECURITY_POLICY.md`
+3. `dehghoon/linkoteq-structural-core/knowledge/gpt5/THREAT_MODEL.md`
+4. `dehghoon/linkoteq-structural-core/knowledge/gpt5/GPT5_MASTER_INSTRUCTIONS.md`
+5. `dehghoon/linkoteq-structural-core/knowledge/gpt5/GPT5_OPERATIONS_HANDBOOK.md`
 6. Target repository source, status, handoffs, tests, workflows, deployment configuration, and security artifacts
 
 ## Current application security context
@@ -82,13 +82,16 @@ If static knowledge conflicts with current released Core or live repository stat
 
 
 ## Additional mandatory sources and migration precedence
-- `dehghoon/Main-website/security/BACKUP_AND_DISASTER_RECOVERY_GUIDE.md`: required before every backup/recovery/readiness task.
-- `dehghoon/Main-website/security/GPT5_PLUGIN_MIGRATION_TRACKING.md`: migration evidence and blockers.
-- `dehghoon/Main-website/security/GPT5_RUNTIME_INSTRUCTIONS.txt`: concise host bootstrap; full guides remain authoritative within their scope.
+- `dehghoon/linkoteq-structural-core/knowledge/gpt5/BACKUP_AND_DISASTER_RECOVERY_GUIDE.md`: required before every backup/recovery/readiness task.
+- `dehghoon/linkoteq-structural-core/knowledge/gpt5/GPT5_PLUGIN_MIGRATION_TRACKING.md`: migration evidence and blockers.
+- `dehghoon/linkoteq-structural-core/knowledge/gpt5/GPT5_RUNTIME_INSTRUCTIONS.txt`: concise host bootstrap; full guides remain authoritative within their scope.
 - `dehghoon/linkoteq-structural-core/AI_GPT_UPDATE_POLICY.md`
-- `dehghoon/linkoteq-structural-core/knowledge/GPT5_SECURITY_RULES.md`
+- `dehghoon/linkoteq-structural-core/knowledge/gpt5/README.md`
+- `dehghoon/linkoteq-structural-core/knowledge/gpt5/GPT5_KNOWLEDGE_MANIFEST.md`
 - `dehghoon/linkoteq-structural-core/orchestration/AGENT_ROLE_REGISTRY.md`
 - `dehghoon/linkoteq-structural-core/LINKOTEQ_PLUGIN_MIGRATION_CONTRACT.md`
+
+The canonical GPT-5 manuals are maintained in `dehghoon/linkoteq-structural-core/knowledge/gpt5/`. Historical references to Main-website/security remain provenance only. Application code, tests, status, handoffs and deployment evidence must still be read from their owning repositories.
 
 Clarification of the earlier precedence list: current code is authoritative evidence of observed behavior, not permission to override the applicable Core contract, security policy or approved engineering requirements. Verify releases/tags separately from main; if no released baseline exists, report it and obtain an approved pinned baseline before release claims. Old threat observations require fresh source evidence before being reported as current findings.
 
