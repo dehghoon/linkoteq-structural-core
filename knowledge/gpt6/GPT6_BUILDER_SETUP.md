@@ -12,7 +12,16 @@
 GitHub is the single runtime source of truth for engineering state, contracts, specifications, tests, handoffs, and ownership. GPT Builder Knowledge is optional reference material only and must not mirror runtime repository documents.
 
 ## Builder Instructions
-Paste the current content of `docs/gpt6/GPT6_MASTER_INSTRUCTIONS.md` into the Builder Instructions field.
+Paste the current complete content of
+`knowledge/gpt6/GPT6_RUNTIME_INSTRUCTIONS.txt`
+from the Structural Core repository into the
+GPT Builder Instructions field.
+
+This is the active bootstrap instruction.
+Read the complete GPT6_MASTER_INSTRUCTIONS.md
+and GPT6_OPERATIONS_HANDBOOK.md from GitHub
+at runtime. Do not paste the full Master into
+the limited Builder Instructions field.
 
 The bootstrap rules must require GPT-6, before every engineering task, to inspect:
 1. latest released `dehghoon/linkoteq-structural-core`;
