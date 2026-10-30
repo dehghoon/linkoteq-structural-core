@@ -83,3 +83,58 @@ Before any future repository mutation, apply the exact-diff approval workflow in
 ### Remaining acceptance item
 Owner/GPT-5: open version 0.2.2 in a fresh chat and repeat canonical read and non-mutating scope/approval cases. The previous host report plus unchanged instructions support continuity but do not substitute for this final release-specific behavior check.
 GPT-3/GPT-5/GPT-4: retain the previously reported product security findings for later remediation and independent verification; deferral is not risk acceptance or production security approval.
+
+
+## Canonical knowledge-path migration — 2026-10-29
+
+This checkpoint supersedes earlier migration-pending statements for plugin publication and canonical knowledge-path access only. All earlier checkpoints remain preserved as historical evidence.
+
+### Plugin release verification
+- Plugin ID: `plugin_17b41dcc445c819186ca1f58c55cac8a`.
+- Display name: Linkoteq GPT-5 Security.
+- Scope/audience: USER / PRIVATE.
+- Previous version: `0.2.2`.
+- Previous release: `pluginrel_6ae3f6910a5081919c351f5f7ab528ad`.
+- Published version: `0.2.3`.
+- Published release: `pluginrel_6ae400ec74f08191bffae6ac2b51ddcf`.
+- Publication method: Partial Overlay, existing plugin.
+- Packaged files preserved: 6 of 6.
+- Canonical knowledge root: `dehghoon/linkoteq-structural-core/knowledge/gpt5/`.
+- Direct GitHub connector configured.
+- Obsolete GPT-5 knowledge path removed from the published plugin SKILL.md.
+
+### Runtime verification
+- Core repository: `dehghoon/linkoteq-structural-core`.
+- Branch: `main`.
+- Inspected commit: `fd88ff3d01bcbc070d9d16bffae2b538f5d41779`.
+- Core Contract declares v0.5.
+- Migration Contract declares v2.0.
+- Requested canonical runtime reads: 8/8 successful, as reported by the GPT-5 host verification.
+- Additional policy, role and knowledge files were also reported readable.
+- Direct GitHub access: PASS for observed reads.
+- Gateway/proxy dependency: not required for observed reads.
+- Runtime verdict: CONDITIONAL.
+- No repository writes or write-permission tests were performed during runtime verification.
+
+### Security and release limitations
+- Core v0.5 was confirmed in the contract, but a corresponding formal GitHub Release was not independently established.
+- Plugin Creator independently confirmed version 0.2.3 and its release ID. GitHub source reads alone do not establish the installed plugin version.
+- Production Security Verification: NOT APPROVED.
+- Backup/restore recovery readiness: NOT VERIFIED.
+- Main Website findings include token exposure in URL fragments, employee authorization concerns, HTML sanitization/XSS risk, and unverified entitlement/quota enforcement.
+- Branch protection and repository rulesets require further review.
+- GPT-3 owns application remediation; GPT-5 owns independent security retesting; GPT-4 coordinates cross-repository release and production evidence.
+- No security finding is closed by this migration.
+- No risk acceptance is implied.
+
+### Knowledge ownership
+- GPT-5 role manuals are canonical in Core under `knowledge/gpt5/`.
+- Historical Main-website/security guide references are retained as provenance, not active runtime knowledge-routing instructions.
+- Application source code, runtime configuration, tests, status, handoffs and deployment evidence remain in their owning repositories.
+
+### Migration documentation status
+- Plugin publication: VERIFIED.
+- Canonical GitHub reads: PASS.
+- Runtime acceptance: CONDITIONAL.
+- Production security: BLOCKED pending remediation and independent verification.
+- Recovery readiness: NOT VERIFIED.
