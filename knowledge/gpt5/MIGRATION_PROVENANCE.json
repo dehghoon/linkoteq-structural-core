@@ -1,0 +1,62 @@
+{
+  "status": "guides-centralized",
+  "scope": "documentation only; no product security or reconstruction readiness claim",
+  "sources": [
+    {
+      "source_repository": "dehghoon/Main-website",
+      "source_commit": "2d55087cbe22a2f48063af1fa9495451ec93fdd1",
+      "source_path": "security/BACKUP_AND_DISASTER_RECOVERY_GUIDE.md",
+      "source_blob_sha": "780c04c99b11dac5abc64d44abbc190e1a77e076",
+      "canonical_path": "knowledge/gpt5/BACKUP_AND_DISASTER_RECOVERY_GUIDE.md"
+    },
+    {
+      "source_repository": "dehghoon/Main-website",
+      "source_commit": "2d55087cbe22a2f48063af1fa9495451ec93fdd1",
+      "source_path": "security/GPT5_KNOWLEDGE_MANIFEST.md",
+      "source_blob_sha": "7fcea1e04f3c54dd785f339bcceec3e2ed0c02f4",
+      "canonical_path": "knowledge/gpt5/GPT5_KNOWLEDGE_MANIFEST.md"
+    },
+    {
+      "source_repository": "dehghoon/Main-website",
+      "source_commit": "2d55087cbe22a2f48063af1fa9495451ec93fdd1",
+      "source_path": "security/GPT5_MASTER_INSTRUCTIONS.md",
+      "source_blob_sha": "df38ca358332dc83f18965dc4c3338c12c4192fa",
+      "canonical_path": "knowledge/gpt5/GPT5_MASTER_INSTRUCTIONS.md"
+    },
+    {
+      "source_repository": "dehghoon/Main-website",
+      "source_commit": "2d55087cbe22a2f48063af1fa9495451ec93fdd1",
+      "source_path": "security/GPT5_OPERATIONS_HANDBOOK.md",
+      "source_blob_sha": "78696fe275bf0ebe931276e237c6a87a089c9c44",
+      "canonical_path": "knowledge/gpt5/GPT5_OPERATIONS_HANDBOOK.md"
+    },
+    {
+      "source_repository": "dehghoon/Main-website",
+      "source_commit": "2d55087cbe22a2f48063af1fa9495451ec93fdd1",
+      "source_path": "security/GPT5_PLUGIN_MIGRATION_TRACKING.md",
+      "source_blob_sha": "093cdc70ece11443574b20f55989c5384eb1499d",
+      "canonical_path": "knowledge/gpt5/GPT5_PLUGIN_MIGRATION_TRACKING.md"
+    },
+    {
+      "source_repository": "dehghoon/Main-website",
+      "source_commit": "2d55087cbe22a2f48063af1fa9495451ec93fdd1",
+      "source_path": "security/GPT5_RUNTIME_INSTRUCTIONS.txt",
+      "source_blob_sha": "fc4149e0737b007d1566c6959f42d2bdfbc4784c",
+      "canonical_path": "knowledge/gpt5/GPT5_RUNTIME_INSTRUCTIONS.txt"
+    },
+    {
+      "source_repository": "dehghoon/Main-website",
+      "source_commit": "2d55087cbe22a2f48063af1fa9495451ec93fdd1",
+      "source_path": "security/SECURITY_POLICY.md",
+      "source_blob_sha": "0515481f5eae3689482c69000fa0f2b3920c2ba8",
+      "canonical_path": "knowledge/gpt5/SECURITY_POLICY.md"
+    },
+    {
+      "source_repository": "dehghoon/Main-website",
+      "source_commit": "2d55087cbe22a2f48063af1fa9495451ec93fdd1",
+      "source_path": "security/THREAT_MODEL.md",
+      "source_blob_sha": "8eeeb86d29ced7476ab206dbb0fcdd3651531cf0",
+      "canonical_path": "knowledge/gpt5/THREAT_MODEL.md"
+    }
+  ]
+}

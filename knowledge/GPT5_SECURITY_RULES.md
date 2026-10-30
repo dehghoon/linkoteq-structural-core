@@ -1,3 +1,5 @@
+> Read the complete canonical GPT-5 manuals in [knowledge/gpt5](gpt5/README.md). Role guide routing there supersedes former Website guide locations.
+
 # GPT-5 Security and Cybersecurity Operating Rules
 
 ## Startup and authority

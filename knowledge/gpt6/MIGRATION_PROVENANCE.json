@@ -1,0 +1,41 @@
+{
+  "status": "guides-centralized",
+  "scope": "documentation only; no product security or reconstruction readiness claim",
+  "sources": [
+    {
+      "source_repository": "dehghoon/linkoteq-drawing-reconstruction",
+      "source_commit": "c1b1b7a749e711e4e9eefe5f2088d80dd35d1eb1",
+      "source_path": "docs/gpt6/GPT6_BUILDER_SETUP.md",
+      "source_blob_sha": "1f1452500e7fd84619dd726c14183def7ae221a1",
+      "canonical_path": "knowledge/gpt6/GPT6_BUILDER_SETUP.md"
+    },
+    {
+      "source_repository": "dehghoon/linkoteq-drawing-reconstruction",
+      "source_commit": "c1b1b7a749e711e4e9eefe5f2088d80dd35d1eb1",
+      "source_path": "docs/gpt6/GPT6_INSTRUCTIONS_v0.2.md",
+      "source_blob_sha": "6f22a6a101cddeb4efb3bfef8bb7dcd5cb7c856d",
+      "canonical_path": "knowledge/gpt6/GPT6_INSTRUCTIONS_v0.2.md"
+    },
+    {
+      "source_repository": "dehghoon/linkoteq-drawing-reconstruction",
+      "source_commit": "c1b1b7a749e711e4e9eefe5f2088d80dd35d1eb1",
+      "source_path": "docs/gpt6/GPT6_KNOWLEDGE_MANIFEST.md",
+      "source_blob_sha": "cd2918384b418ee1ccab5e0e1db275d0b40cdef6",
+      "canonical_path": "knowledge/gpt6/GPT6_KNOWLEDGE_MANIFEST.md"
+    },
+    {
+      "source_repository": "dehghoon/linkoteq-drawing-reconstruction",
+      "source_commit": "c1b1b7a749e711e4e9eefe5f2088d80dd35d1eb1",
+      "source_path": "docs/gpt6/GPT6_MASTER_INSTRUCTIONS.md",
+      "source_blob_sha": "e38a5c7c65b765c7b19678b1f984c05f92430508",
+      "canonical_path": "knowledge/gpt6/GPT6_MASTER_INSTRUCTIONS.md"
+    },
+    {
+      "source_repository": "dehghoon/linkoteq-drawing-reconstruction",
+      "source_commit": "c1b1b7a749e711e4e9eefe5f2088d80dd35d1eb1",
+      "source_path": "docs/gpt6/GPT6_OPERATIONS_HANDBOOK.md",
+      "source_blob_sha": "321fac79ef08e405bad0239cdccddb80b8e148a3",
+      "canonical_path": "knowledge/gpt6/GPT6_OPERATIONS_HANDBOOK.md"
+    }
+  ]
+}
