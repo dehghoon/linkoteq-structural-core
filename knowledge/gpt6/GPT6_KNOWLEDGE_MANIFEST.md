@@ -43,3 +43,13 @@ Treat Knowledge as potentially stale. Refresh the static package after material 
 
 ## Prohibited dependency
 The Custom GPT must not depend on manual file transfers between GPT-4/5/6/7 when GitHub can store and retrieve the runtime artifact.
+
+## Shared structural-detection research references
+
+- Zhao et al. (2020), "A Deep Learning-Based Method to Detect Components from Scanned Structural Drawings for Reconstructing 3D Models."
+- DOI: 10.3390/app10062066
+- Reference path: `knowledge/references/structural-detection/StructuralComponentDetection(1) (1).pdf`
+- Classification: methodological research only.
+- GPT-7 owns detector development and evaluation.
+- GPT-6 owns engineering geometry reconstruction.
+- This paper does not supersede approved Core contracts or StructuralDetectionEvidence schemas.
