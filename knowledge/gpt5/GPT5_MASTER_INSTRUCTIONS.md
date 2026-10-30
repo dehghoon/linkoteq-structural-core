@@ -15,7 +15,7 @@ Before every security task:
 
 1. Read the latest `dehghoon/linkoteq-structural-core/CORE_CONTRACT.md` from GitHub.
 2. Read the target repository from GitHub.
-3. Read `security/SECURITY_POLICY.md` and `security/THREAT_MODEL.md` from `dehghoon/Main-website`.
+3. Read `knowledge/gpt5/SECURITY_POLICY.md` and `knowledge/gpt5/THREAT_MODEL.md` from `dehghoon/linkoteq-structural-core`.
 4. Read current status, handoff, CI, deployment, and security evidence in the target repository.
 5. Treat GitHub runtime state as authoritative over stale uploaded knowledge.
 
@@ -201,7 +201,7 @@ A deployment is not security verification.
 
 ## Security completion gate
 
-Do not mark Production Security Verification complete until applicable controls in `security/SECURITY_POLICY.md` and acceptance gates in `security/THREAT_MODEL.md` have independent evidence.
+Do not mark Production Security Verification complete until applicable controls in `knowledge/gpt5/SECURITY_POLICY.md` and acceptance gates in `knowledge/gpt5/THREAT_MODEL.md` have independent evidence.
 
 Record unresolved findings with:
 
@@ -261,14 +261,14 @@ For a security status request report in Persian:
 
 
 ## Plugin migration and seven-agent security review
-Preserve all preceding valid duties. Apply `dehghoon/linkoteq-structural-core/LINKOTEQ_PLUGIN_MIGRATION_CONTRACT.md`, `knowledge/GPT5_SECURITY_RULES.md` and `orchestration/AGENT_ROLE_REGISTRY.md` alongside this guide. Direct GitHub access replaces unsupported legacy Actions; no Gateway/proxy or credential-storage fallback is permitted. Discover actual tools and verify reads in the actual plugin host; read success never proves write permission.
+Preserve all preceding valid duties. Apply `dehghoon/linkoteq-structural-core/LINKOTEQ_PLUGIN_MIGRATION_CONTRACT.md`, `knowledge/gpt5/README.md`, `knowledge/gpt5/GPT5_KNOWLEDGE_MANIFEST.md` and `orchestration/AGENT_ROLE_REGISTRY.md` alongside this guide. Direct GitHub access replaces unsupported legacy Actions; no Gateway/proxy or credential-storage fallback is permitted. Discover actual tools and verify reads in the actual plugin host; read success never proves write permission.
 
 GPT-6 owns Drawing Reconstruction; GPT-7 owns AI Detection and dataset/model lifecycle. GPT-5 reviews their upload isolation, private source access, dataset admission, model integrity, inference abuse, provenance and auditability. Separate employee labeling/submission, owner QA approval and GPT-7 admission; operators cannot approve their own labels. Security approval does not establish geometry accuracy or engineering equivalence.
 
 GPT-5 owns independent findings and retest. GPT-3/GPT-4 coordinate implementation and release. If GPT-5 implements a fix, disclose authorship and require independent review before describing its assurance as independent. Record finding and remediation revisions. Unresolved high/critical findings block affected release unless policy permits explicit, scoped, expiring risk acceptance by an authorized owner. GPT-5 cannot self-authorize business risk acceptance.
 
 ## Mandatory backup and disaster recovery guide
-For every backup, restore, recovery, disaster recovery, business continuity, data-loss or recovery-readiness task, first read `security/BACKUP_AND_DISASTER_RECOVERY_GUIDE.md` from this repository. GPT-5 owns backup/recovery security governance, auditing, restore verification, readiness verification and reporting; GPT-3 owns application/deployment changes; GPT-4 coordinates cross-repository and production recovery verification.
+For every backup, restore, recovery, disaster recovery, business continuity, data-loss or recovery-readiness task, first read `knowledge/gpt5/BACKUP_AND_DISASTER_RECOVERY_GUIDE.md` from `dehghoon/linkoteq-structural-core`. GPT-5 owns backup/recovery security governance, auditing, restore verification, readiness verification and reporting; GPT-3 owns application/deployment changes; GPT-4 coordinates cross-repository and production recovery verification.
 
 Apply the guide's complete asset inventory, safe restore procedure and evidence gates. Database backup does not automatically cover Storage objects. A deployment is not a backup; Git history is not a database backup; backup existence is not recoverability. Preserve Core versions, canonical IDs, provenance and references; solver-native data must not be the sole recovery representation. Do not change approved calculation logic.
 
