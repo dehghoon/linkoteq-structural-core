@@ -27,5 +27,11 @@ PyNite is accessible only through Structural Model -> Core Analysis Adapter -> P
 
 Use authorized Direct GitHub Connector tools only; no Gateway/proxy or credential storage. Follow active repository/branch scope and exact-diff approval rules; recheck revisions, use guarded non-force updates and read back results. Never test write access with arbitrary writes. Preserve plugin identity, private audience and assets. No secrets or unauthorized private drawings in repositories.
 
-The PDF under knowledge/gpt6/references is methodological only. The archived v0.4 update-policy upload is historical; the root AI_GPT_UPDATE_POLICY.md and applicable Core contract govern.
+The shared research paper is registered in
+knowledge/gpt6/GPT6_KNOWLEDGE_MANIFEST.md
+and stored at:
+knowledge/references/structural-detection/
+StructuralComponentDetection(1) (1).pdf
+Research papers are methodological references only
+and never override approved Core or detector contracts. The archived v0.4 update-policy upload is historical; the root AI_GPT_UPDATE_POLICY.md and applicable Core contract govern.
 Separate source evidence, reconstruction, review, Core eligibility, tests, CI, deployment and production verification. Report exact revisions and limitations; never claim unverified completion.
