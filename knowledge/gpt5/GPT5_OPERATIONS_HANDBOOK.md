@@ -10,7 +10,7 @@ For every repository or feature:
 1. Read latest Core Contract.
 2. Inspect live GitHub repository state.
 3. Identify assets, trust boundaries, identities, roles, plans, entitlements, APIs, data stores, uploads, external services, and deployment targets.
-4. Compare implementation against `SECURITY_POLICY.md` and `THREAT_MODEL.md`.
+4. Compare implementation against `knowledge/gpt5/SECURITY_POLICY.md` and `knowledge/gpt5/THREAT_MODEL.md` in `dehghoon/linkoteq-structural-core`.
 5. Create findings with severity and concrete evidence.
 6. Implement safe remediations that stay within GPT-5 ownership.
 7. Add negative security tests.
@@ -237,7 +237,7 @@ Only GPT-5/GPT-4 verification evidence may support the final status, and product
 
 
 ## Plugin runtime acceptance
-Read `GPT5_PLUGIN_MIGRATION_TRACKING.md` and the Core plugin migration contract. Preserve the original GPT/plugin identity, instructions, audience, assets and rollback evidence. Compare the inventory before and after migration. Do not delete/recreate an existing plugin.
+Read `knowledge/gpt5/GPT5_PLUGIN_MIGRATION_TRACKING.md` from `dehghoon/linkoteq-structural-core` and the Core plugin migration contract. Preserve the original GPT/plugin identity, instructions, audience, assets and rollback evidence. Compare the inventory before and after migration. Do not delete/recreate an existing plugin.
 
 Verify current Core, master instructions, handbook, manifest, security policy, threat model and backup guide through actual direct GitHub tools in the migrated host. Record repository, path, exact commit and result. Distinguish available tools, successful reads, authorized writes, saved release and behavior. Do not write merely to test connectivity. Prepare full diffs and follow required approval/concurrency/readback controls for real changes.
 
@@ -247,7 +247,7 @@ Coordinate GPT-6 reconstruction and GPT-7 detection reviews through GPT-4. Recor
 Issue scoped `pass`, `conditional` or `block` decisions. Track authorized risk acceptance separately, with owner, rationale, controls, scope and expiry. Unresolved high/critical findings block affected release absent permitted explicit acceptance.
 
 ## Backup and recovery operations
-Before all backup/recovery work, read and follow `BACKUP_AND_DISASTER_RECOVERY_GUIDE.md`. Use its inventory, disaster scenarios, restore runbooks, evidence fields and readiness gates without replacing them with a shorter checklist. Report approved RPO/RTO or `DEFINE_REQUIRED`; identify asset owners and missing provider evidence. Use isolated non-production restore tests unless explicitly approved otherwise. Preserve canonical engineering data and approved calculation logic.
+Before all backup/recovery work, read and follow `knowledge/gpt5/BACKUP_AND_DISASTER_RECOVERY_GUIDE.md` from `dehghoon/linkoteq-structural-core`. Use its inventory, disaster scenarios, restore runbooks, evidence fields and readiness gates without replacing them with a shorter checklist. Report approved RPO/RTO or `DEFINE_REQUIRED`; identify asset owners and missing provider evidence. Use isolated non-production restore tests unless explicitly approved otherwise. Preserve canonical engineering data and approved calculation logic.
 
 
 ## Mandatory authentication, access and quota regression matrix
