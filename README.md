@@ -41,3 +41,11 @@ Core v0.5 additionally defines:
 All Linkoteq products may maintain private implementation/UI state, but cross-product engineering exchange should conform to this repository.
 
 See `CORE_CONTRACT.md` for architecture and integration rules and `typescript/index.ts` for canonical TypeScript interfaces.
+
+## Core Gap Register — proposed future revisions
+
+All Linkoteq GPT agents and engineering teams should consult and contribute to the [Core Gap Register](docs/CORE_GAP_REGISTER.md) when a feature or importer exposes a possible missing Core capability. Record evidence against the current released Core contract before classifying a gap as confirmed; do **not** change Core or introduce a parallel incompatible schema for each feature.
+
+The register collects candidates across the 3D Model and SAP2000, ETABS, and STAAD.Pro importers. After GPT-2 has assessed all three formats and GPT-3 has assessed the Advanced Model, consolidate and deduplicate confirmed needs into **one proposed Core revision** for review and explicit approval. Until then, continue development using the existing Core contract and preserve unsupported source information without silent loss.
+
+This register is a planning process, not a Core schema revision.
