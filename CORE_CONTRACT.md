@@ -169,6 +169,14 @@ Target: surface/plate/quad. Stores pressure magnitude, load case and pressure co
 
 PyNite mapping: plate/quad surface pressure methods.
 
+### SurfaceVectorLoad (additive schema proposal)
+
+An explicitly global, distributed surface vector load stores FX/FY/FZ force-per-area components with explicit units. It is distinct from scalar pressure normal to a surface. The adapter must integrate the vector over physical surface area, preserve the source convention, and verify total force and moment equilibrium. Existing `SurfacePressureLoad` semantics remain unchanged; a specified normal sense is interpreted using the canonical oriented surface normal. Do not infer a normal from an unordered boundary or silently flip node winding.
+
+### Diaphragm membership and constraints (additive schema proposal)
+
+`Diaphragm.surfaceIds` and `Diaphragm.nodeIds` are complementary membership inputs. Effective analysis nodes are the deduplicated union of explicitly assigned nodes and nodes derived from the associated surfaces/verified mesh. Membership does not itself authorize applying a second load or a second constraint. A rigid diaphragm requires a declared in-plane constraint basis and validated reference point; a semi-rigid diaphragm requires actual in-plane stiffness from a verified analytical mesh. Unsupported diaphragm constraint semantics must be preserved and flagged, never replaced silently with a rigid diaphragm. Level/diaphragm resultants must be distributed with force and moment equilibrium checks and transformation provenance.
+
 ### SelfWeightLoad
 
 Defines a global gravity direction, factor and load case. The adapter may use native solver self-weight support or generate equivalent canonical loads while retaining provenance.
