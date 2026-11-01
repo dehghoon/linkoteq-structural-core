@@ -44,7 +44,8 @@ export interface EnforcedNodeDisplacement { id: string; nodeId: string; dof: Str
 export interface SurfaceLoadTransfer { method: LoadTransfer; direction?: Vec3; supportingMemberIds?: string[]; notes?: string; }
 export interface Surface { id: string; type: SurfaceType; boundaryNodeIds: string[]; levelId?: string; thickness?: UnitValue; materialId?: string; loadTransfer?: SurfaceLoadTransfer; metadata?: Record<string, string | number | boolean | null>; }
 export interface Opening { id: string; hostSurfaceId: string; boundaryNodeIds: string[]; }
-export interface Diaphragm { id: string; type: DiaphragmType; levelId: string; surfaceIds: string[]; nodeIds?: string[]; }
+export interface Diaphragm { id: string; type: DiaphragmType; levelId: string; surfaceIds: string[]; nodeIds?: string[]; constraint?: DiaphragmConstraint; }
+export interface DiaphragmConstraint { referenceNodeId?: string; planeNormal?: Vec3; inPlaneDofs?: StructuralDOF[]; membershipPolicy?: "union-deduplicated"; analysisPolicy?: "rigid-constraint" | "shell-stiffness" | "preserve-only"; }
 
 export interface LoadSource { id: string; category: LoadCategory; name: string; calculator?: "manual" | "snow" | "wind" | "seismic" | "self-weight" | "other"; calculatorVersion?: string; codeEdition?: string; jurisdiction?: string; status?: "manual" | "generated" | "stale" | "error"; inputs?: Record<string, unknown>; summary?: Record<string, unknown>; generatedAt?: string; }
 export interface LoadCase { id: string; name: string; category: LoadCategory; sourceId?: string; analysisType?: "static" | "response-spectrum" | "other"; tags?: string[]; }
@@ -53,11 +54,12 @@ interface BaseLoad { id: string; loadCaseId: string; provenance?: LoadProvenance
 export interface NodalLoad extends BaseLoad { type: "nodal"; nodeId: string; coordinateSystem: "global"; components: Partial<Record<ForceDirection | MomentDirection, UnitValue>>; }
 export interface MemberPointLoad extends BaseLoad { type: "member-point"; memberId: string; coordinateSystem: LoadCoordinateSystem; direction: MemberLoadDirection; magnitude: UnitValue; x: UnitValue; }
 export interface MemberDistributedLoad extends BaseLoad { type: "member-distributed"; memberId: string; coordinateSystem: LoadCoordinateSystem; direction: MemberLoadDirection; w1: UnitValue; w2: UnitValue; x1?: UnitValue; x2?: UnitValue; }
-export interface SurfacePressureLoad extends BaseLoad { type: "surface-pressure"; surfaceId: string; pressure: UnitValue; convention?: "surface-normal"; }
+export interface SurfacePressureLoad extends BaseLoad { type: "surface-pressure"; surfaceId: string; pressure: UnitValue; convention?: "surface-normal"; normalSense?: "positive" | "negative"; }
+export interface SurfaceVectorLoad extends BaseLoad { type: "surface-vector"; surfaceId: string; coordinateSystem: "global"; components: Partial<Record<ForceDirection, UnitValue>>; distribution: "force-per-area"; }
 export interface SelfWeightLoad extends BaseLoad { type: "self-weight"; globalDirection: ForceDirection; factor: number; targetMemberIds?: string[]; }
 export interface LevelLoad extends BaseLoad { type: "level"; levelId: string; force: Vec3; moment?: Vec3; forceUnit: string; momentUnit?: string; }
 export interface DiaphragmLoad extends BaseLoad { type: "diaphragm"; diaphragmId: string; force: Vec3; moment?: Vec3; forceUnit: string; momentUnit?: string; }
-export type Load = NodalLoad | MemberPointLoad | MemberDistributedLoad | SurfacePressureLoad | SelfWeightLoad | LevelLoad | DiaphragmLoad;
+export type Load = NodalLoad | MemberPointLoad | MemberDistributedLoad | SurfacePressureLoad | SurfaceVectorLoad | SelfWeightLoad | LevelLoad | DiaphragmLoad;
 
 export interface LoadCombination { id: string; name: string; limitState?: "ULS" | "SLS" | "ASD" | "other"; factors: Record<string, number>; tags?: string[]; codeRef?: string; }
 
