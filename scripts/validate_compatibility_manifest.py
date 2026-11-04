@@ -6,7 +6,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 manifest = json.loads((ROOT / "releases/compatibility-manifest.json").read_text())
 assert manifest["manifestVersion"] == "1.0"
-assert manifest["coreSchemaVersion"] == "0.5"
+assert manifest["coreSchemaVersion"] == "0.6"
+assert manifest["supportedSchemaVersions"] == ["0.5", "0.6"]
 assert (ROOT / manifest["coreContractPath"]).is_file()
 assert manifest["capabilities"], "At least one capability required"
 for name, cap in manifest["capabilities"].items():
@@ -18,5 +19,6 @@ for name, cap in manifest["capabilities"].items():
         assert not cap["productionReady"], name
 for name, consumer in manifest["consumers"].items():
     if "coreSchemaVersion" in consumer:
-        assert consumer["coreSchemaVersion"] == manifest["coreSchemaVersion"], name
+        assert consumer["coreSchemaVersion"] in manifest["supportedSchemaVersions"], name
+        assert consumer["targetCoreSchemaVersion"] == manifest["coreSchemaVersion"], name
 print("Compatibility manifest validation: PASS")
