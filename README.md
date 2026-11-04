@@ -4,6 +4,18 @@ Canonical, versioned engineering data contract shared by Linkoteq applications, 
 
 Current schema: **v0.5**.
 
+Current package release: **v0.6.0**.
+
+Revision 6 adds TypeScript definitions for:
+- Joist specifications and capacity-verification status.
+- Member-end connections, releases, stiffness and offsets.
+- Nodal links and multi-point constraints.
+- Surface local-axis information.
+- Extended shell analysis results.
+
+These definitions do not establish verified solver
+support or production integration.
+
 ## Scope
 
 Core defines the shared structural domain and integration boundaries. It does **not** contain rendering, PyNite, DXF/IFC parsing, snow/wind/seismic formulas or member-design calculation logic.
