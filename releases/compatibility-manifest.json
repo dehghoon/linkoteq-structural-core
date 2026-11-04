@@ -1,6 +1,7 @@
 {
   "manifestVersion": "1.0",
-  "coreSchemaVersion": "0.5",
+  "coreSchemaVersion": "0.6",
+  "supportedSchemaVersions": ["0.5", "0.6"],
   "coreContractPath": "CORE_CONTRACT.md",
   "capabilities": {
     "surface-to-member-transfer": {
@@ -23,15 +24,18 @@
   "consumers": {
     "snow-calculator": {
       "coreSchemaVersion": "0.5",
+      "targetCoreSchemaVersion": "0.6",
       "surfacePressureExport": "verified",
       "surfaceToMemberTransfer": "not-integrated"
     },
     "3d-model": {
       "coreSchemaVersion": "0.5",
+      "targetCoreSchemaVersion": "0.6",
       "surfaceToMemberTransfer": "not-integrated"
     },
     "pynite-adapter": {
       "coreSchemaVersion": "0.5",
+      "targetCoreSchemaVersion": "0.6",
       "surfaceToMemberTransfer": "not-integrated"
     },
     "gpt-and-plugins": {
