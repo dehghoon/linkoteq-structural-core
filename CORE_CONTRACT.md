@@ -1,4 +1,4 @@
-# Linkoteq Structural Core Contract v0.5
+# Linkoteq Structural Core Contract v0.6
 
 ## Purpose
 
@@ -261,5 +261,19 @@ Nodes, members, surfaces, materials, sections, load cases, loads, combinations, 
 - `0.3`: design/report/AI integration
 - `0.4`: coordinate systems, internal-force convention, arbitrary stations and envelopes
 - `0.5`: typed material/section analysis properties; explicit DOF/support behavior; explicit external load primitives; load-case/combination semantics; analysis modes; PyNite reference mapping and adapter boundary
+
+- `0.6`: additive joist specifications, member-end connections,
+  nodal links, multi-point constraints, surface local axes,
+  and extended shell analysis results.
+
+### v0.6 compatibility
+
+- Both `schemaVersion: "0.5"` and `"0.6"` are supported.
+- Existing v0.5 fields retain their original meanings.
+- New v0.6 engineering fields are optional.
+- Consumers should target v0.6 while preserving v0.5 data.
+- Unsupported solver features must be preserved and reported,
+  not silently discarded.
+- Consumer deployment is independent of Core publication.
 
 Breaking semantic changes require a new schema version and migration notes.
