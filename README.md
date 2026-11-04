@@ -2,9 +2,9 @@
 
 Canonical, versioned engineering data contract shared by Linkoteq applications, calculators, importers, analysis adapters, design modules, reports, viewers and AI/GPT workflows.
 
-Current schema: **v0.5**.
+Current schema on `main`: **v0.6** (v0.5 remains supported for backward compatibility).
 
-Current package release: **v0.6.0**.
+Package version: **v0.6.0**. Official GitHub Release: **pending** (latest verified published release: v0.5.0).
 
 Revision 6 adds TypeScript definitions for:
 - Joist specifications and capacity-verification status.
