@@ -1,7 +1,10 @@
 {
   "manifestVersion": "1.0",
   "coreSchemaVersion": "0.6",
-  "supportedSchemaVersions": ["0.5", "0.6"],
+  "supportedSchemaVersions": [
+    "0.5",
+    "0.6"
+  ],
   "coreContractPath": "CORE_CONTRACT.md",
   "capabilities": {
     "surface-to-member-transfer": {
@@ -42,5 +45,7 @@
       "contractReadPolicy": "read pinned approved Core revision before engineering tasks",
       "runtimeCapabilityAssumed": false
     }
-  }
+  },
+  "registryAuthoritySchemaVersion": "0.5",
+  "note": "Registry authority remains 0.5 for registered consumers; coreSchemaVersion 0.6 is the target release schema. Consumer migrations require separate verification."
 }
