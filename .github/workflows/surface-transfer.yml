@@ -1,0 +1,22 @@
+name: Experimental Surface Transfer Tests
+on:
+  pull_request:
+    paths:
+      - 'surface_transfer/**'
+      - 'tests/test_surface_transfer.py'
+      - '.github/workflows/surface-transfer.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'surface_transfer/**'
+      - 'tests/test_surface_transfer.py'
+      - '.github/workflows/surface-transfer.yml'
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -p 'test_surface_transfer.py'
