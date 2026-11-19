@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ca-nbc-2020-first-printing-wind-pressure-pilot",
+  "source": {
+    "standard": "NBC 2020",
+    "printing": 1,
+    "reference": "Appendix C, Table C-2",
+    "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf"
+  },
+  "coverage": "Four exact named locations reviewed against the first printing. No interpolation. Other printings may differ.",
+  "records": [
+    {
+      "id": "CA/British%20Columbia/Vancouver%20(City%20Hall)",
+      "provinceOrTerritory": "British Columbia",
+      "location": "Vancouver (City Hall)",
+      "q10KPa": 0.36,
+      "q50KPa": 0.45
+    },
+    {
+      "id": "CA/Ontario/Ottawa%20(City%20Hall)",
+      "provinceOrTerritory": "Ontario",
+      "location": "Ottawa (City Hall)",
+      "q10KPa": 0.32,
+      "q50KPa": 0.41
+    },
+    {
+      "id": "CA/Ontario/Toronto%20(City%20Hall)",
+      "provinceOrTerritory": "Ontario",
+      "location": "Toronto (City Hall)",
+      "q10KPa": 0.37,
+      "q50KPa": 0.47
+    },
+    {
+      "id": "CA/Quebec/Montr%C3%A9al%20(City%20Hall)",
+      "provinceOrTerritory": "Quebec",
+      "location": "Montréal (City Hall)",
+      "q10KPa": 0.34,
+      "q50KPa": 0.44
+    }
+  ]
+}
