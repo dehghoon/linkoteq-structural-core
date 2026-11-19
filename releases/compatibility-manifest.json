@@ -26,15 +26,23 @@
   },
   "consumers": {
     "snow-calculator": {
-      "coreSchemaVersion": "0.5",
+      "coreSchemaVersion": "0.6",
       "targetCoreSchemaVersion": "0.6",
       "surfacePressureExport": "verified",
-      "surfaceToMemberTransfer": "not-integrated"
+      "surfaceToMemberTransfer": "not-integrated",
+      "supportedSchemaVersions": [
+        "0.5",
+        "0.6"
+      ]
     },
     "3d-model": {
-      "coreSchemaVersion": "0.5",
+      "coreSchemaVersion": "0.6",
       "targetCoreSchemaVersion": "0.6",
-      "surfaceToMemberTransfer": "not-integrated"
+      "surfaceToMemberTransfer": "not-integrated",
+      "supportedSchemaVersions": [
+        "0.5",
+        "0.6"
+      ]
     },
     "pynite-adapter": {
       "coreSchemaVersion": "0.5",
@@ -44,6 +52,15 @@
     "gpt-and-plugins": {
       "contractReadPolicy": "read pinned approved Core revision before engineering tasks",
       "runtimeCapabilityAssumed": false
+    },
+    "w-section-calculator": {
+      "coreSchemaVersion": "0.6",
+      "targetCoreSchemaVersion": "0.6",
+      "supportedSchemaVersions": [
+        "0.5",
+        "0.6"
+      ],
+      "designWriteback": "verified-boundary-parity"
     }
   },
   "registryAuthoritySchemaVersion": "0.6",
