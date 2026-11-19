@@ -15,19 +15,31 @@
       "id": "snow-calculator",
       "type": "calculator",
       "status": "partial-verified",
-      "coreSchemaVersion": "0.5"
+      "coreSchemaVersion": "0.6",
+      "supportedSchemaVersions": [
+        "0.5",
+        "0.6"
+      ]
     },
     {
       "id": "w-section-calculator",
       "type": "calculator",
       "status": "pending-verification",
-      "coreSchemaVersion": "0.5"
+      "coreSchemaVersion": "0.6",
+      "supportedSchemaVersions": [
+        "0.5",
+        "0.6"
+      ]
     },
     {
       "id": "3d-model",
       "type": "model",
-      "status": "not-integrated",
-      "coreSchemaVersion": "0.5"
+      "status": "partial-verified",
+      "coreSchemaVersion": "0.6",
+      "supportedSchemaVersions": [
+        "0.5",
+        "0.6"
+      ]
     },
     {
       "id": "pynite-adapter",
