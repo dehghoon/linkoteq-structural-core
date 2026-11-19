@@ -46,6 +46,6 @@
       "runtimeCapabilityAssumed": false
     }
   },
-  "registryAuthoritySchemaVersion": "0.5",
-  "note": "Registry authority remains 0.5 for registered consumers; coreSchemaVersion 0.6 is the target release schema. Consumer migrations require separate verification."
+  "registryAuthoritySchemaVersion": "0.6",
+  "note": "Registry authority follows released schema 0.6. Each consumer records its supported schema and independent migration verification."
 }

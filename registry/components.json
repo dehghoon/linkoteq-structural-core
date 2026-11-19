@@ -1,7 +1,7 @@
 {
   "registryVersion": "0.1",
   "authority": {
-    "coreSchemaVersion": "0.5",
+    "coreSchemaVersion": "0.6",
     "manifestPath": "releases/compatibility-manifest.json",
     "contractPath": "CORE_CONTRACT.md"
   },
