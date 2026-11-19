@@ -6,4 +6,8 @@ Six original JSON files copied from the pinned Snow-Calculator revision in `prov
 
 ## Hourly wind reference pressures
 
-[Wind pressure pilot](wind-pressure-first-printing.json) records the 1-in-10-year and 1-in-50-year hourly wind pressures in kPa for four exact location IDs. Its source is NBC 2020 Appendix C, Table C-2, first printing. Select the exact location and verify the adopted printing and amendments for the project. Coverage is limited to the listed station names.
+[NBC 2020 Table C-2 wind catalog](wind-pressure-second-printing.json) contains all 680 named station rows from the NRC second printing (March 2025 revisions and errata). The two values per station are hourly reference pressures for 1-in-10 and 1-in-50 years in kPa. They are reference inputs for a wind calculation.
+
+The wind catalog covers all 678 IDs in the climate location index, plus Windsor, Ontario and Windsor, Quebec. Windsor IDs are separate and carry their source province. This wind coverage does not provide snow values for either Windsor. Choose the exact station and verify the printing and local amendments adopted for the project.
+
+The [first-printing pilot](wind-pressure-first-printing.json) is retained for reference.

@@ -13,7 +13,7 @@
       "id": "CA/British%20Columbia/Vancouver%20(City%20Hall)",
       "provinceOrTerritory": "British Columbia",
       "location": "Vancouver (City Hall)",
-      "q10KPa": 0.36,
+      "q10KPa": 0.34,
       "q50KPa": 0.45
     },
     {
@@ -27,8 +27,8 @@
       "id": "CA/Ontario/Toronto%20(City%20Hall)",
       "provinceOrTerritory": "Ontario",
       "location": "Toronto (City Hall)",
-      "q10KPa": 0.37,
-      "q50KPa": 0.47
+      "q10KPa": 0.34,
+      "q50KPa": 0.44
     },
     {
       "id": "CA/Quebec/Montr%C3%A9al%20(City%20Hall)",
