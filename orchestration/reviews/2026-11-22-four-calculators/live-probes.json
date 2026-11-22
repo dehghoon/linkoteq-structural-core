@@ -1,0 +1,193 @@
+[
+  {
+    "method": "GET",
+    "url": "https://wind-calculator.vercel.app/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "cache_control": "public, max-age=0, must-revalidate",
+    "redirect_location": null,
+    "title": [
+      "Wind Load Calculator | Linkoteq"
+    ],
+    "forms": 0,
+    "sign_in_gate": false,
+    "vercel_auth": false
+  },
+  {
+    "method": "GET",
+    "url": "https://wind-calculator.vercel.app/health",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "cache_control": "public, max-age=0, must-revalidate",
+    "redirect_location": null,
+    "title": [
+      "404: This page could not be found.",
+      "Wind Load Calculator | Linkoteq"
+    ],
+    "forms": 0,
+    "sign_in_gate": false,
+    "vercel_auth": false
+  },
+  {
+    "method": "GET",
+    "url": "https://linkoteq-seismic-preview.vercel.app/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "cache_control": "public, max-age=0, must-revalidate",
+    "redirect_location": null,
+    "title": [
+      "Seismic Load Calculator | Linkoteq"
+    ],
+    "forms": 0,
+    "sign_in_gate": false,
+    "vercel_auth": false
+  },
+  {
+    "method": "GET",
+    "url": "https://linkoteq-seismic-api.vercel.app/health",
+    "status": 200,
+    "content_type": "application/json",
+    "cache_control": "public, max-age=0, must-revalidate",
+    "redirect_location": null,
+    "body": "{\"status\":\"ok\",\"engine_source_consistency\":{\"passed\":true,\"checks\":[\"2010 formula IDs F-001..F-062 are complete and ordered.\",\"2020 formula IDs N20-F-001..N20-F-045 are complete and ordered.\",\"Formula ID namespaces are edition-separated.\",\"2010 SFRS/locality and 2020 SFRS row counts match the handoff.\",\"Every 2020 SFRS row carries SC1-SC4 restriction fields.\",\"NBCC 2020 contains no locality hazard table.\",\"All mandatory 2020 implementation hold points are in the issue tracker.\",\"N20-VC-001..010 are complete.\"]}}"
+  },
+  {
+    "method": "GET",
+    "url": "https://linkoteq-seismic-api.vercel.app/version",
+    "status": 200,
+    "content_type": "application/json",
+    "cache_control": "public, max-age=0, must-revalidate",
+    "redirect_location": null,
+    "body": "{\"api_version\":\"0.1.0\",\"engine_version\":\"0.1.0\",\"engineering_specification_version\":\"3.0\",\"nbcc_2020_release_status\":\"BLOCKED_PENDING_ENGINEERING_APPROVAL\"}"
+  },
+  {
+    "method": "GET",
+    "url": "https://linkoteq-wood-api.vercel.app/health",
+    "status": 200,
+    "content_type": "application/json",
+    "cache_control": "public, max-age=0, must-revalidate",
+    "redirect_location": null,
+    "body": "{\"status\":\"ok\"}"
+  },
+  {
+    "method": "GET",
+    "url": "https://linkoteq-wood-api.vercel.app/version",
+    "status": 200,
+    "content_type": "application/json",
+    "cache_control": "public, max-age=0, must-revalidate",
+    "redirect_location": null,
+    "body": "{\"version\":\"0.1.0\",\"engineering_engine\":\"country-component-pilot-2026-11-22\",\"complete_design_engine\":\"not-integrated\"}"
+  },
+  {
+    "method": "GET",
+    "url": "https://linkoteq-concrete-api.vercel.app/health",
+    "status": 200,
+    "content_type": "application/json",
+    "cache_control": "public, max-age=0, must-revalidate",
+    "redirect_location": null,
+    "body": "{\"status\":\"ok\",\"scope\":\"section_arithmetic_research_only\",\"csa_design_enabled\":false}"
+  },
+  {
+    "method": "GET",
+    "url": "https://linkoteq-concrete-api.vercel.app/version",
+    "status": 200,
+    "content_type": "application/json",
+    "cache_control": "public, max-age=0, must-revalidate",
+    "redirect_location": null,
+    "body": "{\"profile_version\":\"component-pilot-2026-11-22\",\"profiles\":[\"ACI_318_2019\",\"CSA_A23_3_2019\",\"CSA_A23_3_2024_SHEAR_ONLY\"],\"engineering_approval\":false}"
+  },
+  {
+    "method": "GET",
+    "url": "https://www.linkoteq.com/tools/wood-design",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "cache_control": "public, max-age=0, must-revalidate",
+    "redirect_location": null,
+    "title": [
+      "Wood Design — USA &amp; Canada Beta | Linkoteq"
+    ],
+    "forms": 0,
+    "sign_in_gate": true,
+    "vercel_auth": false
+  },
+  {
+    "method": "GET",
+    "url": "https://www.linkoteq.com/tools/concrete-beam",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "cache_control": "public, max-age=0, must-revalidate",
+    "redirect_location": null,
+    "title": [
+      "Concrete Beam | Linkoteq"
+    ],
+    "forms": 0,
+    "sign_in_gate": true,
+    "vercel_auth": false
+  },
+  {
+    "method": "POST",
+    "url": "https://wind-calculator.vercel.app/api/v1/calculations",
+    "status": 401,
+    "content_type": "application/json",
+    "cache_control": "no-store",
+    "redirect_location": null,
+    "body": "{\"detail\":{\"code\":\"authentication_required\",\"message\":\"Sign in to Linkoteq with approved tool access.\"}}"
+  },
+  {
+    "method": "POST",
+    "url": "https://linkoteq-seismic-api.vercel.app/api/v1/calculations",
+    "status": 401,
+    "content_type": "application/json",
+    "cache_control": "no-store",
+    "redirect_location": null,
+    "body": "{\"detail\":{\"code\":\"authentication_required\",\"message\":\"Sign in to Linkoteq with approved tool access.\"}}"
+  },
+  {
+    "method": "POST",
+    "url": "https://linkoteq-wood-api.vercel.app/api/v1/beam/check",
+    "status": 401,
+    "content_type": "application/json",
+    "cache_control": "no-store",
+    "redirect_location": null,
+    "body": "{\"detail\":{\"code\":\"authentication_required\",\"message\":\"Sign in to Linkoteq with approved tool access.\"}}"
+  },
+  {
+    "method": "POST",
+    "url": "https://linkoteq-concrete-api.vercel.app/api/v1/beam/check",
+    "status": 401,
+    "content_type": "application/json",
+    "cache_control": "no-store",
+    "redirect_location": null,
+    "body": "{\"detail\":{\"code\":\"authentication_required\",\"message\":\"Sign in to Linkoteq with approved tool access.\"}}"
+  },
+  {
+    "method": "POST",
+    "url": "https://www.linkoteq.com/api/calculators/wood",
+    "status": 401,
+    "content_type": "application/json",
+    "cache_control": "private, no-store",
+    "redirect_location": null,
+    "body": "{\"error\":\"authentication_required\"}"
+  },
+  {
+    "method": "POST",
+    "url": "https://www.linkoteq.com/api/calculators/concrete",
+    "status": 401,
+    "content_type": "application/json",
+    "cache_control": "private, no-store",
+    "redirect_location": null,
+    "body": "{\"error\":\"authentication_required\"}"
+  },
+  {
+    "method": "GET",
+    "url": "https://wind-calculator.vercel.app/api/health",
+    "status": 401,
+    "interpretation": "Broad /api middleware; no unauthenticated health conclusion"
+  },
+  {
+    "method": "GET",
+    "url": "https://wind-calculator.vercel.app/api/version",
+    "status": 401,
+    "interpretation": "Broad /api middleware"
+  }
+]

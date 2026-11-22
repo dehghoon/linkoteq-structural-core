@@ -1,0 +1,47 @@
+{
+  "handoff_version": "1.0",
+  "review_id": "GPT3-FOUR-CALCULATORS-20261122",
+  "source_owner": "GPT3",
+  "target_owner": "GPT4",
+  "tool": "wind",
+  "repository": "dehghoon/wind-calculator",
+  "source_commit": "307871a6f7861aadb6bed9da8ef9b40b421a0d90",
+  "source_url": "https://github.com/dehghoon/wind-calculator/tree/307871a6f7861aadb6bed9da8ef9b40b421a0d90",
+  "core_schema_target": "0.6",
+  "canonical_integration_status": "not accepted; private DTOs are not canonical writeback",
+  "application_status": "implemented limited Beta",
+  "deployment_status": "READY record observed; see evidence.json",
+  "production_engineering_acceptance": "blocked",
+  "tests": [
+    {
+      "repo": "wind-calculator",
+      "command": "PYTHONPATH=packages/wind-calculation-engine/src:backend python -m pytest packages/wind-calculation-engine/tests backend/tests -q",
+      "passed": 65,
+      "exit_code": 0,
+      "evidence_kind": "executed-this-review",
+      "scope": "included engine and API tests",
+      "source_parity": "39 source/test/dataset files fetched at pinned revision"
+    }
+  ],
+  "blockers": [
+    "F01 login roundtrip/SSO unresolved",
+    "F03 engineering/workbook scope limits",
+    "F04 canonical wind writeback not demonstrated",
+    "F05 authenticated browser evidence missing"
+  ],
+  "deliverables": [
+    "../REVIEW.md",
+    "../evidence.json",
+    "../live-probes.json",
+    "../acceptance-checklist.md"
+  ],
+  "next_actions": "GPT4 independently verify and assign application remediation to GPT3, engineering/material source approval to GPT1/GPT2 and security review/retest to GPT5.",
+  "forbidden_changes": [
+    "Do not rewrite approved GPT2 engineering logic",
+    "Do not remove backend authorization or activate plans",
+    "Do not infer full member approval from component checks",
+    "Do not modify existing verified Snow or W-Section tools",
+    "Do not mark GPT4 acceptance complete without independent evidence"
+  ],
+  "limitations": "Review handoff only; no runtime code/DNS/deployment changes and no automatic notification or execution of GPT4."
+}
