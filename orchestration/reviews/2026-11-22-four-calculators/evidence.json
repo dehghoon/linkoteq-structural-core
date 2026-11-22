@@ -1,0 +1,328 @@
+{
+  "schema_version": "1.0",
+  "review_id": "GPT3-FOUR-CALCULATORS-20261122",
+  "prepared_at_utc": "2026-11-22T18:48:09Z",
+  "prepared_by": "GPT3 Engineering App",
+  "acceptance_owner": "GPT4",
+  "review_status": "prepared-for-independent-review",
+  "production_acceptance": "blocked",
+  "source_revisions": {
+    "dehghoon/linkoteq-structural-core": "c628d25982760936ff0e652047d0c1440d5a004b",
+    "dehghoon/Main-website": "5a0d3a478580946eb2985ee1cb7dc3fb8880e6b8",
+    "dehghoon/WoodDessign": "c149f82f087fbdea09292bc275fa50d731a80b3c",
+    "dehghoon/linkoteq-concrete-beam": "b1a5f06e9d3cdea817841451675d8649829044f1",
+    "dehghoon/seismic-calculator": "038074cadb7e6e007a366b4582e22d981416d97c",
+    "dehghoon/wind-calculator": "307871a6f7861aadb6bed9da8ef9b40b421a0d90"
+  },
+  "core": {
+    "released_tag": "v0.6.0",
+    "schema": "0.6",
+    "legacy_supported": "0.5",
+    "documentation_conflict": "Some Knowledge and policy prose still says v0.5; current contract, TypeScript and release manifest specify v0.6",
+    "pynite_gate": "blocked; not changed; no solver execution in this review"
+  },
+  "tests": [
+    {
+      "repo": "WoodDessign",
+      "command": "PYTHONPATH=src python -m pytest -q",
+      "passed": 66,
+      "exit_code": 0,
+      "evidence_kind": "executed-this-review",
+      "scope": "entire current repository suite",
+      "source_parity": "17 src/tests files matched Git blob SHA"
+    },
+    {
+      "repo": "linkoteq-concrete-beam",
+      "command": "PYTHONPATH=src python -m pytest -q",
+      "passed": 61,
+      "subtests": 16,
+      "exit_code": 0,
+      "evidence_kind": "executed-this-review",
+      "scope": "entire current repository suite",
+      "source_parity": "24 Python files fetched at pinned revision to isolated audit directory; stale local foundation not used for final result"
+    },
+    {
+      "repo": "wind-calculator",
+      "command": "PYTHONPATH=packages/wind-calculation-engine/src:backend python -m pytest packages/wind-calculation-engine/tests backend/tests -q",
+      "passed": 65,
+      "exit_code": 0,
+      "evidence_kind": "executed-this-review",
+      "scope": "included engine and API tests",
+      "source_parity": "39 source/test/dataset files fetched at pinned revision"
+    },
+    {
+      "repo": "seismic-calculator",
+      "command": "PYTHONPATH=. python -m pytest backend/tests/test_tool_auth.py -q",
+      "passed": 10,
+      "exit_code": 0,
+      "evidence_kind": "executed-this-review",
+      "scope": "authorization only; not full engineering suite",
+      "source_parity": "12 backend files fetched at pinned revision"
+    },
+    {
+      "repo": "Main-website",
+      "command": "npm run typecheck",
+      "exit_code": 0,
+      "evidence_kind": "executed-this-review",
+      "source_parity": "15 relevant frontend/proxy/policy/package files matched Git blob SHA"
+    },
+    {
+      "repo": "Main-website",
+      "command": "node --experimental-strip-types --test tests/tool-execution-policy.test.ts",
+      "passed": 6,
+      "exit_code": 0,
+      "evidence_kind": "executed-this-review"
+    }
+  ],
+  "not_executed": [
+    "Real signed-in Owner/employee/customer browser session and login roundtrip",
+    "Mobile/desktop pointer/pinch/keyboard 3D interaction retest",
+    "Full seismic engineering suite: approved immutable cnbc_seismic_dual_edition package absent locally",
+    "New dependency audit in this audit pass (earlier checks and CI are separate evidence)",
+    "Full new frontend production build for all tools in this review; successful Vercel deployments and available CI retained separately",
+    "Numerical code certification or independent GPT2/GPT4 approval",
+    "Canonical writeback roundtrip into 3D model"
+  ],
+  "ci_checks": {
+    "WoodDessign": [
+      {
+        "name": "verify",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/dehghoon/WoodDessign/actions/runs/45056456417/job/137312666645"
+      },
+      {
+        "name": "verify",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/dehghoon/WoodDessign/actions/runs/45050934767/job/137295663620"
+      }
+    ],
+    "linkoteq-concrete-beam": [
+      {
+        "name": "verify",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/dehghoon/linkoteq-concrete-beam/actions/runs/45056457873/job/137312671295"
+      },
+      {
+        "name": "runtime-import",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/dehghoon/linkoteq-concrete-beam/actions/runs/45056457873/job/137312671047"
+      },
+      {
+        "name": "runtime-import",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/dehghoon/linkoteq-concrete-beam/actions/runs/45050631317/job/137294734441"
+      },
+      {
+        "name": "verify",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/dehghoon/linkoteq-concrete-beam/actions/runs/45050631317/job/137294734364"
+      }
+    ],
+    "wind-calculator": [
+      {
+        "name": "verify",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/dehghoon/wind-calculator/actions/runs/44687668936/job/136125748080"
+      }
+    ],
+    "seismic-calculator": [
+      {
+        "name": "verify",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/dehghoon/seismic-calculator/actions/runs/44687996809/job/136126822266"
+      }
+    ],
+    "Main-website": []
+  },
+  "deployments": [
+    {
+      "name": "wind-calculator",
+      "id": "dpl_J6FG2G2oKsaikCxykbXCdWgNBrhL",
+      "state": "READY",
+      "source": "git",
+      "meta": {
+        "githubCommitRef": "main",
+        "githubCommitSha": "307871a6f7861aadb6bed9da8ef9b40b421a0d90",
+        "githubCommitMessage": "Merge pull request #4 from dehghoon/fix/calculator-access-and-readiness\n\nProtect Wind calculator access and align the site theme",
+        "githubRepo": "wind-calculator",
+        "githubOrg": "dehghoon"
+      },
+      "aliases": [
+        "wind-calculator.vercel.app",
+        "wind-calculator-structara.vercel.app",
+        "wind-calculator-git-main-structara.vercel.app"
+      ]
+    },
+    {
+      "name": "linkoteq-seismic-preview",
+      "id": "dpl_FBoaWLg5HpZot7LYo5tZYB9nDweT",
+      "state": "READY",
+      "source": "redeploy",
+      "meta": {
+        "githubCommitSha": "785aad72dd3e80bbf27e36857b6857181d388216"
+      },
+      "aliases": [
+        "linkoteq-seismic-preview.vercel.app",
+        "linkoteq-seismic-preview-structara.vercel.app"
+      ]
+    },
+    {
+      "name": "linkoteq-seismic-api",
+      "id": "dpl_FwWrS9y5Ket3D8nBaeg2CGhhhatz",
+      "state": "READY",
+      "source": "redeploy",
+      "meta": {
+        "githubCommitSha": "dec2b9c76439f9f6f0cc4fe5679c32213c11f06a"
+      },
+      "aliases": [
+        "linkoteq-seismic-api.vercel.app",
+        "linkoteq-seismic-api-structara.vercel.app"
+      ]
+    },
+    {
+      "name": "linkoteq-wood-api",
+      "id": "dpl_4HBUoxyoUwr69QH1oP6c9qTHTXS9",
+      "state": "READY",
+      "source": "git-source-api",
+      "meta": {
+        "githubCommitRef": "c149f82f087fbdea09292bc275fa50d731a80b3c",
+        "githubCommitSha": "c149f82f087fbdea09292bc275fa50d731a80b3c",
+        "githubCommitMessage": "Merge pull request #5 from dehghoon/fix/canadian-wood-grade-boundaries-20261122\n\nEnforce Canadian wood grade and deep-framing size-factor boundaries",
+        "githubRepo": "WoodDessign",
+        "githubOrg": "dehghoon"
+      },
+      "aliases": [
+        "linkoteq-wood-api.vercel.app",
+        "linkoteq-wood-api-structara.vercel.app",
+        "linkoteq-wood-api-git-c149f82f087fbdea09292bc2-5c45d8-structara.vercel.app"
+      ]
+    },
+    {
+      "name": "linkoteq-concrete-api",
+      "id": "dpl_8VPfsUX6LVz8Jzkb4FJRdewq2A1w",
+      "state": "READY",
+      "source": "git-source-api",
+      "meta": {
+        "githubCommitRef": "b1a5f06e9d3cdea817841451675d8649829044f1",
+        "githubCommitSha": "b1a5f06e9d3cdea817841451675d8649829044f1",
+        "githubCommitMessage": "Merge pull request #6 from dehghoon/feat/country-beam-profiles-20261122\n\nAdd country-specific beam component checks and published benchmarks",
+        "githubRepo": "linkoteq-concrete-beam",
+        "githubOrg": "dehghoon"
+      },
+      "aliases": [
+        "linkoteq-concrete-api.vercel.app",
+        "linkoteq-concrete-api-structara.vercel.app",
+        "linkoteq-concrete-api-git-b1a5f06e9d3cdea81784-a149ae-structara.vercel.app"
+      ]
+    },
+    {
+      "name": "main-website",
+      "id": "dpl_84vGGiseKF1iekW4EKTmU55njx3B",
+      "state": "READY",
+      "source": "git",
+      "meta": {
+        "githubCommitRef": "main",
+        "githubCommitSha": "5a0d3a478580946eb2985ee1cb7dc3fb8880e6b8",
+        "githubCommitMessage": "Merge pull request #59 from dehghoon/fix/canadian-wood-grade-boundaries-20261122\n\nEnforce Canadian wood grade and deep-framing size-factor boundaries",
+        "githubRepo": "Main-website",
+        "githubOrg": "dehghoon"
+      },
+      "aliases": [
+        "www.linkoteq.com",
+        "main-website-six-livid.vercel.app",
+        "linkoteq.com",
+        "main-website-structara.vercel.app",
+        "main-website-git-main-structara.vercel.app"
+      ]
+    }
+  ],
+  "deployment_configuration": [
+    {
+      "name": "wind-calculator",
+      "project_id": "prj_i80LzRsrdVA33LhU9HAkjoYgiNuD",
+      "domains": [
+        "wind-calculator.vercel.app",
+        "wind-calculator-structara.vercel.app",
+        "wind-calculator-git-main-structara.vercel.app"
+      ],
+      "ssoProtection": {
+        "enabled": true,
+        "deploymentType": "all_except_custom_domains"
+      }
+    },
+    {
+      "name": "linkoteq-seismic-preview",
+      "project_id": "prj_s4JTeOcoNHCo85zIBtBxFm3M91TE",
+      "domains": [
+        "linkoteq-seismic-preview.vercel.app",
+        "linkoteq-seismic-preview-structara.vercel.app"
+      ],
+      "ssoProtection": {
+        "enabled": true,
+        "deploymentType": "all_except_custom_domains"
+      }
+    },
+    {
+      "name": "linkoteq-seismic-api",
+      "project_id": "prj_t4S7biN97eEhtsT4C9dUTNeHsQ9T",
+      "domains": [
+        "linkoteq-seismic-api.vercel.app",
+        "linkoteq-seismic-api-structara.vercel.app"
+      ],
+      "ssoProtection": {
+        "enabled": true,
+        "deploymentType": "all_except_custom_domains"
+      }
+    },
+    {
+      "name": "linkoteq-wood-api",
+      "project_id": "prj_Mtsto8rQMSvBaFxbmoWbm4XCmOka",
+      "domains": [
+        "linkoteq-wood-api.vercel.app",
+        "linkoteq-wood-api-structara.vercel.app",
+        "linkoteq-wood-api-git-c149f82f087fbdea09292bc2-5c45d8-structara.vercel.app"
+      ],
+      "ssoProtection": {
+        "enabled": true,
+        "deploymentType": "all_except_custom_domains"
+      }
+    },
+    {
+      "name": "linkoteq-concrete-api",
+      "project_id": "prj_tCMuSM2RLjm30jF2zXkSrKQ8qGg4",
+      "domains": [
+        "linkoteq-concrete-api.vercel.app",
+        "linkoteq-concrete-api-structara.vercel.app",
+        "linkoteq-concrete-api-git-b1a5f06e9d3cdea81784-a149ae-structara.vercel.app"
+      ],
+      "ssoProtection": {
+        "enabled": true,
+        "deploymentType": "preview"
+      }
+    },
+    {
+      "name": "main-website",
+      "project_id": "prj_qLUl4n2dzoBVfGlUxTbDn1FL4YoI",
+      "domains": [
+        "www.linkoteq.com",
+        "main-website-six-livid.vercel.app",
+        "linkoteq.com",
+        "main-website-structara.vercel.app",
+        "main-website-git-main-structara.vercel.app"
+      ],
+      "ssoProtection": {
+        "enabled": true,
+        "deploymentType": "all_except_custom_domains"
+      }
+    }
+  ],
+  "seismic_revision_note": "main=038074...; frontend deployed785aad... and APIdec2b9... . GitHub compare frontend-to-main reports 2 commits ahead and no changed files. API equivalence not independently established. Immutable engine wheel SHA/build provenance still required."
+}

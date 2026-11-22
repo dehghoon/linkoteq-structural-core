@@ -1,0 +1,47 @@
+{
+  "handoff_version": "1.0",
+  "review_id": "GPT3-FOUR-CALCULATORS-20261122",
+  "source_owner": "GPT3",
+  "target_owner": "GPT4",
+  "tool": "seismic",
+  "repository": "dehghoon/seismic-calculator",
+  "source_commit": "038074cadb7e6e007a366b4582e22d981416d97c",
+  "source_url": "https://github.com/dehghoon/seismic-calculator/tree/038074cadb7e6e007a366b4582e22d981416d97c",
+  "core_schema_target": "0.6",
+  "canonical_integration_status": "not accepted; private DTOs are not canonical writeback",
+  "application_status": "implemented limited Beta",
+  "deployment_status": "READY record observed; see evidence.json",
+  "production_engineering_acceptance": "blocked",
+  "tests": [
+    {
+      "repo": "seismic-calculator",
+      "command": "PYTHONPATH=. python -m pytest backend/tests/test_tool_auth.py -q",
+      "passed": 10,
+      "exit_code": 0,
+      "evidence_kind": "executed-this-review",
+      "scope": "authorization only; not full engineering suite",
+      "source_parity": "12 backend files fetched at pinned revision"
+    }
+  ],
+  "blockers": [
+    "F01 login roundtrip/SSO unresolved",
+    "F03 NBCC2020 engineering release hold; immutable engine provenance/full suite not rerun",
+    "F04 private seismic static handoff is not canonical writeback",
+    "F05 deployment revision and QA provenance"
+  ],
+  "deliverables": [
+    "../REVIEW.md",
+    "../evidence.json",
+    "../live-probes.json",
+    "../acceptance-checklist.md"
+  ],
+  "next_actions": "GPT4 independently verify and assign application remediation to GPT3, engineering/material source approval to GPT1/GPT2 and security review/retest to GPT5.",
+  "forbidden_changes": [
+    "Do not rewrite approved GPT2 engineering logic",
+    "Do not remove backend authorization or activate plans",
+    "Do not infer full member approval from component checks",
+    "Do not modify existing verified Snow or W-Section tools",
+    "Do not mark GPT4 acceptance complete without independent evidence"
+  ],
+  "limitations": "Review handoff only; no runtime code/DNS/deployment changes and no automatic notification or execution of GPT4."
+}

@@ -1,0 +1,47 @@
+{
+  "handoff_version": "1.0",
+  "review_id": "GPT3-FOUR-CALCULATORS-20261122",
+  "source_owner": "GPT3",
+  "target_owner": "GPT4",
+  "tool": "concrete",
+  "repository": "dehghoon/linkoteq-concrete-beam",
+  "source_commit": "b1a5f06e9d3cdea817841451675d8649829044f1",
+  "source_url": "https://github.com/dehghoon/linkoteq-concrete-beam/tree/b1a5f06e9d3cdea817841451675d8649829044f1",
+  "core_schema_target": "0.6",
+  "canonical_integration_status": "boundary scaffold exists; automatic component route not demonstrated integrated",
+  "application_status": "implemented limited Beta",
+  "deployment_status": "READY record observed; see evidence.json",
+  "production_engineering_acceptance": "blocked",
+  "tests": [
+    {
+      "repo": "linkoteq-concrete-beam",
+      "command": "PYTHONPATH=src python -m pytest -q",
+      "passed": 61,
+      "subtests": 16,
+      "exit_code": 0,
+      "evidence_kind": "executed-this-review",
+      "scope": "entire current repository suite",
+      "source_parity": "24 Python files fetched at pinned revision to isolated audit directory; stale local foundation not used for final result"
+    }
+  ],
+  "blockers": [
+    "F03 CSA2024 flexure and full-member scope incomplete",
+    "F04 public/private Core boundaries not fully integrated",
+    "F05 authenticated browser/report evidence missing"
+  ],
+  "deliverables": [
+    "../REVIEW.md",
+    "../evidence.json",
+    "../live-probes.json",
+    "../acceptance-checklist.md"
+  ],
+  "next_actions": "GPT4 independently verify and assign application remediation to GPT3, engineering/material source approval to GPT1/GPT2 and security review/retest to GPT5.",
+  "forbidden_changes": [
+    "Do not rewrite approved GPT2 engineering logic",
+    "Do not remove backend authorization or activate plans",
+    "Do not infer full member approval from component checks",
+    "Do not modify existing verified Snow or W-Section tools",
+    "Do not mark GPT4 acceptance complete without independent evidence"
+  ],
+  "limitations": "Review handoff only; no runtime code/DNS/deployment changes and no automatic notification or execution of GPT4."
+}
